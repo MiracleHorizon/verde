@@ -1,0 +1,42 @@
+@import '@styles/variables';
+
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  background-color: $gray-200;
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 0;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    background-image: url('/skeleton_thinking.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.wrapper {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media screen and (max-width: $laptop) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 25vh 15px 0;
+  }
+}

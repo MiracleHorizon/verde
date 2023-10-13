@@ -46,6 +46,15 @@
       ],
       "@public/*": [
         "public/*"
+      ],
+      "@styles/*": [
+        "./src/assets/styles/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
       ]
     },
   },

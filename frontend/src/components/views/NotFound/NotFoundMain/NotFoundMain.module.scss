@@ -1,0 +1,62 @@
+@import '@styles/variables';
+
+.root {
+  max-width: 410px;
+
+  @media screen and (max-width: $laptop) {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    max-width: 360px;
+    min-width: auto;
+    width: auto;
+    margin: 0;
+
+    .title,
+    .information,
+    .link {
+      color: $white-primary;
+    }
+  }
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 44px;
+  font-weight: 700;
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 24px;
+  }
+}
+
+.information {
+  opacity: 0.6;
+  line-height: 21px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: opacity 50ms ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    position: absolute;
+    left: 50%;
+    bottom: 15vh;
+    width: 100%;
+    translate: -50% 0;
+  }
+}

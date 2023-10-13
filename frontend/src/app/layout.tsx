@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 
+import { inter } from '@styles/fonts'
 import './globals.scss'
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
