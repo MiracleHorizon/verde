@@ -34,7 +34,7 @@
 }
 
 .information {
-  opacity: 0.6;
+  opacity: 60%;
   line-height: 21px;
   font-size: 18px;
   font-weight: 500;
@@ -45,11 +45,11 @@
   margin-top: 45px;
   font-size: 18px;
   font-weight: 600;
-  opacity: 0.7;
+  opacity: 70%;
   transition: opacity 50ms ease-in;
 
   &:hover {
-    opacity: 1;
+    opacity: 100%;
   }
 
   @media screen and (max-width: $tablet-sm) {
