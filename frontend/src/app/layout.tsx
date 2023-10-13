@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 
-import './globals.css'
+import './globals.scss'
 
 export const metadata: Metadata = {
   title: 'Verde',
