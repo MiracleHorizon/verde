@@ -46,6 +46,9 @@
       ],
       "@public/*": [
         "public/*"
+      ],
+      "@styles/*": [
+        "./src/assets/styles/*"
       ]
     },
   },
