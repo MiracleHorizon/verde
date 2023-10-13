@@ -1,0 +1,22 @@
+{
+  "name": "verde",
+  "version": "1.0.0",
+  "author": "MiracleHorizon",
+  "description": "Your personal garden store where flowers and greenery meet the convenience of ordering",
+  "private": true,
+  "scripts": {
+    "start:frontend:prod": "cd frontend && yarn start",
+    "start:frontend:dev": "cd frontend && yarn dev",
+    "start:backend": "cd backend && yarn start",
+    "start:backend:prod": "cd backend && yarn start:prod",
+    "start:backend:dev": "cd backend && yarn dev",
+    "start:dev": "concurrently \"yarn start:frontend:dev\" \"yarn start:backend:dev\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.5",
+    "prettier": "^3.0.3"
+  }
+}
