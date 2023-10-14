@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin size($size) {
   width: $size;
   height: $size;
@@ -14,6 +16,21 @@
   justify-content: center;
 }
 
+@mixin top-left-fixed($z-index) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index;
+}
+
+// Components
+@mixin divider-x($bg-color) {
+  width: 100%;
+  height: $divider-x-h;
+  background: $bg-color;
+}
+
+// Media
 @mixin media-hidden-max($breakpoint) {
   @media screen and (max-width: $breakpoint) {
     display: none;

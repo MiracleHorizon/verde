@@ -1,7 +1,9 @@
+import { DefaultLayout } from '@components/Layout/Layout.tsx'
+
 export default function HomePage() {
   return (
-    <div>
+    <DefaultLayout>
       <h1>Hello, Verde!</h1>
-    </div>
+    </DefaultLayout>
   )
 }

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import cn from 'classnames'
 
-import { Route } from '@shared/@types/Route'
+import { Route } from '@shared/@types/Route.ts'
 import styles from './MobileMenuItem.module.scss'
 
 function MobileMenuItem({ href, title, imagePath }: Props) {

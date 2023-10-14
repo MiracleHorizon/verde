@@ -1,0 +1,12 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  height: 100%;
+
+  @media screen and (max-width: $tablet) {
+    flex: 1 1 auto;
+  }
+}

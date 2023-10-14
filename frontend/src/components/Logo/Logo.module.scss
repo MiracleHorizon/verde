@@ -1,0 +1,44 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  min-width: 125px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $tablet) {
+    @include flex-center;
+
+    flex-direction: column;
+  }
+}
+
+.mock {
+  @include size(55px);
+
+  border-radius: 50%;
+  background: $gray-700;
+
+  @media screen and (max-width: $tablet) {
+    @include size(44px);
+  }
+}
+
+.link {
+  @include flex-center;
+
+  height: 100%;
+  margin-right: 8px;
+
+  @media screen and (max-width: $tablet) {
+    margin-right: 0;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @include media-hidden-max($tablet);
+}

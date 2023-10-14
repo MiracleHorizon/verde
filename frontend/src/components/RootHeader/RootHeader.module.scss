@@ -1,0 +1,40 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+$medium-bp: 500px;
+
+.root {
+  @include top-left-fixed(100);
+  @include flex-center;
+
+  flex-direction: column;
+  width: 100%;
+  height: $root-header-h;
+  padding: 0 24px;
+  background: $gray-200;
+
+  @media screen and (max-width: $tablet) {
+    height: $root-header-h-sm;
+  }
+
+  @media screen and (max-width: $medium-bp) {
+    padding: 0 12px;
+  }
+
+  @media screen and (max-width: $mobile-sm) {
+    padding: 0 8px;
+  }
+}
+
+.content {
+  max-width: $desktop;
+  width: 100%;
+  height: calc(100% - $divider-x-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.divider {
+  @include divider-x(rgba(138, 135, 132, 0.4));
+}
