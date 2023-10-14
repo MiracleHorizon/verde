@@ -1,0 +1,29 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  width: 100%;
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: $mobile-menu-h;
+  }
+
+  @media screen and (max-width: $mobile-sm) {
+    min-width: 300px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: $root-header-h;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: $root-header-h-sm;
+  }
+}
