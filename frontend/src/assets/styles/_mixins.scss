@@ -1,0 +1,27 @@
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin size-full {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin media-hidden-max($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    display: none;
+  }
+}
+
+@mixin media-hidden-min($breakpoint) {
+  @media screen and (min-width: $breakpoint + 1px) {
+    display: none;
+  }
+}
