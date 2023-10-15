@@ -2,5 +2,6 @@
 export enum Route {
   HOME = '/',
   CART = '/cart',
-  ORDERS = '/orders'
+  ORDERS = '/orders',
+  CATEGORY = '/category'
 }

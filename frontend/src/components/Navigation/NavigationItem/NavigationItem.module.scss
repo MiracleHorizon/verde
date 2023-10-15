@@ -1,0 +1,88 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+$image-size: 44px;
+$image-size-sm: 38px;
+$title-ml: 12px;
+
+.root {
+  cursor: pointer;
+  height: 50px;
+  margin: 1px 0;
+  padding-left: 4px;
+  padding-right: 8px;
+  border-radius: 12px;
+  transition: background 50ms ease-in-out;
+
+  &:hover {
+    background: $gray-500;
+  }
+
+  @media screen and (max-width: $laptop) and (max-width: $tablet) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: $mobile-lg) {
+    height: 46px;
+  }
+}
+
+.link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px 4px;
+
+  @media screen and (max-width: $laptop) and (max-width: $tablet) {
+    justify-content: center;
+  }
+}
+
+.image {
+  @include size($image-size);
+
+  min-width: $image-size;
+  background-size: $image-size $image-size;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (max-width: $mobile-lg) {
+    @include size($image-size-sm);
+
+    min-width: $image-size-sm;
+    background-size: $image-size-sm $image-size-sm;
+  }
+}
+
+.imageFallback {
+  @include size($image-size);
+
+  border-radius: 12px;
+  background: $gray-500;
+
+  @media screen and (max-width: $mobile-lg) {
+    @include size($image-size-sm);
+  }
+}
+
+.title {
+  @include truncate;
+
+  width: calc(100% - $image-size - $title-ml);
+  display: block;
+  margin-left: $title-ml;
+  font-size: 16px;
+
+  @media screen and (max-width: $laptop) and (min-width: $tablet + 1px) {
+    display: none;
+  }
+
+  @media screen and (max-width: $mobile-lg) {
+    width: calc(100% - $image-size-sm - $title-ml);
+  }
+}
+
+.selected {
+  font-weight: 500;
+}
