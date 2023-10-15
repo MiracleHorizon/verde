@@ -15,7 +15,7 @@
   }
 }
 
-.wrapper {
+.view {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -26,4 +26,33 @@
   @media screen and (max-width: $tablet) {
     padding-top: $root-header-h-sm;
   }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 55px 0;
+
+  @media screen and (max-width: $laptop-lg) {
+    padding: 40px 35px 0;
+  }
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 30px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    padding-top: 20px;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 20px;
 }

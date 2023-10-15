@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import type { PropsWithChildren } from 'react'
 
 import { LayoutHeader } from './LayoutHeader'
+import { NavigationAside } from './aside/NavigationAside'
 import styles from './Layout.module.scss'
 
 const MobileMenu = dynamic(
@@ -12,9 +13,12 @@ const MobileMenu = dynamic(
 export function DefaultLayout({ children }: PropsWithChildren) {
   return (
     <div className={styles.root}>
-      <div className={styles.wrapper}>
+      <div className={styles.view}>
         <LayoutHeader />
-        <main>{children}</main>
+        <div className={styles.wrapper}>
+          <NavigationAside />
+          <div content={styles.content}>{children}</div>
+        </div>
       </div>
 
       <MobileMenu />
