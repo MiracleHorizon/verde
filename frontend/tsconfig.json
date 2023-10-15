@@ -56,6 +56,9 @@
       "@shared/*": [
         "./src/shared/*"
       ],
+      "@helpers/*": [
+        "./src/shared/helpers/*"
+      ],
       "@utils/*": [
         "./src/utils/*"
       ]

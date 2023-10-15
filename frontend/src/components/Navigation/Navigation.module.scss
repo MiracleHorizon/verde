@@ -1,0 +1,10 @@
+@import '@styles/mixins';
+
+.root {
+  @include size-full;
+}
+
+.list {
+  height: 100%;
+  overflow: hidden auto;
+}
