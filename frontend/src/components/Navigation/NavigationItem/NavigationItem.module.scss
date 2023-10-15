@@ -18,7 +18,7 @@ $title-ml: 12px;
     background: $gray-500;
   }
 
-  @media screen and (max-width: $laptop) and (max-width: $tablet) {
+  @media screen and (max-width: $laptop) and (min-width: $tablet + 1px) {
     padding: 0;
   }
 
@@ -58,6 +58,7 @@ $title-ml: 12px;
 .imageFallback {
   @include size($image-size);
 
+  min-width: $image-size;
   border-radius: 12px;
   background: $gray-500;
 

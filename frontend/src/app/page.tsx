@@ -1,4 +1,4 @@
-import { DefaultLayout } from '@components/Layout/Layout.tsx'
+import { DefaultLayout } from '@components/Layout'
 
 export default function HomePage() {
   return (
