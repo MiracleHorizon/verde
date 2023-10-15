@@ -2,3 +2,4 @@
 *.config.cjs
 *.config.ts
 *.json
+/json-server
