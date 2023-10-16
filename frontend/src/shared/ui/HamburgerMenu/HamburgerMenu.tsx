@@ -1,9 +1,9 @@
 'use client'
 
-import { useEventListener, useToggle } from 'usehooks-ts'
+import { type PropsWithChildren, useEffect } from 'react'
 import { type MediaQueryAllQueryable, useMediaQuery } from 'react-responsive'
+import { useEventListener, useToggle } from 'usehooks-ts'
 import cn from 'classnames'
-import type { PropsWithChildren } from 'react'
 
 import { Portal } from '@components/Portal.tsx'
 import { IconXMark } from '@ui/icons/IconXMark.tsx'
@@ -33,6 +33,14 @@ export function HamburgerMenu({
     if (isSuitableViewportWidth) return
     handleClose()
   }
+
+  useEffect(() => {
+    document.body.classList[isOpen ? 'add' : 'remove']('overflowHidden')
+
+    return () => {
+      document.body.classList.remove('overflowHidden')
+    }
+  }, [isOpen])
 
   useEventListener('keydown', handlePressEscape)
   useEventListener('resize', handleWindowResize)
