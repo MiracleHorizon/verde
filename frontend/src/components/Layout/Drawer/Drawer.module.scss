@@ -1,0 +1,28 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  position: fixed;
+  top: $root-header-h;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - $root-header-h);
+  padding-bottom: 12px;
+  background: $gray-200;
+  z-index: 30;
+
+  @media screen and (max-width: $tablet) {
+    top: $root-header-h-sm;
+    height: calc(100vh - $root-header-h-sm);
+  }
+}
+
+.content {
+  @include size-full;
+  @include flex-start;
+
+  flex-direction: column;
+  padding: 8px 12px;
+}

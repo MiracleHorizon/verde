@@ -3,10 +3,10 @@
 import { createPortal } from 'react-dom'
 import type { PropsWithChildren } from 'react'
 
-export const ROOT_ID: string = '__next'
+export const ROOT_SELECTOR: string = '#root'
 
 export function Portal({ children, containerSelector }: Props) {
-  const container = document.querySelector(containerSelector || ROOT_ID)
+  const container = document.querySelector(containerSelector || ROOT_SELECTOR)
 
   if (!container) {
     return null
