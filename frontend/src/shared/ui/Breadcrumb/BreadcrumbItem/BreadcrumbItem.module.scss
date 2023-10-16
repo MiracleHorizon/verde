@@ -1,0 +1,16 @@
+.root {
+  font-size: 18px;
+  transition: opacity 200ms ease;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.selected {
+  opacity: 100%;
+}
+
+.unselected {
+  opacity: 50%;
+}
