@@ -1,0 +1,16 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  height: 100%;
+}
+
+.hamburgerMenu {
+  display: none;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
