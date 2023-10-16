@@ -1,0 +1,15 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include size(44px);
+
+  border-radius: 16px;
+}
+
+.button {
+  @include flex-center;
+  @include size-full;
+
+  cursor: pointer;
+}

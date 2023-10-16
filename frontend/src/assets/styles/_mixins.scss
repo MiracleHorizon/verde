@@ -16,6 +16,12 @@
   justify-content: center;
 }
 
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 @mixin top-left-fixed($z-index) {
   position: fixed;
   top: 0;

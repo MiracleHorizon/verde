@@ -18,7 +18,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-responsive": "^9.0.2",
-    "sharp": "^0.32.6"
+    "sharp": "^0.32.6",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
     "@types/json-server": "^0.14.5",
