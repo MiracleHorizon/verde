@@ -1,21 +1,18 @@
 @import '@styles/variables';
 @import '@styles/mixins';
 
-$width: 240px;
-$width-sm: 50px;
-
 .root {
-  min-width: $width;
-  width: $width;
+  min-width: $nav-aside-width;
+  width: $nav-aside-width;
   margin-right: $layout-aside-margin-x;
 
-  @include media-hidden-max($tablet);
-
   @media screen and (max-width: $laptop) {
-    min-width: $width-sm;
-    width: $width-sm;
-    margin-right: 22px;
+    min-width: $nav-aside-width-laptop;
+    width: $nav-aside-width-laptop;
+    margin-right: $layout-aside-margin-x-laptop;
   }
+
+  @include media-hidden-max($tablet);
 }
 
 .title {

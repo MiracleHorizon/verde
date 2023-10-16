@@ -1,0 +1,51 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  width: 100%;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: $laptop) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.titleArticle {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 14px;
+
+  @media screen and (max-width: $tablet-sm) {
+    margin-top: 0;
+  }
+}
+
+.title {
+  @include truncate;
+
+  font-size: 44px;
+  font-weight: 600;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 38px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    font-size: 34px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.breadcrumb {
+  @include media-hidden-max($tablet-sm);
+}

@@ -3,7 +3,7 @@ import { Inter, Roboto } from 'next/font/google'
 export const inter = Inter({
   preload: true,
   subsets: ['cyrillic', 'latin'],
-  weight: ['300', '400', '500', '700'],
+  weight: ['300', '400', '500', '600'],
   style: 'normal',
   display: 'swap'
 })
