@@ -1,4 +1,3 @@
-// TODO: Float
 export class DigitsHandler {
   public static getLastDigit(num: number): number {
     if (isNaN(num)) {
