@@ -1,0 +1,25 @@
+@import '@styles/variables';
+
+.price {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.discountContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.discountPrice {
+  display: inline-block;
+  margin-right: 6px;
+  color: $orange-primary;
+}
+
+.throughFullPrice {
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 18px;
+  text-decoration: line-through;
+  color: $gray-800;
+}

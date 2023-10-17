@@ -1,0 +1,39 @@
+@import '@styles/mixins';
+
+$title-h: 42px;
+$title-lines: 2;
+
+.root {
+  @include flex-start;
+
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.title {
+  @include vertical-line-clamp($title-lines);
+
+  width: 100%;
+  height: $title-h;
+  line-height: $title-h / $title-lines;
+  font-size: 17px;
+}
+
+.default {
+  margin-top: 14px;
+  margin-bottom: 12px;
+
+  .title {
+    margin-top: 6px;
+  }
+}
+
+.small {
+  margin-top: 12px;
+  margin-bottom: 10px;
+
+  .title {
+    margin-top: 4px;
+  }
+}

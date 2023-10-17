@@ -1,0 +1,12 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+}
+
+.image {
+  object-fit: cover;
+  user-select: none;
+  border-radius: 18px;
+}

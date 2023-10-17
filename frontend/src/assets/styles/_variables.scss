@@ -10,6 +10,8 @@ $layout-px-laptop-lg: 35px;
 $nav-aside-width: 240px;
 $nav-aside-width-laptop: 50px;
 $product-card-max-w: 300px;
+$product-card-w: 224px;
+$product-card-w-sm: 172px;
 
 // Breakpoints
 $mobile-sm: 320px;
@@ -24,11 +26,13 @@ $desktop-lg: 2560px;
 
 // Colors
 $black-primary: #252525;
+$orange-primary: #fa6a3c;
 $white-primary: #fff;
 $gray-200: #f5f4f3;
 $gray-500: #e7e6e4;
 $gray-600: #e4e4e4;
 $gray-700: #dedddb;
+$gray-800: #9e9b98;
 $neutral-100: #f7fafc;
 $neutral-200: #edf2f7;
 $neutral-300: #e2e8f0;
