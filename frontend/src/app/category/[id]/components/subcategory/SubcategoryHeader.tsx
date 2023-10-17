@@ -10,8 +10,8 @@ export function SubcategoryHeader({
   categoryId,
   categoryTitle
 }: Pick<ProductSubcategory, 'title' | 'categoryId' | 'categoryTitle'>) {
-  const breadcrumbItems: BreadcrumbItem[] = useMemo(() => {
-    return [
+  const breadcrumbItems: BreadcrumbItem[] = useMemo(
+    () => [
       {
         title: 'Главная',
         href: Route.HOME
@@ -20,8 +20,9 @@ export function SubcategoryHeader({
         title: categoryTitle,
         href: `${Route.CATEGORY}/${categoryId}`
       }
-    ]
-  }, [categoryId, categoryTitle])
+    ],
+    [categoryId, categoryTitle]
+  )
 
   return <Header title={title} breadcrumbItems={breadcrumbItems} />
 }
