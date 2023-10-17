@@ -55,3 +55,11 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+@mixin vertical-line-clamp($rows) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $rows;
+  word-break: break-word;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 24px;
+  background: $white-primary;
+}
+
+.default {
+  min-width: $product-card-w;
+  width: $product-card-w;
+}
+
+.small {
+  min-width: $product-card-w-sm;
+  width: $product-card-w-sm;
+}

@@ -1,0 +1,8 @@
+.root {
+  width: 100%;
+  padding: 4px;
+
+  &:not(&:last-of-type) {
+    margin-bottom: 24px;
+  }
+}

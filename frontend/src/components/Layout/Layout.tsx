@@ -17,7 +17,7 @@ export function DefaultLayout({ children }: PropsWithChildren) {
         <LayoutHeader />
         <div className={styles.wrapper}>
           <NavigationAside />
-          <div content={styles.content}>{children}</div>
+          <div className={styles.content}>{children}</div>
         </div>
       </div>
 

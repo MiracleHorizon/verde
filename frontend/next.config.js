@@ -5,6 +5,9 @@ const StylelintPlugin = require('stylelint-webpack-plugin')
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['eda.yandex', 'avatars.mds.yandex.net', 'yastatic.net']
+  },
   webpack: config => {
     config.plugins.push(
       new StylelintPlugin({
