@@ -1,7 +1,7 @@
-import { Breadcrumb, type BreadcrumbItem } from '@ui/Breadcrumb'
+import { Header } from '@app/category/[id]/components/Header'
 import { Route } from '@shared/@types/Route.ts'
+import type { BreadcrumbItem } from '@ui/Breadcrumb'
 import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
-import styles from './CategoryHeader.module.scss'
 
 const breadcrumbItems: BreadcrumbItem[] = [
   { title: 'Главная', href: Route.HOME },
@@ -10,16 +10,5 @@ const breadcrumbItems: BreadcrumbItem[] = [
 ]
 
 export function CategoryHeader({ title }: Pick<ProductCategory, 'title'>) {
-  return (
-    <header className={styles.root}>
-      <Breadcrumb
-        items={breadcrumbItems}
-        className={styles.breadcrumb}
-        withFinishingSeparator
-      />
-      <article className={styles.titleArticle}>
-        <h1 className={styles.title}>{title}</h1>
-      </article>
-    </header>
-  )
+  return <Header title={title} breadcrumbItems={breadcrumbItems} />
 }

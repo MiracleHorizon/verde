@@ -69,5 +69,56 @@
       "https://eda.yandex/images/3337779/d10c74a161cd75522451f98aed228103-200x200.png",
       "subcategories": []
     }
+  ],
+  "subcategories": [
+    {
+      "id": 1,
+      "title": "Огурцы",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
+      "categoryId": 1,
+      "categoryTitle": "Овощи и зелень",
+      "products": []
+    },
+    {
+      "id": 2,
+      "title": "Овощи",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
+      "categoryId": 1,
+      "categoryTitle": "Овощи и зелень",
+      "products": []
+    },
+    {
+      "id": 3,
+      "title": "Зелень",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
+      "categoryId": 1,
+      "categoryTitle": "Овощи и зелень",
+      "products": [
+        {
+          "subcategoryId": 3,
+          "id": 1,
+          "title": "Авокадо Хасс",
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
+          "fullPrice": 210,
+          "discount": 0
+        },
+        {
+          "subcategoryId": 3,
+          "id": 2,
+          "title": "Виноград Кишмиш, без косточки",
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
+          "fullPrice": 208,
+          "discount": 24
+        },
+        {
+          "subcategoryId": 3,
+          "id": 3,
+          "title": "Брокколи",
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
+          "fullPrice": 158,
+          "discount": 10
+        }
+      ]
+    }
   ]
 }

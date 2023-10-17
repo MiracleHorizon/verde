@@ -3,3 +3,7 @@
 .root {
   @include showcase-pages-content;
 }
+
+.content {
+  width: 100%;
+}
