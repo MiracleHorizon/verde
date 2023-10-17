@@ -44,6 +44,9 @@
       "@root/*": [
         "./src/*"
       ],
+      "@app/*": [
+        "./src/app/*"
+      ],
       "@public/*": [
         "public/*"
       ],
