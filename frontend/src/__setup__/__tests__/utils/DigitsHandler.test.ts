@@ -26,4 +26,14 @@ describe('DigitsHandler.ts', () => {
     expect(DigitsHandler.getNLastDigits(321.437, 5)).toBe(21437)
     expect(DigitsHandler.getNLastDigits(NaN, 5)).toBe(0)
   })
+
+  it('should return digits of the number', () => {
+    expect(DigitsHandler.getDigits(0)).toStrictEqual([0])
+    expect(DigitsHandler.getDigits(9)).toStrictEqual([9])
+    expect(DigitsHandler.getDigits(45)).toStrictEqual([4, 5])
+    expect(DigitsHandler.getDigits(-194)).toStrictEqual([1, 9, 4])
+    expect(DigitsHandler.getDigits(3291)).toStrictEqual([3, 2, 9, 1])
+    expect(DigitsHandler.getDigits(19.3543)).toStrictEqual([1, 9, 3, 5, 4, 3])
+    expect(DigitsHandler.getDigits(NaN)).toStrictEqual([])
+  })
 })

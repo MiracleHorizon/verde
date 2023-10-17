@@ -31,7 +31,11 @@ export class DigitsHandler {
     return +digits.slice(-n).join('')
   }
 
-  private static getDigits(num: number): number[] {
+  public static getDigits(num: number): number[] {
+    if (isNaN(num)) {
+      return []
+    }
+
     return num
       .toString()
       .split('')
