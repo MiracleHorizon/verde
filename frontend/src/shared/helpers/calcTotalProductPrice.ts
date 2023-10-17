@@ -1,7 +1,7 @@
 // NOTE: This is a mock value calculation.
 
-const MAX_PERCENT = 100
-const MIN_PRICE = 1 // In russian rubles.
+export const MAX_PERCENT = 100
+export const MIN_PRICE = 1 // In russian rubles.
 
 /**
  * @param fullPrice - the value of the full price of the product.
