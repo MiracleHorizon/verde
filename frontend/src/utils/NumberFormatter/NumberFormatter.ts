@@ -34,3 +34,5 @@ export class NumberFormatter {
     return numberFormat.format(value)
   }
 }
+
+export const ruNumberFormatter = new NumberFormatter(Locale.RU)
