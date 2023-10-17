@@ -1,0 +1,9 @@
+.root {
+  width: 100%;
+  padding: 4px;
+  background: pink;
+
+  &:not(&:last-of-type) {
+    margin-bottom: 24px;
+  }
+}

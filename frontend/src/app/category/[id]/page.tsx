@@ -13,7 +13,8 @@ export default async function CategoryPage({ params }: PageProps) {
   try {
     const url = `${SERVER_API}/${CATEGORIES_ENDPOINT}/${id}`
     const response = await fetch(url, {
-      method: HTTPMethod.GET
+      method: HTTPMethod.GET,
+      cache: 'no-cache'
     })
 
     if (!response.ok) {

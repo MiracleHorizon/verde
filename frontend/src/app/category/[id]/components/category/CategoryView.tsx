@@ -1,12 +1,13 @@
 import { CategoryHeader } from './CategoryHeader'
+import { CategoryShowcase } from './CategoryShowcase'
 import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
 import styles from './CategoryView.module.scss'
 
-export function CategoryView({ title }: ProductCategory) {
+export function CategoryView({ title, subcategories }: ProductCategory) {
   return (
     <div className={styles.root}>
       <CategoryHeader title={title} />
-      <main></main>
+      <CategoryShowcase subcategories={subcategories} />
     </div>
   )
 }

@@ -1,0 +1,30 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $tablet-sm) {
+    margin-bottom: 14px;
+  }
+}
+
+.titleArticle {
+  width: 100%;
+}
+
+.title {
+  @include vertical-line-clamp(2);
+
+  width: 100%;
+  font-size: 26px;
+  font-weight: 500;
+
+  @media screen and (max-width: $tablet-sm) {
+    @include vertical-line-clamp(4);
+
+    text-align: center;
+    font-size: 22px;
+  }
+}

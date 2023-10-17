@@ -3,8 +3,6 @@
 .root {
   max-width: $product-card-max-w * 4;
   min-width: calc(100vw - $nav-aside-width - $layout-aside-margin-x - $layout-px * 2);
-  padding-bottom: 20px;
-  height: 300px;
 
   @media screen and (max-width: $laptop-lg) {
     min-width: calc(100vw - $nav-aside-width - $layout-aside-margin-x - $layout-px-laptop-lg * 2);

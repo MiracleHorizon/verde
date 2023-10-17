@@ -22,7 +22,7 @@
   margin-bottom: 14px;
 
   @media screen and (max-width: $tablet-sm) {
-    margin-top: 0;
+    margin-top: 4px;
   }
 }
 
@@ -47,5 +47,7 @@
 }
 
 .breadcrumb {
-  @include media-hidden-max($tablet-sm);
+  @media screen and (max-width: $tablet-sm) {
+    display: none !important;
+  }
 }
