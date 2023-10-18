@@ -38,7 +38,11 @@ export function ProductCardPrice({
   )
 
   if (!withDiscount) {
-    return <span className={styles.price}>{formattedTotalPrice}</span>
+    return (
+      <span className={cn(styles.price, priceClassName)}>
+        {formattedTotalPrice}
+      </span>
+    )
   }
 
   return (
@@ -46,9 +50,7 @@ export function ProductCardPrice({
       <span className={cn(styles.price, styles.discountPrice, priceClassName)}>
         {formattedTotalPrice}
       </span>
-      <span className={cn(styles.throughFullPrice, priceClassName)}>
-        {formattedFullPrice}
-      </span>
+      <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
     </div>
   )
 }
