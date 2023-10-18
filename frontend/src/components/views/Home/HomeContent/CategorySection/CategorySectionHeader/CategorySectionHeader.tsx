@@ -14,7 +14,7 @@ export function CategorySectionHeader({
   return (
     <header className={styles.root}>
       <div className={styles.content}>
-        <CategoryImage imagePath={imagePath} />
+        <CategoryImage imagePath={imagePath} className={styles.image} />
         <article className={styles.titleArticle}>
           <Link href={getCategoryRoute(id)} className={styles.title}>
             {title}

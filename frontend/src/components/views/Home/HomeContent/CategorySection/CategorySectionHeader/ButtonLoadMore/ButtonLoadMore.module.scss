@@ -20,6 +20,8 @@
   &:active {
     background: $gray-700;
   }
+
+  @include media-hidden-max($tablet-sm);
 }
 
 .icon {

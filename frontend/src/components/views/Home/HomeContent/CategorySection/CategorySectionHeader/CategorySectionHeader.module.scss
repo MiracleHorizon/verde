@@ -12,6 +12,10 @@ $title-article-ml: 6px;
   justify-content: flex-start;
   margin-bottom: 12px;
   padding: 0 4px;
+
+  @media screen and (max-width: $tablet-sm) {
+    padding: 0;
+  }
 }
 
 .content {
@@ -21,6 +25,11 @@ $title-article-ml: 6px;
   align-items: center;
   justify-content: flex-start;
   margin-right: $content-mr;
+
+  @media screen and (max-width: $tablet-sm) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .titleArticle {
@@ -31,13 +40,24 @@ $title-article-ml: 6px;
   justify-content: flex-start;
   margin-left: $title-article-ml;
   padding: 0 4px;
+
+  @media screen and (max-width: $tablet-sm) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
 }
 
 .title {
   @include truncate;
 
-  display: inline-block;
   width: 100%;
+  max-width: max-content;
+  display: inline-block;
   font-size: 24px;
   font-weight: 500;
+}
+
+.image {
+  @include media-hidden-max($tablet-sm);
 }
