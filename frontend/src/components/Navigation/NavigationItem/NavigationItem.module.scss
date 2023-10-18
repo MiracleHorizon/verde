@@ -1,8 +1,6 @@
 @import '@styles/variables';
 @import '@styles/mixins';
 
-$image-size: 44px;
-$image-size-sm: 38px;
 $title-ml: 12px;
 
 .root {
@@ -39,38 +37,10 @@ $title-ml: 12px;
   }
 }
 
-.image {
-  @include size($image-size);
-
-  min-width: $image-size;
-  background-size: $image-size $image-size;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media screen and (max-width: $mobile-lg) {
-    @include size($image-size-sm);
-
-    min-width: $image-size-sm;
-    background-size: $image-size-sm $image-size-sm;
-  }
-}
-
-.imageFallback {
-  @include size($image-size);
-
-  min-width: $image-size;
-  border-radius: 12px;
-  background: $gray-500;
-
-  @media screen and (max-width: $mobile-lg) {
-    @include size($image-size-sm);
-  }
-}
-
 .title {
   @include truncate;
 
-  width: calc(100% - $image-size - $title-ml);
+  width: calc(100% - $category-image-size - $title-ml);
   display: block;
   margin-left: $title-ml;
   font-size: 16px;
@@ -80,7 +50,7 @@ $title-ml: 12px;
   }
 
   @media screen and (max-width: $mobile-lg) {
-    width: calc(100% - $image-size-sm - $title-ml);
+    width: calc(100% - $category-image-size-sm - $title-ml);
   }
 }
 

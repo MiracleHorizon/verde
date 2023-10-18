@@ -1,8 +1,15 @@
 @import '@styles/variables';
 
 .price {
-  font-size: 23px;
   font-weight: 500;
+}
+
+.default {
+  font-size: 23px;
+}
+
+.small {
+  font-size: 21px;
 }
 
 .discountContainer {

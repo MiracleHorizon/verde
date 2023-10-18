@@ -42,14 +42,14 @@
   $offsets-laptop: $layout-aside-margin-x-laptop + $layout-px-laptop-lg * 2;
 
   max-width: $product-card-max-w * 4;
-  min-width: calc(100vw - $nav-aside-width - $offsets);
+  width: calc(100vw - $nav-aside-width - $offsets);
 
   @media screen and (max-width: $laptop-lg) {
-    min-width: calc(100vw - $nav-aside-width - $offsets-laptop-lg);
+    width: calc(100vw - $nav-aside-width - $offsets-laptop-lg);
   }
 
   @media screen and (max-width: $laptop) {
-    min-width: calc(100vw - $nav-aside-width-laptop - $offsets-laptop);
+    width: calc(100vw - $nav-aside-width-laptop - $offsets-laptop);
   }
 
   @media screen and (max-width: $tablet) {

@@ -1,20 +1,29 @@
 import { useMemo } from 'react'
 import cn from 'classnames'
 
+import { ProductCardVariant, type Props } from '@components/ProductCard'
 import { DigitsHandler } from '@utils/DigitsHandler.ts'
 import { ruNumberFormatter } from '@utils/NumberFormatter'
 import { calcTotalProductPrice } from '@helpers/calcTotalProductPrice.ts'
 import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign.ts'
-import type { Props } from '@components/ProductCard'
 import styles from './ProductCardPrice.module.scss'
 
 export function ProductCardPrice({
   fullPrice,
-  discount
-}: Pick<Props, 'fullPrice' | 'discount'>) {
+  discount,
+  variant
+}: Pick<Props, 'fullPrice' | 'discount' | 'variant'>) {
   const { totalPrice, withDiscount } = useMemo(
     () => calcTotalProductPrice(fullPrice, discount),
     [fullPrice, discount]
+  )
+
+  const priceClassName = useMemo(
+    () => ({
+      [styles.default]: variant === ProductCardVariant.DEFAULT || !variant,
+      [styles.small]: variant === ProductCardVariant.SMALL
+    }),
+    [variant]
   )
 
   const formattedTotalPrice = setThinSpaceBeforeCurrencySign(
@@ -28,18 +37,20 @@ export function ProductCardPrice({
     })
   )
 
+  if (!withDiscount) {
+    return (
+      <span className={cn(styles.price, priceClassName)}>
+        {formattedTotalPrice}
+      </span>
+    )
+  }
+
   return (
-    <>
-      {withDiscount ? (
-        <div className={styles.discountContainer}>
-          <span className={cn(styles.price, styles.discountPrice)}>
-            {formattedTotalPrice}
-          </span>
-          <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
-        </div>
-      ) : (
-        <span className={styles.price}>{formattedTotalPrice}</span>
-      )}
-    </>
+    <div className={styles.discountContainer}>
+      <span className={cn(styles.price, styles.discountPrice, priceClassName)}>
+        {formattedTotalPrice}
+      </span>
+      <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
+    </div>
   )
 }

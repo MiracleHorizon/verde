@@ -10,8 +10,8 @@ const defaultSizes = {
   height: 168
 }
 const smallSizes = {
-  width: 160,
-  height: 147
+  width: 150,
+  height: 137
 }
 
 export function ProductCardImage({
