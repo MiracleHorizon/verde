@@ -36,27 +36,6 @@
   background: $bg-color;
 }
 
-@mixin showcase-pages-content {
-  $offsets: $layout-aside-margin-x + $layout-px * 2;
-  $offsets-laptop-lg: $layout-aside-margin-x + $layout-px-laptop-lg * 2;
-  $offsets-laptop: $layout-aside-margin-x-laptop + $layout-px-laptop-lg * 2;
-
-  max-width: $product-card-max-w * 4;
-  width: calc(100vw - $nav-aside-width - $offsets);
-
-  @media screen and (max-width: $laptop-lg) {
-    width: calc(100vw - $nav-aside-width - $offsets-laptop-lg);
-  }
-
-  @media screen and (max-width: $laptop) {
-    width: calc(100vw - $nav-aside-width-laptop - $offsets-laptop);
-  }
-
-  @media screen and (max-width: $tablet) {
-    width: clamp(100%, 100%, 100%);
-  }
-}
-
 // Media
 @mixin media-hidden-max($breakpoint) {
   @media screen and (max-width: $breakpoint) {

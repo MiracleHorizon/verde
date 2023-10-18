@@ -2,9 +2,11 @@
 @import '@styles/mixins';
 
 .root {
-  @include flex-center;
-
+  min-height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 
   @media screen and (max-width: $tablet) {
     padding-bottom: $mobile-menu-h;
@@ -18,7 +20,7 @@
 .view {
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   padding-top: $root-header-h;
@@ -29,14 +31,15 @@
 }
 
 .wrapper {
+  @include flex-start;
+
   position: relative;
+  max-width: calc($desktop + $layout-px * 2);
   width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   padding: 40px $layout-px 0;
 
   @media screen and (max-width: $laptop-lg) {
+    max-width: calc($desktop + $layout-px-laptop-lg * 2);
     padding: 40px $layout-px-laptop-lg 0;
   }
 
@@ -44,15 +47,43 @@
     padding-top: 30px;
   }
 
+  @media screen and (max-width: $tablet) {
+    max-width: calc($desktop + $layout-px-tablet * 2);
+    padding-left: $layout-px-tablet;
+    padding-right: $layout-px-tablet;
+  }
+
   @media screen and (max-width: $tablet-sm) {
     padding-top: 20px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    max-width: calc($desktop + $layout-px-mobile-lg * 2);
+    padding-left: $layout-px-mobile-lg;
+    padding-right: $layout-px-mobile-lg;
   }
 }
 
 .content {
-  width: 100%;
+  $offsets: $layout-aside-margin-x + $layout-px * 2;
+  $offsets-laptop-lg: $layout-aside-margin-x + $layout-px-laptop-lg * 2;
+  $offsets-laptop: $layout-aside-margin-x-laptop + $layout-px-laptop-lg * 2;
+
+  width: calc(100vw - $nav-aside-width - $offsets);
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding-bottom: 20px;
+
+  @media screen and (max-width: $laptop-lg) {
+    width: calc(100vw - $nav-aside-width - $offsets-laptop-lg);
+  }
+
+  @media screen and (max-width: $laptop) {
+    width: calc(100vw - $nav-aside-width-laptop - $offsets-laptop);
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: clamp(100%, 100%, 100%);
+  }
 }
