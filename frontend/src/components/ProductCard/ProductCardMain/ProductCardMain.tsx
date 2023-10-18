@@ -16,7 +16,7 @@ export function ProductCardMain({
         [styles.small]: variant === ProductCardVariant.SMALL
       })}
     >
-      <ProductCardPrice {...priceData} />
+      <ProductCardPrice variant={variant} {...priceData} />
       <span className={styles.title}>{title}</span>
     </main>
   )
