@@ -1,0 +1,54 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  width: 100%;
+  flex-direction: column;
+  padding-top: 5vh;
+  padding-right: $nav-aside-width;
+
+  @media screen and (max-width: $laptop) {
+    padding-right: $nav-aside-width-laptop;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding-right: 0;
+  }
+}
+
+.titleArticle {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+
+  @media screen and (max-width: $laptop-lg) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: $mobile-lg) {
+    font-size: 20px;
+  }
+}
+
+.icon {
+  max-width: 400px;
+
+  @media screen and (max-width: $mobile-lg) {
+    max-width: 250px;
+  }
+}

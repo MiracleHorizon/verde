@@ -1,0 +1,29 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  width: $category-section-header-load-more-btn-w;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 8px;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: background 0.2s ease-out;
+
+  &:hover {
+    background: $gray-500;
+  }
+
+  &:active {
+    background: $gray-700;
+  }
+}
+
+.icon {
+  @include size(22px);
+
+  margin-left: 4px;
+}

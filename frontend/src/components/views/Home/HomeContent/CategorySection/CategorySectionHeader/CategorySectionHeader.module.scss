@@ -1,0 +1,43 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+$content-mr: 12px;
+$title-article-ml: 6px;
+
+.root {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.content {
+  width: calc(100% - $category-section-header-load-more-btn-w - $content-mr);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: $content-mr;
+}
+
+.titleArticle {
+  width: calc(100% - $category-image-size - $title-article-ml);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: $title-article-ml;
+  padding: 0 4px;
+}
+
+.title {
+  @include truncate;
+
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+}
