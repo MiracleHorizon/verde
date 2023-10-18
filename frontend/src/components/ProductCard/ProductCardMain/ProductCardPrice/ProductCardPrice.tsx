@@ -18,6 +18,14 @@ export function ProductCardPrice({
     [fullPrice, discount]
   )
 
+  const priceClassName = useMemo(
+    () => ({
+      [styles.default]: variant === ProductCardVariant.DEFAULT || !variant,
+      [styles.small]: variant === ProductCardVariant.SMALL
+    }),
+    [variant]
+  )
+
   const formattedTotalPrice = setThinSpaceBeforeCurrencySign(
     ruNumberFormatter.formatCurrency(totalPrice, {
       maximumSignificantDigits: DigitsHandler.getDigits(totalPrice).length + 2
@@ -35,15 +43,12 @@ export function ProductCardPrice({
 
   return (
     <div className={styles.discountContainer}>
-      <span
-        className={cn(styles.price, styles.discountPrice, {
-          [styles.default]: variant === ProductCardVariant.DEFAULT || !variant,
-          [styles.small]: variant === ProductCardVariant.SMALL
-        })}
-      >
+      <span className={cn(styles.price, styles.discountPrice, priceClassName)}>
         {formattedTotalPrice}
       </span>
-      <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
+      <span className={cn(styles.throughFullPrice, priceClassName)}>
+        {formattedFullPrice}
+      </span>
     </div>
   )
 }
