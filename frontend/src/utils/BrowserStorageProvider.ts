@@ -5,13 +5,13 @@ interface StorageItem {
   value: NonNullable<unknown>
 }
 
-export abstract class BrowserStorageProvider {
+export class BrowserStorageProvider {
   public get length(): number {
     return this.storage.length
   }
 
   /* eslint no-unused-vars: 0 */
-  protected constructor(private readonly storage: Storage) {}
+  constructor(private readonly storage: Storage) {}
 
   public set<T extends NonNullable<unknown>>(key: string, payload: T): void {
     const value = isObject(payload)

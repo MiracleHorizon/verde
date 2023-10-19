@@ -1,6 +1,6 @@
 export interface User {
   id: number
-  cartId: string
+  cartId: number
   email: string
   name: string
   phoneNumber: string | null
