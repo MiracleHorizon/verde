@@ -1,0 +1,15 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  width: 100%;
+}
+
+.default {
+  height: 48px;
+}
+
+.small {
+  height: 40px;
+}

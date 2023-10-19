@@ -1,0 +1,35 @@
+@import '@styles/animations';
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.buttonAdd {
+  @include size-full;
+  @include flex-center;
+
+  border-radius: $counter-changer-border-radius;
+  background: $gray-200;
+  transition: background 50ms ease-in-out;
+
+  &:hover {
+    background: $gray-400;
+  }
+
+  &:active {
+    background: $gray-500;
+  }
+}
+
+.iconDefault {
+  @include size(28px);
+}
+
+.iconSmall {
+  @include size(24px);
+}
+
+.counterChanger {
+  &,
+  button {
+    height: 100%;
+  }
+}
