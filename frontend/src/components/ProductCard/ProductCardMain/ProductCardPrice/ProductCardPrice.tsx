@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
 import cn from 'classnames'
 
-import { ProductCardVariant, type Props } from '@components/ProductCard'
 import { DigitsHandler } from '@utils/DigitsHandler.ts'
 import { ruNumberFormatter } from '@utils/NumberFormatter'
+import { getVariantStyles, type Props } from '@components/ProductCard'
 import { calcTotalProductPrice } from '@helpers/calcTotalProductPrice.ts'
 import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign.ts'
 import styles from './ProductCardPrice.module.scss'
@@ -18,13 +18,7 @@ export function ProductCardPrice({
     [fullPrice, discount]
   )
 
-  const priceClassName = useMemo(
-    () => ({
-      [styles.default]: variant === ProductCardVariant.DEFAULT || !variant,
-      [styles.small]: variant === ProductCardVariant.SMALL
-    }),
-    [variant]
-  )
+  const priceClassName = getVariantStyles(styles, variant)
 
   const formattedTotalPrice = setThinSpaceBeforeCurrencySign(
     ruNumberFormatter.formatCurrency(totalPrice, {

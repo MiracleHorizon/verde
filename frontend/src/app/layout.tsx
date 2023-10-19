@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 
+import { ClientSide } from '@components/ClientSide.tsx'
 import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@shared/const/seo.ts'
 import { inter } from '@styles/fonts'
 import './globals.scss'
@@ -32,6 +33,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang='en'>
       <body className={inter.className}>
         <div id='root'>{children}</div>
+
+        <ClientSide />
       </body>
     </html>
   )

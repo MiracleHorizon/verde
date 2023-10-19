@@ -18,6 +18,9 @@ $category-image-size: 44px;
 $category-image-size-sm: 38px;
 $category-section-header-load-more-btn-w: 80px;
 
+// UI - components
+$counter-changer-border-radius: 10px;
+
 // Breakpoints
 $mobile-sm: 320px;
 $mobile-md: 375px;
@@ -33,11 +36,14 @@ $desktop-lg: 2560px;
 $black-primary: #252525;
 $orange-primary: #fa6a3c;
 $white-primary: #fff;
+$gray-100: #f9f9f9;
 $gray-200: #f5f4f3;
+$gray-400: #ebeae9;
 $gray-500: #e7e6e4;
 $gray-600: #e4e4e4;
 $gray-700: #dedddb;
-$gray-800: #9e9b98;
+$gray-800: #c9c5c2;
+$gray-900: #9e9b98;
 $neutral-100: #f7fafc;
 $neutral-200: #edf2f7;
 $neutral-300: #e2e8f0;

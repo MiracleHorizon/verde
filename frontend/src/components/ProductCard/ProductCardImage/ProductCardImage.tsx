@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import Image from 'next/image'
 
-import { ProductCardVariant, type Props } from '@components/ProductCard'
+import type { Props } from '@components/ProductCard'
 import productFallbackPng from '@public/product_fallback.png'
 import styles from './ProductCardImage.module.scss'
 
@@ -20,7 +20,7 @@ export function ProductCardImage({
   variant
 }: Pick<Props, 'title' | 'imagePath' | 'variant'>) {
   const imageSizes = useMemo(() => {
-    if (!variant || variant === ProductCardVariant.DEFAULT) {
+    if (!variant || variant === 'default') {
       return defaultSizes
     }
 

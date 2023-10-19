@@ -56,6 +56,9 @@
       "@components/*": [
         "./src/components/*"
       ],
+      "@stores/*": [
+        "./src/stores/*"
+      ],
       "@shared/*": [
         "./src/shared/*"
       ],
@@ -67,8 +70,11 @@
       ],
       "@utils/*": [
         "./src/utils/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
       ]
-    },
+    }
   },
   "include": [
     "src/**/*.ts",
@@ -79,10 +85,5 @@
   ],
   "exclude": [
     "node_modules"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ]
 }
