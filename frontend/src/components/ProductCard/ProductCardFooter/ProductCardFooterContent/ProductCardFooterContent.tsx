@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useIsClient } from 'usehooks-ts'
+import cn from 'classnames'
 
 import { IconPlus } from '@ui/icons/IconPlus.tsx'
 import { CounterChanger } from '@ui/CounterChanger'
@@ -40,7 +41,7 @@ export default function ProductCardFooterContent({
   if (!isClient || !inCart) {
     return (
       <button className={styles.buttonAdd} onClick={handleAddProduct}>
-        <IconPlus className={getVariantStyles(styles, variant)} />
+        <IconPlus className={getVariantStyles(styles, variant, 'icon')} />
       </button>
     )
   }
@@ -53,7 +54,10 @@ export default function ProductCardFooterContent({
       decrement={handleDecrement}
       isIncrementDisabled={count >= MAX_PRODUCT_COUNT}
       isDecrementDisabled={count <= 0}
-      className={styles.counterChanger}
+      className={cn(
+        styles.counterChanger,
+        getVariantStyles(styles, variant, 'counterChanger')
+      )}
     />
   )
 }

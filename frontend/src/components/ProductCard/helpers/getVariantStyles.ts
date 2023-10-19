@@ -1,26 +1,14 @@
 import cn from 'classnames'
 
-import { ProductCardVariant } from '@components/ProductCard'
+import type { ProductCardVariant } from '@components/ProductCard'
 
 export function getVariantStyles(
   styles: Record<string, string>,
-  variant?: ProductCardVariant
+  variant?: ProductCardVariant,
+  classPrefix?: string
 ): string {
-  let propertyDefault = 'default'
-  let propertySmall = 'small'
-
-  for (const styleName in styles) {
-    const isPropertyDefault = styleName.toLocaleLowerCase().includes('default')
-    const isPropertySmall = styleName.toLocaleLowerCase().includes('small')
-
-    if (isPropertyDefault && styleName !== propertyDefault) {
-      propertyDefault = styleName
-    }
-
-    if (isPropertySmall && styleName !== propertySmall) {
-      propertySmall = styleName
-    }
-  }
+  const propertyDefault = classPrefix ? `${classPrefix}Default` : 'default'
+  const propertySmall = classPrefix ? `${classPrefix}Small` : 'small'
 
   if (!variant) {
     return styles[propertyDefault]
