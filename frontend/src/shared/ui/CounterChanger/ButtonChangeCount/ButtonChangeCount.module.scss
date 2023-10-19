@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+
+$size: 44px;
+$border-radius: $counter-changer-border-radius - 2px;
+
+@mixin solid-background($deg) {
+  &:hover {
+    background: linear-gradient($deg, $gray-700 -70%, $gray-200 100%);
+  }
+
+  &:active {
+    background: linear-gradient($deg, $gray-800 -100%, $gray-200 100%);
+  }
+}
+
+.root {
+  @include flex-center;
+
+  min-width: $size;
+  background: $gray-200;
+  transition: background 50ms ease-in-out;
+}
+
+.rootSolid {
+  flex: 1;
+  height: $size;
+}
+
+.rootSeparated {
+  @include size($size);
+
+  border-radius: $border-radius;
+
+  &:hover {
+    background: $gray-400;
+  }
+
+  &:active {
+    background: $gray-500;
+  }
+}
+
+.leftSolid {
+  @include solid-background(90deg);
+
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+.rightSolid {
+  @include solid-background(-90deg);
+
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 50%;
+  background: transparent;
+}
