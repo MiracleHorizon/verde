@@ -1,4 +1,4 @@
-import type { User } from '@shared/@types/User.ts'
+import type { User } from '@interfaces/User'
 
 export type Store = State & Computed & Actions
 

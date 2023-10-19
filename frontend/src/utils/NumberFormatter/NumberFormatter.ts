@@ -1,4 +1,4 @@
-import { Currency, Locale } from './types.ts'
+import { Currency, Locale } from './types'
 
 export class NumberFormatter {
   private readonly locale: Locale

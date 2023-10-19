@@ -1,4 +1,4 @@
-import type { ProductSubcategory } from './ProductSubcategory.ts'
+import type { ProductSubcategory } from './ProductSubcategory'
 
 export interface ProductCategory {
   id: number

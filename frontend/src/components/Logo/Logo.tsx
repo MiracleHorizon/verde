@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import cn from 'classnames'
 
-import { APP_TITLE } from '@shared/const/seo.ts'
-import { Route } from '@shared/@types/Route.ts'
-import { roboto } from '@styles/fonts.ts'
+import { APP_TITLE } from '@constants/seo'
+import { Route } from '@enums/Route'
+import { roboto } from '@styles/fonts'
 import styles from './Logo.module.scss'
 
 export function Logo() {

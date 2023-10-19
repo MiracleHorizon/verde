@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Route } from '@shared/@types/Route.ts'
+import { Route } from '@enums/Route'
 
 export default function SigninPage() {
   return (

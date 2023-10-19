@@ -1,4 +1,4 @@
-import type { CartProduct } from '@shared/@types/CartProduct.ts'
+import type { CartProduct } from './CartProduct.ts'
 
 export interface UserCart {
   id: number

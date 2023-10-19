@@ -4,13 +4,13 @@ import { useRouter } from 'next/navigation'
 import { useIsClient } from 'usehooks-ts'
 import cn from 'classnames'
 
-import { IconPlus } from '@ui/icons/IconPlus.tsx'
+import { IconPlus } from '@ui/icons/IconPlus'
 import { CounterChanger } from '@ui/CounterChanger'
 import { useUserStore } from '@stores/user'
 import { useCartStore } from '@stores/cart'
-import { MAX_PRODUCT_COUNT } from '@shared/const/mock.ts'
+import { MAX_PRODUCT_COUNT } from '@constants/mock'
 import { getVariantStyles, type Props } from '@components/ProductCard'
-import { Route } from '@shared/@types/Route.ts'
+import { Route } from '@enums/Route'
 import styles from './ProductCardFooterContent.module.scss'
 
 export default function ProductCardFooterContent({

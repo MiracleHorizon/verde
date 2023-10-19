@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 
 import { EmptyShowcase } from './EmptyShowcase'
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 
 const HomeContent = dynamic(() =>
   import('./HomeContent').then(mod => mod.HomeContent)

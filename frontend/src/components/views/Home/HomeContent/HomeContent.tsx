@@ -1,5 +1,5 @@
 import { CategorySection } from './CategorySection'
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 import styles from './HomeContent.module.scss'
 
 export function HomeContent({ categories }: Props) {

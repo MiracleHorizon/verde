@@ -1,8 +1,8 @@
 import { memo, useMemo } from 'react'
 import cn from 'classnames'
 
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
-import type { ClassNameProps } from '@shared/@types/ClassNameProps.ts'
+import type { ProductCategory } from '@interfaces/ProductCategory'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './CategoryImage.module.scss'
 
 function CategoryImage({ imagePath, className }: Props) {

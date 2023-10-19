@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 
 import { HomeView } from '@components/views/Home'
 import { DefaultLayout } from '@components/Layout'
-import { HTTPMethod } from '@shared/@types/HTTPMethod.ts'
-import { APP_TITLE } from '@shared/const/seo.ts'
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
+import { APP_TITLE } from '@constants/seo'
+import { HTTPMethod } from '@enums/HTTPMethod'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 
 export const metadata: Metadata = {
   title: `Главная | ${APP_TITLE}`

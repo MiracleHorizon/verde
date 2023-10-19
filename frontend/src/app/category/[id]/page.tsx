@@ -2,9 +2,9 @@ import { notFound } from 'next/navigation'
 
 import { CategoryView } from './components/category'
 import { SubcategoryView } from './components/subcategory'
-import { HTTPMethod } from '@shared/@types/HTTPMethod.ts'
-import type { PageProps } from '@shared/@types/next/PageProps.ts'
-import { ProductSubcategory } from '@shared/@types/ProductSubcategory.ts'
+import { HTTPMethod } from '@enums/HTTPMethod'
+import type { PageProps } from '@interfaces/next/PageProps'
+import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
 
 const SERVER_API = 'http://localhost:4200'
 const CATEGORIES_ENDPOINT = 'categories'

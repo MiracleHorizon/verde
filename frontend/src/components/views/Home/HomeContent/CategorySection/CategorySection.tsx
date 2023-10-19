@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 
 import { CategorySectionHeader } from './CategorySectionHeader'
 import { CategorySectionContent } from './CategorySectionContent'
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 import styles from './CategorySection.module.scss'
 
 const MAX_DISPLAY_PRODUCTS = 20

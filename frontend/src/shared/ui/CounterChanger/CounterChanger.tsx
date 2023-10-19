@@ -1,8 +1,8 @@
 import cn from 'classnames'
 
 import { ButtonChangeCount } from './ButtonChangeCount'
-import type { CounterChangerVariant } from './CounterChanger.types.ts'
-import type { ClassNameProps } from '@shared/@types/ClassNameProps.ts'
+import type { CounterChangerVariant } from './CounterChanger.types'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './CounterChanger.module.scss'
 
 export function CounterChanger({

@@ -1,2 +1,2 @@
-export { NumberFormatter, ruNumberFormatter } from './NumberFormatter.ts'
-export { Locale, CurrencySign } from './types.ts'
+export { NumberFormatter, ruNumberFormatter } from './NumberFormatter'
+export { Locale, CurrencySign } from './types'

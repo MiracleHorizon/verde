@@ -1,6 +1,6 @@
-import type { UserCart } from '@shared/@types/UserCart.ts'
-import type { Product } from '@shared/@types/Product.ts'
-import type { CartProduct } from '@shared/@types/CartProduct.ts'
+import type { UserCart } from '@interfaces/UserCart'
+import type { Product } from '@interfaces/Product'
+import type { CartProduct } from '@interfaces/CartProduct'
 
 export type Store<T> = State<T> & Computed<T> & Actions<T>
 

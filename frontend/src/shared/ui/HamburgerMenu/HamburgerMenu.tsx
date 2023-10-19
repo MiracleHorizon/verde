@@ -5,11 +5,11 @@ import { type MediaQueryAllQueryable, useMediaQuery } from 'react-responsive'
 import { useEventListener, useToggle } from 'usehooks-ts'
 import cn from 'classnames'
 
-import { Portal } from '@components/Portal.tsx'
-import { IconXMark } from '@ui/icons/IconXMark.tsx'
-import { IconThreeBars } from '@ui/icons/IconThreeBars.tsx'
-import { KeyboardCode } from '@shared/@types/KeyboardCode.ts'
-import type { ClassNameProps } from '@shared/@types/ClassNameProps.ts'
+import { Portal } from '@components/Portal'
+import { IconXMark } from '@ui/icons/IconXMark'
+import { IconThreeBars } from '@ui/icons/IconThreeBars'
+import { KeyboardCode } from '@enums/KeyboardCode'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './HamburgerMenu.module.scss'
 
 export function HamburgerMenu({

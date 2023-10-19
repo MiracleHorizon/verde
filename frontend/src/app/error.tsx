@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation'
 
-import { Route } from '@shared/@types/Route'
+import { Route } from '@enums/Route'
 
 export default function ErrorPage() {
   redirect(Route.HOME)

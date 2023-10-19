@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import { ProductCategory } from '@shared/@types/ProductCategory.ts'
-import { IconChevronRight } from '@ui/icons/IconChevronRight.tsx'
-import { getCategoryRoute } from '@helpers/getCategoryRoute.ts'
+import { IconChevronRight } from '@ui/icons/IconChevronRight'
+import { getCategoryRoute } from '@helpers/getCategoryRoute'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 import styles from './ButtonLoadMore.module.scss'
 
 export function ButtonLoadMore({ id }: Pick<ProductCategory, 'id'>) {

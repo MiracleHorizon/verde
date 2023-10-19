@@ -1,10 +1,10 @@
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
-import { BrowserStorageProvider } from '@utils/BrowserStorageProvider.ts'
-import { USER_CART_KEY } from '@shared/const/browserStorages.ts'
-import type { UserCart } from '@shared/@types/UserCart.ts'
-import type { State, Store } from './types.ts'
+import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
+import { USER_CART_KEY } from '@constants/browserStorages'
+import type { UserCart } from '@interfaces/UserCart'
+import type { State, Store } from './types'
 
 const initialState: State<number> = {
   cartId: null,

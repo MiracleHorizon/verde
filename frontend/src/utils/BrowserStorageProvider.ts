@@ -1,4 +1,4 @@
-import { isObject } from '@helpers/isObject.ts'
+import { isObject } from '@helpers/isObject'
 
 interface StorageItem {
   key: string

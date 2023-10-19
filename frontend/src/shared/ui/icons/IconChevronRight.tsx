@@ -1,4 +1,4 @@
-import type { ClassNameProps } from '@shared/@types/ClassNameProps.ts'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
 
 export function IconChevronRight(props: ClassNameProps) {
   return (

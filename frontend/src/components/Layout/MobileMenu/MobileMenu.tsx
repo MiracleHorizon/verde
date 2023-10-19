@@ -1,5 +1,5 @@
 import { MobileMenuItem } from './MobileMenuItem'
-import { Route } from '@shared/@types/Route.ts'
+import { Route } from '@enums/Route'
 import homeSvg from '@public/home.svg'
 import listSvg from '@public/list.svg'
 import cartSvg from '@public/cart.svg'

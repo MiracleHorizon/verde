@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 
-import { ClientSide } from '@components/ClientSide.tsx'
-import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@shared/const/seo.ts'
+import { ClientSide } from '@components/ClientSide'
+import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@constants/seo'
 import { inter } from '@styles/fonts'
 import './globals.scss'
 

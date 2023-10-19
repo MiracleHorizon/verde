@@ -1,5 +1,5 @@
 import { ProductCard } from '@components/ProductCard'
-import type { Product } from '@shared/@types/Product.ts'
+import type { Product } from '@interfaces/Product'
 import styles from './CategorySectionContent.module.scss'
 
 export function CategorySectionContent({ products }: Props) {

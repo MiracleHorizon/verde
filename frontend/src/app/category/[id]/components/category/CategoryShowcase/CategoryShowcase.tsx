@@ -1,5 +1,5 @@
 import { SubcategorySection } from './SubcategorySection'
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 import styles from './CategoryShowcase.module.scss'
 
 export function CategoryShowcase({

@@ -1,4 +1,4 @@
-import type { Product } from '@shared/@types/Product.ts'
+import type { Product } from './Product'
 
 export interface CartProduct extends Product {
   count: number

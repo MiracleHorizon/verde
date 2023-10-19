@@ -62,6 +62,15 @@
       "@shared/*": [
         "./src/shared/*"
       ],
+      "@interfaces/*": [
+        "./src/shared/interfaces/*"
+      ],
+      "@enums/*": [
+        "./src/shared/enums/*"
+      ],
+      "@constants/*": [
+        "./src/shared/constants/*"
+      ],
       "@ui/*": [
         "./src/shared/ui/*"
       ],

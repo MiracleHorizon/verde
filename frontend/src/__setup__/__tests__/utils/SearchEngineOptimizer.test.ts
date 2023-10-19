@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals'
 
-import { SearchEngineOptimizer } from '@utils/SearchEngineOptimizer.ts'
-import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@shared/const/seo.ts'
+import { SearchEngineOptimizer } from '@utils/SearchEngineOptimizer'
+import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@constants/seo'
 
 describe('SearchEngineOptimizer.ts', () => {
   it('should return generated basic metadata for SEO ', () => {

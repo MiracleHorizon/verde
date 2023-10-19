@@ -5,10 +5,10 @@ import { useIsClient } from 'usehooks-ts'
 
 import { useCartStore } from '@stores/cart'
 import { useUserStore } from '@stores/user'
-import { BrowserStorageProvider } from '@utils/BrowserStorageProvider.ts'
-import { USER_CART_KEY, USER_KEY } from '@shared/const/browserStorages.ts'
-import type { User } from '@shared/@types/User.ts'
-import type { UserCart } from '@shared/@types/UserCart.ts'
+import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
+import { USER_CART_KEY, USER_KEY } from '@constants/browserStorages'
+import type { User } from '@interfaces/User'
+import type { UserCart } from '@interfaces/UserCart'
 
 export function useInitUser() {
   const isClient = useIsClient()

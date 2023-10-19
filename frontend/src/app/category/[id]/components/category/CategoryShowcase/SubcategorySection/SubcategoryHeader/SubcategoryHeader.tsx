@@ -3,8 +3,8 @@
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 
-import { getSubcategoryRoute } from '@helpers/getSubcategoryRoute.ts'
-import type { ProductSubcategory } from '@shared/@types/ProductSubcategory.ts'
+import { getSubcategoryRoute } from '@helpers/getSubcategoryRoute'
+import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
 import styles from './SubcategoryHeader.module.scss'
 
 export function SubcategoryHeader({

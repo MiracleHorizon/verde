@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals'
 
-import { getSubcategoryRoute } from '@helpers/getSubcategoryRoute.ts'
-import { Route } from '@shared/@types/Route.ts'
+import { getSubcategoryRoute } from '@helpers/getSubcategoryRoute'
+import { Route } from '@enums/Route'
 
 describe('getCategoryRoute.ts', () => {
   it('should return the generated link to the category with the passed id', () => {

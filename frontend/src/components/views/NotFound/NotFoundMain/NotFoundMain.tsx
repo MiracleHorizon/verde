@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import cn from 'classnames'
 
-import { Route } from '@shared/@types/Route.ts'
+import { Route } from '@enums/Route'
 import { roboto } from '@styles/fonts.ts'
 import styles from './NotFoundMain.module.scss'
 

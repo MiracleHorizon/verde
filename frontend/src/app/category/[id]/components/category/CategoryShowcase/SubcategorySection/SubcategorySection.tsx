@@ -1,6 +1,6 @@
 import { ProductsGrid } from '@components/ProductsGrid'
 import { SubcategoryHeader } from './SubcategoryHeader'
-import type { ProductSubcategory } from '@shared/@types/ProductSubcategory.ts'
+import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
 import styles from './SubcategorySection.module.scss'
 
 export function SubcategorySection({

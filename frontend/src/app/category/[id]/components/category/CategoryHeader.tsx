@@ -1,7 +1,7 @@
 import { Header } from '@app/category/[id]/components/Header'
-import { Route } from '@shared/@types/Route.ts'
+import { Route } from '@enums/Route'
 import type { BreadcrumbItem } from '@ui/Breadcrumb'
-import type { ProductCategory } from '@shared/@types/ProductCategory.ts'
+import type { ProductCategory } from '@interfaces/ProductCategory'
 
 const breadcrumbItems: BreadcrumbItem[] = [
   { title: 'Главная', href: Route.HOME },

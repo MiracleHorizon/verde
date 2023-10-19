@@ -1,5 +1,5 @@
 import { NavigationItem } from './NavigationItem'
-import type { NavigationCategory } from '@shared/@types/NavigationCategory.ts'
+import type { NavigationCategory } from '@interfaces/NavigationCategory'
 import styles from './Navigation.module.scss'
 
 const categories: NavigationCategory[] = [

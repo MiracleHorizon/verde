@@ -6,8 +6,8 @@ import Link from 'next/link'
 import cn from 'classnames'
 
 import { CategoryImage } from '@components/CategoryImage'
-import { getCategoryRoute } from '@helpers/getCategoryRoute.ts'
-import type { NavigationCategory } from '@shared/@types/NavigationCategory.ts'
+import { getCategoryRoute } from '@helpers/getCategoryRoute'
+import type { NavigationCategory } from '@interfaces/NavigationCategory'
 import styles from './NavigationItem.module.scss'
 
 function NavigationItem({ id, title, imagePath }: NavigationCategory) {

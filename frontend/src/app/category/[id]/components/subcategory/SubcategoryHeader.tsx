@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
 
 import { Header } from '@app/category/[id]/components/Header'
-import { Route } from '@shared/@types/Route.ts'
+import { Route } from '@enums/Route'
 import type { BreadcrumbItem } from '@ui/Breadcrumb'
-import type { ProductSubcategory } from '@shared/@types/ProductSubcategory.ts'
+import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
 
 export function SubcategoryHeader({
   title,
