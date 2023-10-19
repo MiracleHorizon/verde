@@ -5,8 +5,4 @@ export interface Props extends Product, ClassNameProps {
   variant?: ProductCardVariant
 }
 
-/* eslint no-unused-vars: 0 */
-export enum ProductCardVariant {
-  DEFAULT = 'default',
-  SMALL = 'small'
-}
+export type ProductCardVariant = 'default' | 'small'

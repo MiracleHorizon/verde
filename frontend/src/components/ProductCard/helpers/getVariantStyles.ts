@@ -6,12 +6,28 @@ export function getVariantStyles(
   styles: Record<string, string>,
   variant?: ProductCardVariant
 ): string {
+  let propertyDefault = 'default'
+  let propertySmall = 'small'
+
+  for (const styleName in styles) {
+    const isPropertyDefault = styleName.toLocaleLowerCase().includes('default')
+    const isPropertySmall = styleName.toLocaleLowerCase().includes('small')
+
+    if (isPropertyDefault && styleName !== propertyDefault) {
+      propertyDefault = styleName
+    }
+
+    if (isPropertySmall && styleName !== propertySmall) {
+      propertySmall = styleName
+    }
+  }
+
   if (!variant) {
-    return styles.default
+    return styles[propertyDefault]
   }
 
   return cn({
-    [styles.default]: variant === ProductCardVariant.DEFAULT,
-    [styles.small]: variant === ProductCardVariant.SMALL
+    [styles[propertyDefault]]: variant === 'default',
+    [styles[propertySmall]]: variant === 'small'
   })
 }
