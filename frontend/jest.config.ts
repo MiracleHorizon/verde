@@ -19,8 +19,10 @@ const jestConfig: Config = {
   moduleNameMapper: {
     '^__setup__(.*)$': '<rootDir>/src/__setup__$1',
     '^@utils(.*)$': '<rootDir>/src/utils$1',
-    '^@shared(.*)$': '<rootDir>/src/shared$1',
-    '^@helpers(.*)$': '<rootDir>/src/shared/helpers$1'
+    '^@helpers(.*)$': '<rootDir>/src/shared/helpers$1',
+    '^@constants(.*)$': '<rootDir>/src/shared/constants$1',
+    '^@interfaces(.*)$': '<rootDir>/src/shared/interfaces$1',
+    '^@enums(.*)$': '<rootDir>/src/shared/enums$1'
   },
   moduleFileExtensions: ['js', 'ts']
 }
