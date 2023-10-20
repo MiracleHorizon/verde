@@ -49,6 +49,9 @@ export function useSignin() {
         user.cartId = createdUserCart.id
       }
 
+      localStorageProvider.set(USER_KEY, user)
+      localStorageProvider.set(USER_CART_KEY, userCart)
+
       signin(user)
       initializeUserCart(userCart)
 
