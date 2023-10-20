@@ -1,0 +1,53 @@
+@use 'sass:color';
+@import '@styles/mixins';
+
+$bg-primary: #fbe000;
+$bg-secondary: #eee;
+
+@mixin background($bg-color) {
+  transition: background 50ms ease-in-out;
+  background: $bg-color;
+
+  &:hover {
+    background: color.adjust($bg-color, $lightness: -2.5%);
+  }
+
+  &:active {
+    background: color.adjust($bg-color, $lightness: -1%);
+  }
+}
+
+.root {
+  @include flex-center;
+
+  height: 48px;
+  border-radius: 16px;
+}
+
+.withoutLeadIcon {
+  padding: 0 16px;
+}
+
+.withLeadIcon {
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 17px;
+}
+
+.titleWithLeadIcon {
+  margin-left: 4px;
+}
+
+.primary {
+  @include background($bg-primary);
+}
+
+.secondary {
+  @include background($bg-secondary);
+}
+
+.disabled {
+  @include disabled(60%);
+}
