@@ -1,0 +1,34 @@
+@import '@styles/mixins';
+
+.root {
+  width: 100%;
+  margin-bottom: 28px;
+
+  @media screen and (max-width: $mobile-lg) {
+    margin-bottom: 22px;
+  }
+
+  @media screen and (max-width: $mobile-md) {
+    margin-bottom: 18px;
+  }
+}
+
+.title {
+  @include truncate;
+
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: $mobile-md) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: $mobile-sm) {
+    font-size: 23px;
+  }
+}

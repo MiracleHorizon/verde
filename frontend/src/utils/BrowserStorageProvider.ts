@@ -45,6 +45,10 @@ export class BrowserStorageProvider {
     this.storage.removeItem(key)
   }
 
+  public removeMultiply(keys: string[]): void {
+    keys.forEach(key => this.remove(key))
+  }
+
   public clear(): void {
     this.storage.clear()
   }

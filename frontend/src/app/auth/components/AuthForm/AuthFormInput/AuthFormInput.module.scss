@@ -1,0 +1,74 @@
+@import '@styles/mixins';
+
+$input-h: 48px;
+$input-h-sm: 44px;
+
+@mixin status-border($color, $secondary-color: $color) {
+  border: 1.5px solid $color;
+
+  &:focus {
+    border: 1.5px solid $secondary-color;
+  }
+}
+
+.root {
+  @include flex-start;
+
+  width: 100%;
+  flex-direction: column;
+
+  &:not(&:first-of-type) {
+    margin-top: 8px;
+  }
+}
+
+.field {
+  width: 100%;
+  height: $input-h;
+  min-height: $input-h;
+  margin-bottom: 6px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 17px;
+  transition: border-color 50ms ease-in;
+
+  &::placeholder {
+    font-size: 16px;
+
+    @media screen and (max-width: $tablet-sm) {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: $mobile-md) {
+    height: $input-h-sm;
+    min-height: $input-h-sm;
+  }
+}
+
+.defaultStatus {
+  @include status-border($gray-700, rgba(0 0 0 / 30%));
+}
+
+.errorStatus {
+  @include status-border($red-primary);
+}
+
+.error {
+  @include vertical-line-clamp(2);
+
+  width: 100%;
+  height: calc(100% - $input-h);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $red-primary;
+  font-size: 12px;
+}
+
+.errorIcon {
+  @include size(1.5em);
+
+  margin-right: 6px;
+  stroke: $red-primary;
+}

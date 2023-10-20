@@ -1,0 +1,1 @@
+export { AuthFormInput } from './AuthFormInput'
