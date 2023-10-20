@@ -1,0 +1,1 @@
+export { signupInputs } from './inputs'
