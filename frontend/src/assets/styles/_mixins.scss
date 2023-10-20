@@ -1,5 +1,13 @@
 @import 'variables';
 
+/* Global */
+@mixin disabled($opacity: 40%) {
+  pointer-events: none;
+  user-select: none;
+  opacity: $opacity;
+}
+
+// Sizes
 @mixin size($size) {
   width: $size;
   height: $size;
@@ -10,6 +18,12 @@
   height: 100%;
 }
 
+@mixin size-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+// Flex
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -22,6 +36,7 @@
   justify-content: flex-start;
 }
 
+// Position
 @mixin top-left-fixed($z-index) {
   position: fixed;
   top: 0;
@@ -29,14 +44,14 @@
   z-index: $z-index;
 }
 
-// Components
+/* Components */
 @mixin divider-x($bg-color) {
   width: 100%;
   height: $divider-x-h;
   background: $bg-color;
 }
 
-// Media
+/* Media */
 @mixin media-hidden-max($breakpoint) {
   @media screen and (max-width: $breakpoint) {
     display: none;
@@ -49,7 +64,7 @@
   }
 }
 
-// Typography
+/* Typography */
 @mixin truncate {
   text-overflow: ellipsis;
   white-space: nowrap;

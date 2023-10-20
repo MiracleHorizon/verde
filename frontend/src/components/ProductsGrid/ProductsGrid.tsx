@@ -6,7 +6,12 @@ export function ProductsGrid({ products }: Props) {
   return (
     <div className={styles.root}>
       {products.map(product => (
-        <ProductCard key={product.id} className={styles.card} {...product} />
+        <ProductCard
+          key={product.id}
+          variant='default'
+          className={styles.card}
+          {...product}
+        />
       ))}
     </div>
   )

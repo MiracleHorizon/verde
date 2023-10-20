@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
-import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@constants/seo'
+import { writePageTitle } from '@helpers/writePageTitle'
+import { APP_DESCRIPTION, APP_KEYWORDS } from '@constants/seo'
 import type { SeoPayload } from '@interfaces/SeoPayload'
 
 type BasicMetadata = Pick<Metadata, 'title' | 'keywords' | 'description'>
@@ -31,7 +32,7 @@ export class SearchEngineOptimizer {
   }
 
   private writeTitle(): string {
-    return `${this.title} | ${APP_TITLE}`
+    return writePageTitle(this.title)
   }
 
   private writeDescription(): string {

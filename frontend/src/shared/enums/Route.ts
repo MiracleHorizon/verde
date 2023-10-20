@@ -4,5 +4,6 @@ export enum Route {
   CART = '/cart',
   ORDERS = '/orders',
   CATEGORY = '/category',
-  SIGNIN = '/auth/signin'
+  SIGNIN = '/auth/signin',
+  SIGNUP = '/auth/signup'
 }
