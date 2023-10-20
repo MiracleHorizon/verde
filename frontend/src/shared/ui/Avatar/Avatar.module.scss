@@ -1,0 +1,17 @@
+@import '@styles/mixins';
+
+.root {
+  @include size($avatar-size);
+
+  position: relative;
+  border-radius: 50%;
+  background: $gray-600;
+}
+
+.withAction {
+  cursor: pointer;
+}
+
+.image {
+  padding: 6px;
+}
