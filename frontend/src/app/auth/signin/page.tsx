@@ -1,12 +1,12 @@
-import Link from 'next/link'
+import type { Metadata } from 'next'
 
-import { Route } from '@enums/Route'
+import { SigninForm } from './SigninForm'
+import { writePageTitle } from '@helpers/writePageTitle'
+
+export const metadata: Metadata = {
+  title: writePageTitle('Вход')
+}
 
 export default function SigninPage() {
-  return (
-    <div>
-      <h1>Signin</h1>
-      <Link href={Route.HOME}>Home</Link>
-    </div>
-  )
+  return <SigninForm />
 }

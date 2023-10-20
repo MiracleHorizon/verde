@@ -26,6 +26,10 @@ export function AuthForm<T extends FieldValues>({
     reValidateMode: 'onChange'
   })
 
+  if (inputs.length === 0) {
+    return null
+  }
+
   return (
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
       {inputs.map(({ fieldName, registerOptions, ...inputAttributes }) => (
