@@ -9,14 +9,16 @@ import {
 
 import { Button } from '@ui/Button'
 import { AuthFormInput } from './AuthFormInput'
+import { getSubmitErrorDisplayMessage } from './getSubmitErrorDisplayMessage'
 import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
 import styles from './AuthForm.module.scss'
 
-export function AuthForm<T extends FieldValues>({
+export function AuthForm<T extends FieldValues, Err extends Error>({
   inputs,
   defaultValues,
-  onSubmit
-}: Props<T>) {
+  onSubmit,
+  submitError
+}: Props<T, Err>) {
   const {
     handleSubmit,
     formState: { errors },
@@ -25,6 +27,8 @@ export function AuthForm<T extends FieldValues>({
     defaultValues,
     reValidateMode: 'onChange'
   })
+
+  const submitErrorMessage = getSubmitErrorDisplayMessage(submitError)
 
   if (inputs.length === 0) {
     return null
@@ -40,6 +44,9 @@ export function AuthForm<T extends FieldValues>({
           {...inputAttributes}
         />
       ))}
+      {submitErrorMessage && (
+        <span className={styles.submitError}>{submitErrorMessage}</span>
+      )}
       <Button
         type='submit'
         variant='primary'
@@ -51,8 +58,9 @@ export function AuthForm<T extends FieldValues>({
 }
 
 /* eslint no-unused-vars: 0 */
-interface Props<T extends FieldValues> {
+interface Props<T extends FieldValues, Err extends Error> {
   inputs: ReactHookFormInput<T>[]
   defaultValues: DefaultValues<T>
   onSubmit: (payload: T) => void
+  submitError: Err | null
 }

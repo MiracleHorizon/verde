@@ -22,7 +22,7 @@ export function useInitUser() {
     const localStorageProvider = new BrowserStorageProvider(localStorage)
     const user = localStorageProvider.get<User>(USER_KEY)
 
-    if (!user) return
+    if (!user || !user._isSessionActive) return
 
     let userCart = localStorageProvider.get<UserCart>(USER_CART_KEY)
     if (!userCart || user.cartId !== userCart.id) {

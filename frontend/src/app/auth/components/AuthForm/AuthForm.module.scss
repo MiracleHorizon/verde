@@ -24,3 +24,10 @@
     }
   }
 }
+
+.submitError {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: $red-primary;
+}

@@ -1,4 +1,8 @@
-import { emailRegex, passwordLengthValidation } from '@app/auth/validation'
+import {
+  emailRegex,
+  MAX_PASSWORD_LENGTH,
+  MIN_PASSWORD_LENGTH
+} from '@app/auth/validation'
 import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
 import type { SigninPayload } from '../interfaces'
 
@@ -24,7 +28,8 @@ export const signinInputs: ReactHookFormInput<SigninPayload>[] = [
     type: 'password',
     placeholder: 'Введите пароль',
     registerOptions: {
-      ...passwordLengthValidation,
+      minLength: MIN_PASSWORD_LENGTH,
+      maxLength: MAX_PASSWORD_LENGTH,
       required: {
         value: true,
         message: 'Пожалуйста, введите свой пароль.'

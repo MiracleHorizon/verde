@@ -13,7 +13,6 @@ export function AuthFormInput<T extends string>({
   ...inputAttributes
 }: Props<T>) {
   const id = useId()
-  const isError = Boolean(error)
 
   return (
     <label htmlFor={id} className={styles.root}>
@@ -21,12 +20,14 @@ export function AuthFormInput<T extends string>({
         id={id}
         className={cn(
           styles.field,
-          isError ? styles.errorStatus : styles.defaultStatus
+          error && error.message !== ''
+            ? styles.errorStatus
+            : styles.defaultStatus
         )}
         {...register}
         {...inputAttributes}
       />
-      {error && (
+      {error && error.message !== '' && (
         <span className={styles.error} title={error.message}>
           <IconExclamationTriangle className={styles.errorIcon} />
           {error.message}

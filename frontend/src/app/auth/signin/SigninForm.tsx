@@ -1,6 +1,7 @@
 'use client'
 
 import { AuthForm } from '../components'
+import { useSignin } from './hooks'
 import { signinInputs } from './data'
 import type { SigninPayload } from './interfaces'
 
@@ -10,15 +11,14 @@ const defaultValues: SigninPayload = {
 }
 
 export function SigninForm() {
-  function handleSignin(payload: SigninPayload) {
-    console.log('signin', payload)
-  }
+  const { handleSignin, error } = useSignin()
 
   return (
     <AuthForm
       inputs={signinInputs}
       defaultValues={defaultValues}
       onSubmit={handleSignin}
+      submitError={error}
     />
   )
 }
