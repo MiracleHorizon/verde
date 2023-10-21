@@ -1,0 +1,31 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  border-radius: 16px;
+  background: transparent;
+  transition: background 50ms ease-in-out;
+
+  &:not(&:last-of-type) {
+    margin-bottom: 14px;
+  }
+
+  &:hover {
+    background: $gray-400;
+  }
+
+  &:active {
+    background: $gray-600;
+  }
+}
+
+.title {
+  width: 100%;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 24px;
+}
