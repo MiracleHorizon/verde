@@ -23,8 +23,40 @@ export const metadata: Metadata = {
     description: APP_DESCRIPTION,
     type: 'website'
   },
+  manifest: '/manifest.json',
   icons: {
-    icon: '/favicon.ico'
+    icon: '/favicon.ico',
+    other: [
+      {
+        rel: 'icon',
+        sizes: '16x16',
+        type: 'image/png',
+        url: '/favicon-16x16.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '32x32',
+        type: 'image/png',
+        url: '/favicon-32x32.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '512x512',
+        type: 'image/png',
+        url: '/android-chrome-512x512.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '192x192',
+        type: 'image/png',
+        url: '/android-chrome-192x192.png'
+      },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        url: '/apple-touch-icon.png'
+      }
+    ]
   }
 }
 
