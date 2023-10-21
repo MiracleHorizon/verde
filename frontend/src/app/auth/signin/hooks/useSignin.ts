@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 import { useUserStore } from '@stores/user'
 import { useCartStore } from '@stores/cart'
@@ -21,6 +21,17 @@ export function useSignin() {
   const initializeUserCart = useCartStore(state => state.initialize)
 
   const router = useRouter()
+  const searchParams = useSearchParams()
+
+  const navigateToFromPage = useCallback(() => {
+    const routeFrom = searchParams.get('from')
+
+    if (routeFrom === null) {
+      return router.replace(Route.HOME)
+    }
+
+    router.replace(routeFrom)
+  }, [router, searchParams])
 
   const handleSignin = useCallback(
     ({ email, password }: SigninPayload) => {
@@ -55,9 +66,9 @@ export function useSignin() {
       signin(user)
       initializeUserCart(userCart)
 
-      router.replace(Route.HOME)
+      navigateToFromPage()
     },
-    [initializeUserCart, signin, router]
+    [initializeUserCart, signin, navigateToFromPage]
   )
 
   return { handleSignin, error }
