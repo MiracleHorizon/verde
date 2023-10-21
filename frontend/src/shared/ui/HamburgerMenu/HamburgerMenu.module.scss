@@ -2,7 +2,7 @@
 @import '@styles/mixins';
 
 .root {
-  @include size(44px);
+  @include square(44px);
 
   border-radius: 16px;
 }

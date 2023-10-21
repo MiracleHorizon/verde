@@ -17,13 +17,13 @@ $logo-mock-size-sm: 44px;
 }
 
 .mock {
-  @include size(55px);
+  @include square(55px);
 
   border-radius: 50%;
   background: $gray-700;
 
   @media screen and (max-width: $tablet) {
-    @include size($logo-mock-size-sm);
+    @include square($logo-mock-size-sm);
   }
 }
 

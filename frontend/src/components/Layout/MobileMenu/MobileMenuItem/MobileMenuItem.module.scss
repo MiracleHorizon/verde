@@ -26,13 +26,13 @@
 }
 
 .imageContainer {
-  @include size(34px);
+  @include square(34px);
 
   position: relative;
   display: block;
   margin-bottom: 2px;
 
   @media screen and (max-width: $mobile-lg) {
-    @include size(30px);
+    @include square(30px);
   }
 }

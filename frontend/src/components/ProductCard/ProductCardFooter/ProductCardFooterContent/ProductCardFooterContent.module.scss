@@ -20,11 +20,11 @@
 }
 
 .iconDefault {
-  @include size(28px);
+  @include square(28px);
 }
 
 .iconSmall {
-  @include size(24px);
+  @include square(24px);
 }
 
 .counterChanger {

@@ -67,7 +67,7 @@ $input-h-sm: 44px;
 }
 
 .errorIcon {
-  @include size(1.5em);
+  @include square(1.5em);
 
   margin-right: 6px;
   stroke: $red-primary;

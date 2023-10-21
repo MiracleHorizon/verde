@@ -28,7 +28,7 @@ $border-radius: $counter-changer-border-radius - 2px;
 }
 
 .rootSeparated {
-  @include size($size);
+  @include square($size);
 
   border-radius: $border-radius;
 

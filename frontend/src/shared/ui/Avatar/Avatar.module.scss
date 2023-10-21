@@ -1,7 +1,7 @@
 @import '@styles/mixins';
 
 .root {
-  @include size($avatar-size);
+  @include square($avatar-size);
 
   position: relative;
   border-radius: 50%;

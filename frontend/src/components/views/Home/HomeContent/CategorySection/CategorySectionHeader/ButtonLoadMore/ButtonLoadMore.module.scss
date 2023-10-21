@@ -25,7 +25,7 @@
 }
 
 .icon {
-  @include size(22px);
+  @include square(22px);
 
   margin-left: 4px;
 }

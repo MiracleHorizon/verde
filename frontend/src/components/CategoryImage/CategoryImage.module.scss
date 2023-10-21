@@ -2,7 +2,7 @@
 @import '@styles/mixins';
 
 .image {
-  @include size($category-image-size);
+  @include square($category-image-size);
 
   min-width: $category-image-size;
   background-size: $category-image-size $category-image-size;
@@ -10,7 +10,7 @@
   background-position: center;
 
   @media screen and (max-width: $mobile-lg) {
-    @include size($category-image-size);
+    @include square($category-image-size);
 
     min-width: $category-image-size;
     background-size: $category-image-size-sm $category-image-size-sm;
@@ -18,14 +18,14 @@
 }
 
 .imageFallback {
-  @include size($category-image-size);
+  @include square($category-image-size);
 
   min-width: $category-image-size;
   border-radius: 12px;
   background: $gray-500;
 
   @media screen and (max-width: $mobile-lg) {
-    @include size($category-image-size-sm);
+    @include square($category-image-size-sm);
 
     min-width: $category-image-size-sm;
   }
