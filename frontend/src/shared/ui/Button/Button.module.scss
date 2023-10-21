@@ -2,7 +2,7 @@
 @import '@styles/mixins';
 
 $bg-primary: #fbe000;
-$bg-secondary: #eee;
+$bg-secondary: $gray-500;
 
 @mixin background($bg-color) {
   transition: background 50ms ease-in-out;
@@ -33,11 +33,11 @@ $bg-secondary: #eee;
 }
 
 .title {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .titleWithLeadIcon {
-  margin-left: 4px;
+  margin-left: 6px;
 }
 
 .primary {

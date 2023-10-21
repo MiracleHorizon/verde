@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'animations';
 
 /* Global */
 @mixin disabled($opacity: 40%) {
@@ -48,6 +49,12 @@
 @mixin divider-x($bg-color) {
   width: 100%;
   height: $divider-x-h;
+  background: $bg-color;
+}
+
+@mixin skeleton($bg-color: $gray-400) {
+  @include pulse;
+
   background: $bg-color;
 }
 
