@@ -14,6 +14,7 @@
     "server:start": "node --watch json-server/server.js"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "classnames": "^2.3.2",
     "next": "13.5.4",
     "react": "^18.2.0",

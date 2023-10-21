@@ -1,0 +1,20 @@
+@import '@styles/mixins';
+
+.root {
+  position: relative;
+  z-index: 100;
+}
+
+.container {
+  @include flex-center;
+
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0 0 0 / 20%);
+}

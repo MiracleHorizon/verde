@@ -2,9 +2,14 @@
 
 import dynamic from 'next/dynamic'
 
+import { UserDashboardSkeleton } from '@components/user/UserDashboardSkeleton'
+import { breakpoints } from '@styles/breakpoints'
 import styles from './LayoutHeaderRight.module.scss'
-import { breakpoints } from '@styles/breakpoints.ts'
 
+const UserDashboard = dynamic(
+  () => import('@components/user/UserDashboard').then(mod => mod.UserDashboard),
+  { ssr: false, loading: UserDashboardSkeleton }
+)
 const HamburgerMenu = dynamic(
   () => import('@ui/HamburgerMenu').then(mod => mod.HamburgerMenu),
   { ssr: false }
@@ -24,6 +29,9 @@ const hamburgerMenuProps = {
 export function LayoutHeaderRight() {
   return (
     <div className={styles.root}>
+      <div className={styles.content}>
+        <UserDashboard />
+      </div>
       <HamburgerMenu {...hamburgerMenuProps}>
         <Drawer />
       </HamburgerMenu>

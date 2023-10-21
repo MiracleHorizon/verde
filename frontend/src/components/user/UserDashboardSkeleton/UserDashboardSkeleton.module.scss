@@ -1,0 +1,9 @@
+@import '@styles/mixins';
+
+.root {
+  @include skeleton($gray-600);
+
+  width: 100px;
+  height: 48px;
+  border-radius: 10px;
+}

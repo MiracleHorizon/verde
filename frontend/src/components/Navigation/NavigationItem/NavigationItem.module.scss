@@ -5,15 +5,15 @@ $title-ml: 12px;
 
 .root {
   cursor: pointer;
-  height: 50px;
+  height: $nav-item-h;
   margin: 1px 0;
   padding-left: 4px;
   padding-right: 8px;
-  border-radius: 12px;
+  border-radius: $nav-item-border-radius;
   transition: background 50ms ease-in-out;
 
   &:hover {
-    background: $gray-500;
+    background: $nav-item-hover-bg-color;
   }
 
   @media screen and (max-width: $laptop) and (min-width: $tablet + 1px) {
@@ -21,7 +21,7 @@ $title-ml: 12px;
   }
 
   @media screen and (max-width: $mobile-lg) {
-    height: 46px;
+    height: $nav-item-h-mobile-lg;
   }
 }
 

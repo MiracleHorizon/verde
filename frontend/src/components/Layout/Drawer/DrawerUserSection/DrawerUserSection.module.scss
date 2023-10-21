@@ -1,0 +1,39 @@
+@import '@styles/mixins';
+
+.root {
+  width: 100%;
+}
+
+.userMenu {
+  li {
+    height: $nav-item-h;
+    border-radius: $nav-item-border-radius;
+
+    &:not(&:last-of-type) {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background: $nav-item-hover-bg-color;
+    }
+
+    @media screen and (max-width: $mobile-lg) {
+      height: $nav-item-h-mobile-lg;
+    }
+
+    span,
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+.buttonSignin {
+  width: 100%;
+}
+
+.divider {
+  @include divider-x($gray-700);
+
+  margin: 16px 0;
+}

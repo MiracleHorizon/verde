@@ -1,4 +1,3 @@
-@import '@styles/variables';
 @import '@styles/mixins';
 
 .root {
@@ -24,5 +23,5 @@
   @include flex-start;
 
   flex-direction: column;
-  padding: 8px 12px;
+  padding: 16px 12px;
 }
