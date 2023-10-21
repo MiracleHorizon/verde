@@ -15,5 +15,5 @@ export const useUserStore = create<Store>((set, get) => ({
 
   /* Actions */
   signin: user => set({ user }),
-  signout: () => ({ user: null })
+  signout: () => set({ user: null })
 }))
