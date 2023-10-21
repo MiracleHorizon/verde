@@ -20,8 +20,13 @@ export function ConfirmModal({
   const contentRef = useRef<HTMLElement | null>(null)
 
   return (
-    <Modal initialFocus={contentRef} open={open} onClose={onReject}>
-      <Dialog.Panel as='div' className={styles.root}>
+    <Modal
+      initialFocus={contentRef}
+      open={open}
+      onClose={onReject}
+      withBackdrop
+    >
+      <Dialog.Panel className={styles.root}>
         {titleRoot && (
           <header className={cn(styles.header, roboto.className)}>
             <article className={styles.titleArticle}>

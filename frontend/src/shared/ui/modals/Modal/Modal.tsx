@@ -6,11 +6,12 @@ import styles from './Modal.module.scss'
 
 export function Modal<TagType extends ElementType>({
   children,
+  withBackdrop,
   ...dialogProps
 }: ModalProps<TagType>) {
   return (
     <Dialog {...dialogProps} className={styles.root}>
-      <div className={styles.backdrop} />
+      {withBackdrop && <div className={styles.backdrop} />}
       <div className={styles.container}>{children}</div>
     </Dialog>
   )
