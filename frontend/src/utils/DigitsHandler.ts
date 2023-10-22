@@ -42,4 +42,8 @@ export class DigitsHandler {
       .filter(value => Number.isInteger(+value))
       .map(digit => +digit)
   }
+
+  public static getDigitCount(num: number): number {
+    return this.getDigits(num).length
+  }
 }

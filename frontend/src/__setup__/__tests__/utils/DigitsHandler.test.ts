@@ -36,4 +36,14 @@ describe('DigitsHandler.ts', () => {
     expect(DigitsHandler.getDigits(19.3543)).toStrictEqual([1, 9, 3, 5, 4, 3])
     expect(DigitsHandler.getDigits(NaN)).toStrictEqual([])
   })
+
+  it('should return the count of digits in the number', () => {
+    expect(DigitsHandler.getDigitCount(0)).toBe(1)
+    expect(DigitsHandler.getDigitCount(9)).toBe(1)
+    expect(DigitsHandler.getDigitCount(-147)).toBe(3)
+    expect(DigitsHandler.getDigitCount(5691)).toBe(4)
+    expect(DigitsHandler.getDigitCount(98765)).toBe(5)
+    expect(DigitsHandler.getDigitCount(65.065967658)).toBe(11)
+    expect(DigitsHandler.getDigitCount(NaN)).toBe(0)
+  })
 })

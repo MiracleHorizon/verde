@@ -1,0 +1,32 @@
+@use 'sass:color';
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  cursor: pointer;
+  height: 100%;
+  padding: 4px 16px 4px 12px;
+  border-radius: 16px;
+  background: $green-primary;
+  transition: background 70ms ease-in;
+
+  &:hover {
+    background: color.adjust($green-primary, $lightness: -5%);
+  }
+
+  &:active {
+    background: color.adjust($green-primary, $lightness: -8%);
+  }
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 500;
+  color: $white-primary;
+}
+
+.icon {
+  margin-right: 4px;
+  fill: $white-primary;
+}

@@ -14,6 +14,7 @@ interface Computed<T> {
   isEmpty: () => boolean
   isProductInCart: (productId: T) => boolean
   productCount: (productId: T) => number
+  productsCost: () => number
 }
 
 interface Actions<T> {

@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import cn from 'classnames'
 
-import { DigitsHandler } from '@utils/DigitsHandler.ts'
+import { DigitsHandler } from '@utils/DigitsHandler'
 import { ruNumberFormatter } from '@utils/NumberFormatter'
 import { getVariantStyles, type Props } from '@components/ProductCard'
-import { calcTotalProductPrice } from '@helpers/calcTotalProductPrice.ts'
-import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign.ts'
+import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
+import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign'
 import styles from './ProductCardPrice.module.scss'
 
 export function ProductCardPrice({
@@ -13,28 +13,28 @@ export function ProductCardPrice({
   discount,
   variant
 }: Pick<Props, 'fullPrice' | 'discount' | 'variant'>) {
-  const { totalPrice, withDiscount } = useMemo(
-    () => calcTotalProductPrice(fullPrice, discount),
+  const { totalCost, withDiscount } = useMemo(
+    () => calcTotalProductCost(fullPrice, discount),
     [fullPrice, discount]
   )
 
   const priceClassName = getVariantStyles(styles, variant)
 
-  const formattedTotalPrice = setThinSpaceBeforeCurrencySign(
-    ruNumberFormatter.formatCurrency(totalPrice, {
-      maximumSignificantDigits: DigitsHandler.getDigits(totalPrice).length + 2
+  const formattedTotalCost = setThinSpaceBeforeCurrencySign(
+    ruNumberFormatter.formatCurrency(totalCost, {
+      maximumSignificantDigits: DigitsHandler.getDigitCount(totalCost) + 2
     })
   )
   const formattedFullPrice = setThinSpaceBeforeCurrencySign(
     ruNumberFormatter.formatCurrency(fullPrice, {
-      maximumSignificantDigits: DigitsHandler.getDigits(fullPrice).length + 2
+      maximumSignificantDigits: DigitsHandler.getDigitCount(fullPrice) + 2
     })
   )
 
   if (!withDiscount) {
     return (
       <span className={cn(styles.price, priceClassName)}>
-        {formattedTotalPrice}
+        {formattedTotalCost}
       </span>
     )
   }
@@ -42,7 +42,7 @@ export function ProductCardPrice({
   return (
     <div className={styles.discountContainer}>
       <span className={cn(styles.price, styles.discountPrice, priceClassName)}>
-        {formattedTotalPrice}
+        {formattedTotalCost}
       </span>
       <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
     </div>

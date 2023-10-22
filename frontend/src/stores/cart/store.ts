@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
+import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
 import { USER_CART_KEY } from '@constants/browserStorages'
 import type { UserCart } from '@interfaces/UserCart'
 import type { State, Store } from './types'
@@ -27,6 +28,16 @@ export const useCartStore = create(
       }
 
       return product.count
+    },
+    productsCost: () => {
+      if (get().isEmpty()) {
+        return 0
+      }
+
+      return get().products.reduce((acc, { fullPrice, discount, count }) => {
+        const { totalCost } = calcTotalProductCost(fullPrice, discount)
+        return acc + totalCost * count
+      }, 0)
     },
 
     /* Actions */
