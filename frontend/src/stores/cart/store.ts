@@ -6,13 +6,13 @@ import { USER_CART_KEY } from '@constants/browserStorages'
 import type { UserCart } from '@interfaces/UserCart'
 import type { State, Store } from './types'
 
-const initialState: State<number> = {
+const initialState: State<string> = {
   cartId: null,
   products: []
 }
 
 export const useCartStore = create(
-  devtools<Store<number>>((set, get) => ({
+  devtools<Store<string>>((set, get) => ({
     /* State */
     ...initialState,
 

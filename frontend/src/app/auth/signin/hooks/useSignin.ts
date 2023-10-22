@@ -52,7 +52,7 @@ export function useSignin() {
 
       if (!userCart) {
         const createdUserCart = {
-          id: Math.random() * 100,
+          id: crypto.randomUUID(),
           products: []
         }
 

@@ -39,7 +39,7 @@ function createUserCart(
   storageProvider: BrowserStorageProvider
 ): UserCart {
   const userCart: UserCart = {
-    id: Math.random() * 100,
+    id: crypto.randomUUID(),
     products: []
   }
   const updatedUser: User = {

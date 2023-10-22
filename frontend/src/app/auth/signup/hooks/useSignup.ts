@@ -27,11 +27,11 @@ export function useSignup() {
 
       // Creating a new user with an activated session.
       const userCart: UserCart = {
-        id: Math.random() * 100,
+        id: crypto.randomUUID(),
         products: []
       }
       const user: User = {
-        id: Math.random() * 100,
+        id: crypto.randomUUID(),
         cartId: userCart.id,
         name,
         email,
