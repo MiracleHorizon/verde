@@ -1,5 +1,5 @@
 export interface NavigationCategory {
-  id: number
+  id: string
   title: string
   imagePath: string | null
 }

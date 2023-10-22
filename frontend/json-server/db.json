@@ -1,124 +1,636 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "clo0h4c79000f08l9590rcprw",
       "title": "Овощи и зелень",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
+      "description": "Свежие овощи и зелень для здоровых блюд",
       "imagePath": "https://eda.yandex/images/3337779/d10c74a161cd75522451f98aed228103-200x200.png",
       "subcategories": [
         {
-          "id": 1,
+          "id": "clo0h1kvy000008l966931nfg",
+          "categoryId": "clo0h4c79000f08l9590rcprw",
+          "categoryTitle": "Овощи и зелень",
+          "title": "Помидоры",
+          "description": "Сладкие и сочные помидоры – натуральное сокровище сада. Наши помидоры выращиваются с любовью и заботой, чтобы обеспечить вам самые вкусные и свежие плоды. Узнайте больше о наших сортах и способах ухода за помидорами",
+          "products": []
+        },
+        {
+          "id": "clo0h2ptx000108l9cr1q862h",
+          "categoryId": "clo0h4c79000f08l9590rcprw",
+          "categoryTitle": "Овощи и зелень",
           "title": "Огурцы",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
-          "productCategoryId": 1,
+          "description": "Свежие огурцы – идеальное дополнение к вашему столу. Мы предлагаем разнообразные сорта огурцов, выращенных без использования вредных химических удобрений. Узнайте, какие сорта огурцов подходят для консервации или свежего употребления",
           "products": []
         },
         {
-          "id": 2,
+          "id": "clo0h2w9a000208l9es3s5q93",
+          "categoryId": "clo0h4c79000f08l9590rcprw",
+          "categoryTitle": "Овощи и зелень",
           "title": "Овощи",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
-          "productCategoryId": 1,
-          "products": []
-        },
-        {
-          "id": 3,
-          "title": "Зелень",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
-          "productCategoryId": 1,
+          "description": "Наш ассортимент овощей включает в себя морковь и картофель высшего качества. Узнайте, как использовать эти овощи в разнообразных рецептах. Мы предлагаем советы по хранению и уходу, чтобы гарантировать долгий срок годности и сохранение свежести",
           "products": [
             {
-              "productSubcategoryId": 3,
-              "id": 1,
-              "title": "Авокадо Хасс",
-              "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
-              "fullPrice": 210,
-              "discount": 0
-            },
-            {
-              "productSubcategoryId": 3,
-              "id": 2,
-              "title": "Виноград Кишмиш, без косточки",
-              "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
-              "fullPrice": 208,
-              "discount": 24
-            },
-            {
-              "productSubcategoryId": 3,
-              "id": 3,
+              "id": "clo15f0hi000008mggq1q5o0w",
+              "subcategoryId": "clo0h2w9a000208l9es3s5q93",
               "title": "Брокколи",
-              "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
               "fullPrice": 158,
-              "discount": 10
+              "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
+              "discount": 0
             }
           ]
+        },
+        {
+          "id": "clo0h303t000308l9coouagqz",
+          "categoryId": "clo0h4c79000f08l9590rcprw",
+          "categoryTitle": "Овощи и зелень",
+          "title": "Зелень",
+          "description": "Свежая зелень – незаменимый ингредиент в кулинарии. У нас вы найдете разнообразные виды зелени, включая базилик, петрушку, мяту и другие. Узнайте, как использовать зелень для приготовления вкусных блюд и как вырастить ее дома. Наши советы помогут вам сохранить аромат и свежесть зелени",
+          "products": []
         }
       ]
     },
     {
-      "id": 2,
-      "title": "Цветы",
-      "description": "",
-      "imagePath": null,
-      "subcategories": []
+      "id": "clo0hb77b000g08l9htdg9lt3",
+      "title": "Фрукты и ягоды",
+      "description": "Сладкие фрукты и сочные ягоды для утоления голода",
+      "imagePath": "https://eda.yandex/images/3547279/05e200f266ba0997e5fdc974c8b5f8fc-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo0h3460000408l97cyr4ntq",
+          "categoryId": "clo0hb77b000g08l9htdg9lt3",
+          "categoryTitle": "Фрукты и ягоды",
+          "title": "Фрукты",
+          "description": "",
+          "products": [
+            {
+              "id": "clo14w7w4000108jrb0sbes7x",
+              "subcategoryId": "clo0h3460000408l97cyr4ntq",
+              "title": "Гранат Израиль",
+              "fullPrice": 143,
+              "imagePath": "https://avatars.mds.yandex.net/get-eda/3807432/2f37ff7c1fb77d0872d32c17c57dce17/400x400nocrop",
+              "discount": 0
+            },
+            {
+              "id": "clo14x8os000208jr8hj19sug",
+              "subcategoryId": "clo0h3460000408l97cyr4ntq",
+              "title": "Авокадо Хасс",
+              "fullPrice": 210,
+              "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
+              "discount": 0
+            },
+            {
+              "id": "clo14yz5e000308jra1ut8mbi",
+              "subcategoryId": "clo0h3460000408l97cyr4ntq",
+              "title": "Виноград Кишмиш, без косточки",
+              "fullPrice": 208,
+              "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
+              "discount": 12
+            }
+          ]
+        },
+        {
+          "id": "clo0h37wo000508l92malbvgz",
+          "categoryId": "clo0hb77b000g08l9htdg9lt3",
+          "categoryTitle": "Фрукты и ягоды",
+          "title": "Ягоды",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo0h3ccx000608l9fzyu7nnq",
+          "categoryId": "clo0hb77b000g08l9htdg9lt3",
+          "categoryTitle": "Фрукты и ягоды",
+          "title": "Сухофрукты",
+          "description": "",
+          "products": []
+        }
+      ]
     },
     {
-      "id": 3,
-      "title": "Деревья",
-      "description": "",
-      "imagePath":
-      "https://eda.yandex/images/3337779/d10c74a161cd75522451f98aed228103-200x200.png",
-      "subcategories": []
+      "id": "clo10v9pe000008l99w8j5shy",
+      "title": "Рыба и морепродукты",
+      "description": "Свежая рыба для укрепления здоровья и потребления белков",
+      "imagePath": "https://eda.yandex/images/3806466/99d8d96912b57876bbae4791321df8a6-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo10vwsh000308l99nt17174",
+          "categoryId": "clo10v9pe000008l99w8j5shy",
+          "categoryTitle": "Рыба и морепродукты",
+          "title": "Рыба",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo10w463000408l96hnw9yoh",
+          "categoryId": "clo10v9pe000008l99w8j5shy",
+          "categoryTitle": "Рыба и морепродукты",
+          "title": "Креветки",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo10xta5000508l9258na3h0",
+          "categoryId": "clo10v9pe000008l99w8j5shy",
+          "categoryTitle": "Рыба и морепродукты",
+          "title": "Морепродукты",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo10yjti000608l99gzch9kx",
+      "title": "Мясо и птица",
+      "description": "Свежее мясо и птица для вкусных блюд",
+      "imagePath": "https://eda.yandex/images/3595156/0ead531a3e5b76f0398edd90db36f710-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo10yxnv000708l9hyra46hy",
+          "categoryId": "clo10yjti000608l99gzch9kx",
+          "categoryTitle": "Мясо и птица",
+          "title": "Птица",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo10ztoo000808l977ife58o",
+          "categoryId": "clo10yjti000608l99gzch9kx",
+          "categoryTitle": "Мясо и птица",
+          "title": "Мясо",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo1102i4000908l9c9weetgu",
+          "categoryId": "clo10yjti000608l99gzch9kx",
+          "categoryTitle": "Мясо и птица",
+          "title": "Фарш",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo111s0u000a08l9hbcs0btf",
+      "title": "Супы",
+      "description": "Горячие супы для уютного ужина",
+      "imagePath": "https://eda.yandex/images/3559865/cd4fab0baf9b76ca19d0b4f1d1cd5069-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo114667000b08l9ehns18l0",
+          "categoryId": "clo111s0u000a08l9hbcs0btf",
+          "categoryTitle": "Супы",
+          "title": "Супы на обед",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo114dzz000c08l99c8p7d2j",
+          "categoryId": "clo111s0u000a08l9hbcs0btf",
+          "categoryTitle": "Супы",
+          "title": "Супы на ужин",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo1157qd000d08l9cdhn21w6",
+      "title": "Салаты и закуски",
+      "description": "Свежие салаты и аппетитные закуски для перекусов",
+      "imagePath": "https://eda.yandex/images/3749380/37db379d95863af224949a99cc5e6482-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo1164kh000e08l9gntq9dag",
+          "categoryId": "clo1157qd000d08l9cdhn21w6",
+          "categoryTitle": "Салаты и закуски",
+          "title": "Салаты",
+          "description": "",
+          "products": [
+            {
+              "id": "clo14tzqc000008jr603jhche",
+              "subcategoryId": "clo1164kh000e08l9gntq9dag",
+              "title": "Салат \"Цезарь\"",
+              "fullPrice": 260,
+              "imagePath": "https://avatars.mds.yandex.net/get-eda/3596693/0fc292595b11f00ac4bf4658cda641b2/400x400nocrop",
+              "discount": 0
+            },
+            {
+              "id": "clo1e8orv000008jt60s2dc9f",
+              "subcategoryId": "clo1164kh000e08l9gntq9dag",
+              "title": "Салат с лососем",
+              "fullPrice": 387,
+              "imagePath": "/salmon_salad.png",
+              "discount": 0
+            }
+          ]
+        },
+        {
+          "id": "clo116dji000f08l995ai3hta",
+          "categoryId": "clo1157qd000d08l9cdhn21w6",
+          "categoryTitle": "Салаты и закуски",
+          "title": "Закуски",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo116xek000g08l90tfqfmlp",
+      "title": "Хлеб и выпечка",
+      "description": "Ароматный хлеб и выпечка для завтраков и перекусов",
+      "imagePath": "https://eda.yandex/images/3541746/40585a49e70d7c9f4bae4083d937fc11-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo117owj000h08l925g2gqbj",
+          "categoryId": "clo116xek000g08l90tfqfmlp",
+          "categoryTitle": "Хлеб и выпечка",
+          "title": "Хлеб",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo117ypt000i08l919jx86qw",
+          "categoryId": "clo116xek000g08l90tfqfmlp",
+          "categoryTitle": "Хлеб и выпечка",
+          "title": "Пироги",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo118e0s000j08l9423db897",
+          "categoryId": "clo116xek000g08l90tfqfmlp",
+          "categoryTitle": "Хлеб и выпечка",
+          "title": "Батоны и багеты",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo119141000k08l98dh1cx5h",
+          "categoryId": "clo116xek000g08l90tfqfmlp",
+          "categoryTitle": "Хлеб и выпечка",
+          "title": "Лепешки и лаваши",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo11a7ft000l08l9eif06v4c",
+      "title": "Завтраки",
+      "description": "Здоровые завтраки для энергичного начала дня",
+      "imagePath": "https://eda.yandex/images/2750126/b450332cc152c7356fe191d452ba57b9-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo11bu4v000m08l9c2t2fxru",
+          "categoryId": "clo11a7ft000l08l9eif06v4c",
+          "categoryTitle": "Завтраки",
+          "title": "Каши",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo11cawh000n08l94eueh5jy",
+          "categoryId": "clo11a7ft000l08l9eif06v4c",
+          "categoryTitle": "Завтраки",
+          "title": "Выпечка",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo11e9nd000o08l99c4me74e",
+      "title": "Вода и напитки",
+      "description": "Чистая вода и освежающие напитки для утоления жажды",
+      "imagePath": "https://eda.yandex/images/3772784/2c36bfe0020a7d30ead70a43ddaf6da2-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo11eiqb000p08l9bw35dh38",
+          "categoryId": "clo11e9nd000o08l99c4me74e",
+          "categoryTitle": "Вода и напитки",
+          "title": "Вода",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo11f5jo000q08l9e96o7cfo",
+          "categoryId": "clo11e9nd000o08l99c4me74e",
+          "categoryTitle": "Вода и напитки",
+          "title": "Газировка",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo11fbq7000r08l98pyycbff",
+          "categoryId": "clo11e9nd000o08l99c4me74e",
+          "categoryTitle": "Вода и напитки",
+          "title": "Соки и морсы",
+          "description": "",
+          "products": []
+        }
+      ]
+    },
+    {
+      "id": "clo11hd5y000s08l9cfz761tl",
+      "title": "Молоко и яйца",
+      "description": "Свежее молоко и качественные яйца для белкового завтрака",
+      "imagePath": "https://eda.yandex/images/3513074/c4026e3b49b8acc8802359ab634f97cb-200x200.png",
+      "subcategories": [
+        {
+          "id": "clo11huer000u08l996op22ir",
+          "categoryId": "clo11hd5y000s08l9cfz761tl",
+          "categoryTitle": "Молоко и яйца",
+          "title": "Молоко",
+          "description": "",
+          "products": []
+        },
+        {
+          "id": "clo11hznj000v08l9e8j247el",
+          "categoryId": "clo11hd5y000s08l9cfz761tl",
+          "categoryTitle": "Молоко и яйца",
+          "title": "Яйца",
+          "description": "",
+          "products": []
+        }
+      ]
     }
   ],
   "subcategories": [
     {
-      "id": 1,
+      "id": "clo0h1kvy000008l966931nfg",
+      "categoryId": "clo0h4c79000f08l9590rcprw",
+      "categoryTitle": "Овощи и зелень",
+      "title": "Помидоры",
+      "description": "Сладкие и сочные помидоры – натуральное сокровище сада. Наши помидоры выращиваются с любовью и заботой, чтобы обеспечить вам самые вкусные и свежие плоды. Узнайте больше о наших сортах и способах ухода за помидорами",
+      "products": []
+    },
+    {
+      "id": "clo0h2ptx000108l9cr1q862h",
+      "categoryId": "clo0h4c79000f08l9590rcprw",
+      "categoryTitle": "Овощи и зелень",
       "title": "Огурцы",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
-      "categoryId": 1,
-      "categoryTitle": "Овощи и зелень",
+      "description": "Свежие огурцы – идеальное дополнение к вашему столу. Мы предлагаем разнообразные сорта огурцов, выращенных без использования вредных химических удобрений. Узнайте, какие сорта огурцов подходят для консервации или свежего употребления",
       "products": []
     },
     {
-      "id": 2,
+      "id": "clo0h2w9a000208l9es3s5q93",
+      "categoryId": "clo0h4c79000f08l9590rcprw",
+      "categoryTitle": "Овощи и зелень",
       "title": "Овощи",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
-      "categoryId": 1,
-      "categoryTitle": "Овощи и зелень",
-      "products": []
-    },
-    {
-      "id": 3,
-      "title": "Зелень",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, nemo.",
-      "categoryId": 1,
-      "categoryTitle": "Овощи и зелень",
+      "description": "Наш ассортимент овощей включает в себя морковь и картофель высшего качества. Узнайте, как использовать эти овощи в разнообразных рецептах. Мы предлагаем советы по хранению и уходу, чтобы гарантировать долгий срок годности и сохранение свежести",
       "products": [
         {
-          "subcategoryId": 3,
-          "id": 1,
-          "title": "Авокадо Хасс",
-          "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
-          "fullPrice": 210,
+          "id": "clo15f0hi000008mggq1q5o0w",
+          "subcategoryId": "clo0h2w9a000208l9es3s5q93",
+          "title": "Брокколи",
+          "fullPrice": 158,
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
+          "discount": 0
+        }
+      ]
+    },
+    {
+      "id": "clo0h303t000308l9coouagqz",
+      "categoryId": "clo0h4c79000f08l9590rcprw",
+      "categoryTitle": "Овощи и зелень",
+      "title": "Зелень",
+      "description": "Свежая зелень – незаменимый ингредиент в кулинарии. У нас вы найдете разнообразные виды зелени, включая базилик, петрушку, мяту и другие. Узнайте, как использовать зелень для приготовления вкусных блюд и как вырастить ее дома. Наши советы помогут вам сохранить аромат и свежесть зелени",
+      "products": []
+    },
+    {
+      "id": "clo0h3460000408l97cyr4ntq",
+      "categoryId": "clo0hb77b000g08l9htdg9lt3",
+      "categoryTitle": "Фрукты и ягоды",
+      "title": "Фрукты",
+      "description": "",
+      "products": [
+        {
+          "id": "clo14w7w4000108jrb0sbes7x",
+          "subcategoryId": "clo0h3460000408l97cyr4ntq",
+          "title": "Гранат Израиль",
+          "fullPrice": 143,
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/3807432/2f37ff7c1fb77d0872d32c17c57dce17/400x400nocrop",
           "discount": 0
         },
         {
-          "subcategoryId": 3,
-          "id": 2,
-          "title": "Виноград Кишмиш, без косточки",
-          "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
-          "fullPrice": 208,
-          "discount": 24
+          "id": "clo14x8os000208jr8hj19sug",
+          "subcategoryId": "clo0h3460000408l97cyr4ntq",
+          "title": "Авокадо Хасс",
+          "fullPrice": 210,
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
+          "discount": 0
         },
         {
-          "subcategoryId": 3,
-          "id": 3,
-          "title": "Брокколи",
-          "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
-          "fullPrice": 158,
-          "discount": 10
+          "id": "clo14yz5e000308jra1ut8mbi",
+          "subcategoryId": "clo0h3460000408l97cyr4ntq",
+          "title": "Виноград Кишмиш, без косточки",
+          "fullPrice": 208,
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
+          "discount": 12
         }
       ]
+    },
+    {
+      "id": "clo0h37wo000508l92malbvgz",
+      "categoryId": "clo0hb77b000g08l9htdg9lt3",
+      "categoryTitle": "Фрукты и ягоды",
+      "title": "Ягоды",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo0h3ccx000608l9fzyu7nnq",
+      "categoryId": "clo0hb77b000g08l9htdg9lt3",
+      "categoryTitle": "Фрукты и ягоды",
+      "title": "Сухофрукты",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo10vwsh000308l99nt17174",
+      "categoryId": "clo10v9pe000008l99w8j5shy",
+      "categoryTitle": "Рыба и морепродукты",
+      "title": "Рыба",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo10w463000408l96hnw9yoh",
+      "categoryId": "clo10v9pe000008l99w8j5shy",
+      "categoryTitle": "Рыба и морепродукты",
+      "title": "Креветки",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo10xta5000508l9258na3h0",
+      "categoryId": "clo10v9pe000008l99w8j5shy",
+      "categoryTitle": "Рыба и морепродукты",
+      "title": "Морепродукты",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo10yxnv000708l9hyra46hy",
+      "categoryId": "clo10yjti000608l99gzch9kx",
+      "categoryTitle": "Мясо и птица",
+      "title": "Птица",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo10ztoo000808l977ife58o",
+      "categoryId": "clo10yjti000608l99gzch9kx",
+      "categoryTitle": "Мясо и птица",
+      "title": "Мясо",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo1102i4000908l9c9weetgu",
+      "categoryId": "clo10yjti000608l99gzch9kx",
+      "categoryTitle": "Мясо и птица",
+      "title": "Фарш",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo114667000b08l9ehns18l0",
+      "categoryId": "clo111s0u000a08l9hbcs0btf",
+      "categoryTitle": "Супы",
+      "title": "Супы на обед",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo114dzz000c08l99c8p7d2j",
+      "categoryId": "clo111s0u000a08l9hbcs0btf",
+      "categoryTitle": "Супы",
+      "title": "Супы на ужин",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo1164kh000e08l9gntq9dag",
+      "categoryId": "clo1157qd000d08l9cdhn21w6",
+      "categoryTitle": "Салаты и закуски",
+      "title": "Салаты",
+      "description": "",
+      "products": [
+        {
+          "id": "clo14tzqc000008jr603jhche",
+          "subcategoryId": "clo1164kh000e08l9gntq9dag",
+          "title": "Салат \"Цезарь\"",
+          "fullPrice": 260,
+          "imagePath": "https://avatars.mds.yandex.net/get-eda/3596693/0fc292595b11f00ac4bf4658cda641b2/400x400nocrop",
+          "discount": 0
+        },
+        {
+          "id": "clo1e8orv000008jt60s2dc9f",
+          "subcategoryId": "clo1164kh000e08l9gntq9dag",
+          "title": "Салат с лососем",
+          "fullPrice": 387,
+          "imagePath": "/salmon_salad.png",
+          "discount": 0
+        }
+      ]
+    },
+    {
+      "id": "clo116dji000f08l995ai3hta",
+      "categoryId": "clo1157qd000d08l9cdhn21w6",
+      "categoryTitle": "Салаты и закуски",
+      "title": "Закуски",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo117owj000h08l925g2gqbj",
+      "categoryId": "clo116xek000g08l90tfqfmlp",
+      "categoryTitle": "Хлеб и выпечка",
+      "title": "Хлеб",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo117ypt000i08l919jx86qw",
+      "categoryId": "clo116xek000g08l90tfqfmlp",
+      "categoryTitle": "Хлеб и выпечка",
+      "title": "Пироги",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo118e0s000j08l9423db897",
+      "categoryId": "clo116xek000g08l90tfqfmlp",
+      "categoryTitle": "Хлеб и выпечка",
+      "title": "Батоны и багеты",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo119141000k08l98dh1cx5h",
+      "categoryId": "clo116xek000g08l90tfqfmlp",
+      "categoryTitle": "Хлеб и выпечка",
+      "title": "Лепешки и лаваши",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11bu4v000m08l9c2t2fxru",
+      "categoryId": "clo11a7ft000l08l9eif06v4c",
+      "categoryTitle": "Завтраки",
+      "title": "Каши",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11cawh000n08l94eueh5jy",
+      "categoryId": "clo11a7ft000l08l9eif06v4c",
+      "categoryTitle": "Завтраки",
+      "title": "Выпечка",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11eiqb000p08l9bw35dh38",
+      "categoryId": "clo11e9nd000o08l99c4me74e",
+      "categoryTitle": "Вода и напитки",
+      "title": "Вода",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11f5jo000q08l9e96o7cfo",
+      "categoryId": "clo11e9nd000o08l99c4me74e",
+      "categoryTitle": "Вода и напитки",
+      "title": "Газировка",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11fbq7000r08l98pyycbff",
+      "categoryId": "clo11e9nd000o08l99c4me74e",
+      "categoryTitle": "Вода и напитки",
+      "title": "Соки и морсы",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11huer000u08l996op22ir",
+      "categoryId": "clo11hd5y000s08l9cfz761tl",
+      "categoryTitle": "Молоко и яйца",
+      "title": "Молоко",
+      "description": "",
+      "products": []
+    },
+    {
+      "id": "clo11hznj000v08l9e8j247el",
+      "categoryId": "clo11hd5y000s08l9cfz761tl",
+      "categoryTitle": "Молоко и яйца",
+      "title": "Яйца",
+      "description": "",
+      "products": []
     }
   ]
 }

@@ -1,5 +1,5 @@
 export interface Product {
-  id: number
+  id: string
   subcategoryId: string
   title: string
   fullPrice: number

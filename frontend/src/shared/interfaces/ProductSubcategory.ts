@@ -1,8 +1,8 @@
 import type { Product } from './Product'
 
 export interface ProductSubcategory {
-  id: number
-  categoryId: number
+  id: string
+  categoryId: string
   categoryTitle: string
   title: string
   description: string

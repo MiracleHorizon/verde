@@ -15,7 +15,10 @@ function NavigationItem({ id, title, imagePath }: NavigationCategory) {
   const selected = params.id === id.toString()
 
   return (
-    <li className={cn(styles.root, { [styles.selected]: selected })}>
+    <li
+      title={title}
+      className={cn(styles.root, { [styles.selected]: selected })}
+    >
       <Link href={getCategoryRoute(id)} className={styles.link}>
         <CategoryImage imagePath={imagePath} />
         <span className={styles.title}>{title}</span>

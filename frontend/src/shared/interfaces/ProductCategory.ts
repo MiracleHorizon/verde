@@ -1,7 +1,7 @@
 import type { ProductSubcategory } from './ProductSubcategory'
 
 export interface ProductCategory {
-  id: number
+  id: string
   title: string
   description: string
   imagePath: string | null
