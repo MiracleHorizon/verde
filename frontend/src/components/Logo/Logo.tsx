@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import cn from 'classnames'
 
+import { IconLogoVerde } from '@ui/icons/IconLogoVerde'
 import { APP_TITLE } from '@constants/seo'
 import { Route } from '@enums/Route'
 import { roboto } from '@styles/fonts'
@@ -10,7 +11,7 @@ export function Logo() {
   return (
     <div className={styles.root}>
       <Link href={Route.HOME} className={styles.link}>
-        <div className={styles.mock} />
+        <IconLogoVerde className={styles.logo} />
       </Link>
       <h2 className={cn(styles.title, roboto.className)}>{APP_TITLE}</h2>
     </div>

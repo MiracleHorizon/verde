@@ -1,7 +1,7 @@
 @import '@styles/variables';
 @import '@styles/mixins';
 
-$logo-mock-size-sm: 44px;
+$logo-size-sm: 44px;
 
 .root {
   min-width: 125px;
@@ -11,19 +11,18 @@ $logo-mock-size-sm: 44px;
   @media screen and (max-width: $tablet) {
     @include flex-center;
 
-    min-width: $logo-mock-size-sm;
+    min-width: $logo-size-sm;
     flex-direction: column;
   }
 }
 
-.mock {
+.logo {
   @include square(55px);
 
   border-radius: 50%;
-  background: $gray-700;
 
   @media screen and (max-width: $tablet) {
-    @include square($logo-mock-size-sm);
+    @include square($logo-size-sm);
   }
 }
 
