@@ -24,6 +24,10 @@ export function UserCartSummary({ className }: ClassNameProps) {
 
   const navigateToCart = () => router.push(Route.CART)
 
+  if (summary === 0) {
+    return null
+  }
+
   return (
     <button
       title={`Общая стоимость: ${formattedSummary}`}
