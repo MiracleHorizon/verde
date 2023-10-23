@@ -9,7 +9,7 @@ import { IconPlus } from '@ui/icons/IconPlus'
 import { CounterChanger } from '@ui/CounterChanger'
 import { useUserStore } from '@stores/user'
 import { useCartStore } from '@stores/cart'
-import { MAX_PRODUCT_COUNT } from '@constants/mock'
+import { MAX_PRODUCT_QUANTITY } from '@constants/mock'
 import { getSigninRedirectURL } from '@helpers/getSigninRedirectURL'
 import { getVariantStyles, type Props } from '@components/ProductCard'
 import { Route } from '@enums/Route'
@@ -25,11 +25,11 @@ export default function ProductCardFooterContent({
 
   const isAuth = useUserStore(state => state.isAuth())
   const inCart = useCartStore(state => state.isProductInCart(product.id))
-  const count = useCartStore(state => state.productCount(product.id))
+  const quantity = useCartStore(state => state.productQuantity(product.id))
 
   const addProduct = useCartStore(state => state.addProduct)
-  const increment = useCartStore(state => state.incrementProductCount)
-  const decrement = useCartStore(state => state.decrementProductCount)
+  const increment = useCartStore(state => state.incrementProductQuantity)
+  const decrement = useCartStore(state => state.decrementProductQuantity)
 
   const handleAddProduct = useCallback(() => {
     if (isAuth) {
@@ -63,11 +63,11 @@ export default function ProductCardFooterContent({
   return (
     <CounterChanger
       variant='solid'
-      count={count}
+      count={quantity}
       increment={handleIncrement}
       decrement={handleDecrement}
-      isIncrementDisabled={count >= MAX_PRODUCT_COUNT}
-      isDecrementDisabled={count <= 0}
+      isIncrementDisabled={quantity >= MAX_PRODUCT_QUANTITY}
+      isDecrementDisabled={quantity <= 0}
       className={cn(
         styles.counterChanger,
         getVariantStyles(styles, variant, 'counterChanger')

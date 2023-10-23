@@ -10,12 +10,12 @@ import styles from './ProductCardPrice.module.scss'
 
 export function ProductCardPrice({
   fullPrice,
-  discount,
+  discountPercentage,
   variant
-}: Pick<Props, 'fullPrice' | 'discount' | 'variant'>) {
-  const { totalCost, withDiscount } = useMemo(
-    () => calcTotalProductCost(fullPrice, discount),
-    [fullPrice, discount]
+}: Pick<Props, 'fullPrice' | 'discountPercentage' | 'variant'>) {
+  const totalCost = useMemo(
+    () => calcTotalProductCost(fullPrice, discountPercentage),
+    [fullPrice, discountPercentage]
   )
 
   const priceClassName = getVariantStyles(styles, variant)
@@ -31,7 +31,7 @@ export function ProductCardPrice({
     })
   )
 
-  if (!withDiscount) {
+  if (discountPercentage > 0) {
     return (
       <span className={cn(styles.price, priceClassName)}>
         {formattedTotalCost}

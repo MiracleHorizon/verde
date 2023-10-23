@@ -8,7 +8,7 @@ import type { Props } from './ProductCard.types.ts'
 import styles from './ProductCard.module.scss'
 
 export function ProductCard({ variant, className, ...product }: Props) {
-  const { title, imagePath, fullPrice, discount } = product
+  const { title, imagePath, fullPrice, discountPercentage } = product
 
   return (
     <div
@@ -18,7 +18,7 @@ export function ProductCard({ variant, className, ...product }: Props) {
       <ProductCardMain
         title={title}
         fullPrice={fullPrice}
-        discount={discount}
+        discountPercentage={discountPercentage}
         variant={variant}
       />
       <ProductCardFooter {...product} variant={variant} />

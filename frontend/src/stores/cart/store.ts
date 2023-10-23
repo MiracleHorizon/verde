@@ -7,36 +7,40 @@ import { USER_CART_KEY } from '@constants/browserStorages'
 import type { UserCart } from '@interfaces/UserCart'
 import type { State, Store } from './types'
 
-const initialState: State<string> = {
+type Id = string
+
+const initialState: State<Id> = {
   cartId: null,
   products: []
 }
 
 export const useCartStore = create(
-  devtools<Store<string>>((set, get) => ({
+  devtools<Store<Id>>((set, get) => ({
     /* State */
     ...initialState,
 
     /* Computed */
     isEmpty: () => get().products.length === 0,
     isProductInCart: productId => get().products.some(p => p.id === productId),
-    productCount: productId => {
+    productQuantity: productId => {
       const product = get().products.find(p => p.id === productId)
 
       if (!product) {
         return 0
       }
 
-      return product.count
+      return product.quantity
     },
     productsCost: () => {
       if (get().isEmpty()) {
         return 0
       }
 
-      return get().products.reduce((acc, { fullPrice, discount, count }) => {
-        const { totalCost } = calcTotalProductCost(fullPrice, discount)
-        return acc + totalCost * count
+      return get().products.reduce((acc, product) => {
+        const { fullPrice, discountPercentage, quantity } = product
+        const totalCost = calcTotalProductCost(fullPrice, discountPercentage)
+
+        return acc + totalCost * quantity
       }, 0)
     },
 
@@ -61,7 +65,7 @@ export const useCartStore = create(
 
     addProduct: product => {
       set(state => {
-        const cartProduct = { ...product, count: 1 }
+        const cartProduct = { ...product, quantity: 1 }
         const products = [...state.products, cartProduct]
         const successfullyUpdated = get().updateProducts(products)
 
@@ -85,7 +89,7 @@ export const useCartStore = create(
       })
     },
 
-    incrementProductCount: productId => {
+    incrementProductQuantity: productId => {
       if (get().isEmpty()) return
 
       const products = get().products
@@ -93,13 +97,13 @@ export const useCartStore = create(
       for (const product of products) {
         if (product.id !== productId) continue
 
-        product.count += 1
+        product.quantity += 1
         get().updateProducts(products)
 
         break
       }
     },
-    decrementProductCount: productId => {
+    decrementProductQuantity: productId => {
       if (get().isEmpty()) return
 
       const products = get().products
@@ -107,13 +111,13 @@ export const useCartStore = create(
       for (const product of products) {
         if (product.id !== productId) continue
 
-        if (product.count === 1) {
+        if (product.quantity === 1) {
           get().removeProduct(product.id)
 
           break
         }
 
-        product.count -= 1
+        product.quantity -= 1
         get().updateProducts(products)
 
         break

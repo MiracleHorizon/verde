@@ -24,7 +24,7 @@ export function UserCartSummary({ className }: ClassNameProps) {
 
   const navigateToCart = () => router.push(Route.CART)
 
-  if (summary === 0) {
+  if (summary === 0 || isNaN(summary)) {
     return null
   }
 

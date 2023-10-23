@@ -35,7 +35,7 @@
               "title": "Брокколи",
               "fullPrice": 158,
               "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
-              "discount": 0
+              "discountPercentage": 0
             }
           ]
         },
@@ -68,7 +68,7 @@
               "title": "Гранат Израиль",
               "fullPrice": 143,
               "imagePath": "https://avatars.mds.yandex.net/get-eda/3807432/2f37ff7c1fb77d0872d32c17c57dce17/400x400nocrop",
-              "discount": 0
+              "discountPercentage": 0
             },
             {
               "id": "clo14x8os000208jr8hj19sug",
@@ -76,7 +76,7 @@
               "title": "Авокадо Хасс",
               "fullPrice": 210,
               "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
-              "discount": 0
+              "discountPercentage": 0
             },
             {
               "id": "clo14yz5e000308jra1ut8mbi",
@@ -84,7 +84,7 @@
               "title": "Виноград Кишмиш, без косточки",
               "fullPrice": 208,
               "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
-              "discount": 12
+              "discountPercentage": 12
             }
           ]
         },
@@ -213,7 +213,7 @@
               "title": "Салат \"Цезарь\"",
               "fullPrice": 260,
               "imagePath": "https://avatars.mds.yandex.net/get-eda/3596693/0fc292595b11f00ac4bf4658cda641b2/400x400nocrop",
-              "discount": 0
+              "discountPercentage": 0
             },
             {
               "id": "clo1e8orv000008jt60s2dc9f",
@@ -221,7 +221,7 @@
               "title": "Салат с лососем",
               "fullPrice": 387,
               "imagePath": "/salmon_salad.png",
-              "discount": 0
+              "discountPercentage": 0
             }
           ]
         },
@@ -386,7 +386,7 @@
           "title": "Брокколи",
           "fullPrice": 158,
           "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
-          "discount": 0
+          "discountPercentage": 0
         }
       ]
     },
@@ -411,7 +411,7 @@
           "title": "Гранат Израиль",
           "fullPrice": 143,
           "imagePath": "https://avatars.mds.yandex.net/get-eda/3807432/2f37ff7c1fb77d0872d32c17c57dce17/400x400nocrop",
-          "discount": 0
+          "discountPercentage": 0
         },
         {
           "id": "clo14x8os000208jr8hj19sug",
@@ -419,7 +419,7 @@
           "title": "Авокадо Хасс",
           "fullPrice": 210,
           "imagePath": "https://avatars.mds.yandex.net/get-eda/3483997/6c39fba3e543b740c49ccbcc420a2d5d/orig",
-          "discount": 0
+          "discountPercentage": 0
         },
         {
           "id": "clo14yz5e000308jra1ut8mbi",
@@ -427,7 +427,7 @@
           "title": "Виноград Кишмиш, без косточки",
           "fullPrice": 208,
           "imagePath": "https://avatars.mds.yandex.net/get-eda/2794391/4033c417a3c2350dd9bb3a3c277fda14/400x400nocrop",
-          "discount": 12
+          "discountPercentage": 12
         }
       ]
     },
@@ -524,7 +524,7 @@
           "title": "Салат \"Цезарь\"",
           "fullPrice": 260,
           "imagePath": "https://avatars.mds.yandex.net/get-eda/3596693/0fc292595b11f00ac4bf4658cda641b2/400x400nocrop",
-          "discount": 0
+          "discountPercentage": 0
         },
         {
           "id": "clo1e8orv000008jt60s2dc9f",
@@ -532,7 +532,7 @@
           "title": "Салат с лососем",
           "fullPrice": 387,
           "imagePath": "/salmon_salad.png",
-          "discount": 0
+          "discountPercentage": 0
         }
       ]
     },

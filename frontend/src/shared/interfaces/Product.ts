@@ -4,5 +4,5 @@ export interface Product {
   title: string
   fullPrice: number
   imagePath: string | null
-  discount: number
+  discountPercentage: number
 }

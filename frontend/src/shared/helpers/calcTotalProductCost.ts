@@ -4,28 +4,20 @@ export const MAX_PERCENT = 100
 export const MIN_COST = 1 // In russian rubles.
 
 /**
- * @param fullPrice - the value of the full price of the product.
- * @param discount - the value of the discount on the product as a percentage.
+ * @param fullPrice - the value of the full price of the product (In russian rubles).
+ * @param discountPercentage - the value of the discount on the product as a percentage.
  */
-export function calcTotalProductCost(fullPrice: number, discount: number) {
-  if (discount <= 0) {
-    return {
-      totalCost: fullPrice,
-      withDiscount: false
-    }
+export function calcTotalProductCost(
+  fullPrice: number,
+  discountPercentage: number
+): number {
+  if (discountPercentage <= 0) {
+    return fullPrice
   }
 
-  if (discount >= MAX_PERCENT) {
-    return {
-      totalCost: MIN_COST,
-      withDiscount: true
-    }
+  if (discountPercentage >= MAX_PERCENT) {
+    return MIN_COST
   }
 
-  const totalCost = Math.ceil(fullPrice - (fullPrice / MAX_PERCENT) * discount)
-
-  return {
-    totalCost,
-    withDiscount: true
-  }
+  return Math.ceil(fullPrice - (fullPrice / MAX_PERCENT) * discountPercentage)
 }

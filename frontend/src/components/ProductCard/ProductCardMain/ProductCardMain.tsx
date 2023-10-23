@@ -8,7 +8,7 @@ export function ProductCardMain({
   title,
   variant,
   ...priceData
-}: Pick<Props, 'title' | 'fullPrice' | 'discount' | 'variant'>) {
+}: Pick<Props, 'title' | 'fullPrice' | 'discountPercentage' | 'variant'>) {
   return (
     <main className={cn(styles.root, getVariantStyles(styles, variant))}>
       <ProductCardPrice variant={variant} {...priceData} />

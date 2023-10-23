@@ -13,7 +13,7 @@ export interface State<T> {
 interface Computed<T> {
   isEmpty: () => boolean
   isProductInCart: (productId: T) => boolean
-  productCount: (productId: T) => number
+  productQuantity: (productId: T) => number
   productsCost: () => number
 }
 
@@ -24,6 +24,6 @@ interface Actions<T> {
   updateProducts: (products: CartProduct[]) => boolean
   addProduct: (product: Product) => void
   removeProduct: (productId: T) => void
-  incrementProductCount: (productId: T) => void
-  decrementProductCount: (productId: T) => void
+  incrementProductQuantity: (productId: T) => void
+  decrementProductQuantity: (productId: T) => void
 }
