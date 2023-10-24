@@ -1,0 +1,23 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  opacity: 70%;
+  transition: opacity 0.1s ease-out;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.icon {
+  margin-right: 2px;
+  stroke: $gray-900;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  color: $gray-900;
+}
