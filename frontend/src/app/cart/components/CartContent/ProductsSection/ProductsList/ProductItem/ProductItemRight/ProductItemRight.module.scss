@@ -1,0 +1,47 @@
+@import '@styles/mixins';
+
+$counter-changer-w-tablet-sm: 110px;
+
+.root {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tablet-sm) {
+    width: $counter-changer-w-tablet-sm;
+  }
+}
+
+.counterChanger {
+  width: 130px;
+  background: transparent;
+
+  @media screen and (max-width: $tablet-sm) {
+    width: $counter-changer-w-tablet-sm;
+  }
+
+  button {
+    @include square(38px);
+
+    @media screen and (max-width: $tablet-sm) {
+      @include square(32px);
+
+      svg {
+        @include square(20px);
+      }
+    }
+  }
+}
+
+.price {
+  min-width: 70px;
+  width: 70px;
+
+  @media screen and (max-width: $tablet) {
+    min-width: 50px;
+    width: 50px;
+  }
+
+  @include media-hidden-max($tablet-sm);
+}

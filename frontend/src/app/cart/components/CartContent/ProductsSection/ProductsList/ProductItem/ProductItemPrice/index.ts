@@ -1,0 +1,1 @@
+export { ProductItemPrice } from './ProductItemPrice'

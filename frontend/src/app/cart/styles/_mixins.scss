@@ -5,4 +5,27 @@
   padding: 32px;
   border-radius: 32px;
   background: $white-primary;
+
+  @media screen and (max-width: $tablet) {
+    padding: 24px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    padding: 18px;
+  }
+}
+
+@mixin section-title {
+  @include truncate;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 20px;
+  }
 }

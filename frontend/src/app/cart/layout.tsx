@@ -4,6 +4,7 @@ import type { PropsWithChildren } from 'react'
 import { CartLayoutHeader } from './components/CartLayoutHeader'
 import { writePageTitle } from '@helpers/writePageTitle'
 import styles from './layout.module.scss'
+import './styles/_mixins.scss'
 
 export const metadata: Metadata = {
   title: writePageTitle('Моя корзина')

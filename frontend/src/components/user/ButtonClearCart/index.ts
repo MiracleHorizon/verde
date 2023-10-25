@@ -1,0 +1,1 @@
+export { ButtonClearCart } from './ButtonClearCart'

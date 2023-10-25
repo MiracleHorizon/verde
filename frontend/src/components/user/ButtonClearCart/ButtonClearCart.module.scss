@@ -1,0 +1,21 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  height: 32px;
+  opacity: 40%;
+  transition: opacity 100ms ease-in-out;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.title {
+  @include truncate;
+
+  width: 100%;
+  display: inline-block;
+  font-size: 16px;
+}
