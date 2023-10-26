@@ -1,1 +1,1 @@
-export { ButtonChangeCount } from './ButtonChangeCount.tsx'
+export { ButtonChangeCount } from './ButtonChangeCount'

@@ -1,1 +1,1 @@
-export { NavigationItem } from './NavigationItem.tsx'
+export { NavigationItem } from './NavigationItem'

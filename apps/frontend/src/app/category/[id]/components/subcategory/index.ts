@@ -1,1 +1,1 @@
-export { SubcategoryView } from './SubcategoryView.tsx'
+export { SubcategoryView } from './SubcategoryView'

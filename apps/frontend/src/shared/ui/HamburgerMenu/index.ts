@@ -1,1 +1,1 @@
-export { HamburgerMenu } from './HamburgerMenu.tsx'
+export { HamburgerMenu } from './HamburgerMenu'

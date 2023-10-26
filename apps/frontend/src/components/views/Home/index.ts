@@ -1,1 +1,1 @@
-export { HomeView } from './HomeView.tsx'
+export { HomeView } from './HomeView'

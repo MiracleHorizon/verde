@@ -2,7 +2,7 @@ import Link from 'next/link'
 import cn from 'classnames'
 
 import { Route } from '@enums/Route'
-import { roboto } from '@styles/fonts.ts'
+import { roboto } from '@styles/fonts'
 import styles from './NotFoundMain.module.scss'
 
 export function NotFoundMain() {

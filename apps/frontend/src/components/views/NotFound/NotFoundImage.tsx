@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useMediaQuery } from 'react-responsive'
 import type { CSSProperties } from 'react'
 
-import { breakpoints } from '@styles/breakpoints.ts'
+import { breakpoints } from '@styles/breakpoints'
 import skeletonThinkingPng from '@public/skeleton_thinking.png'
 
 const style: CSSProperties = {

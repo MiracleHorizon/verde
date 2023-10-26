@@ -1,1 +1,1 @@
-export { CategoryView } from './CategoryView.tsx'
+export { CategoryView } from './CategoryView'

@@ -1,1 +1,1 @@
-export { ProductCardMain } from './ProductCardMain.tsx'
+export { ProductCardMain } from './ProductCardMain'

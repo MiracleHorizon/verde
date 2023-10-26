@@ -1,1 +1,1 @@
-export { CategoryShowcase } from './CategoryShowcase.tsx'
+export { CategoryShowcase } from './CategoryShowcase'

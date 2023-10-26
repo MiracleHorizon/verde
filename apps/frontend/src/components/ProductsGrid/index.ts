@@ -1,1 +1,1 @@
-export { ProductsGrid } from './ProductsGrid.tsx'
+export { ProductsGrid } from './ProductsGrid'

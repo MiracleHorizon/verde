@@ -1,8 +1,8 @@
 import { memo } from 'react'
 import cn from 'classnames'
 
-import { IconPlus } from '@ui/icons/IconPlus.tsx'
-import { IconMinus } from '@ui/icons/IconMinus.tsx'
+import { IconPlus } from '@ui/icons/IconPlus'
+import { IconMinus } from '@ui/icons/IconMinus'
 import type { CounterChangerVariant } from '@ui/CounterChanger'
 import styles from './ButtonChangeCount.module.scss'
 

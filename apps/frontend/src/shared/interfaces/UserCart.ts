@@ -1,4 +1,4 @@
-import type { CartProduct } from './CartProduct.ts'
+import type { CartProduct } from './CartProduct'
 
 export interface UserCart {
   id: string

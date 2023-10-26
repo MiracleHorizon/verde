@@ -1,6 +1,6 @@
 import cn from 'classnames'
 
-import { roboto } from '@styles/fonts.ts'
+import { roboto } from '@styles/fonts'
 import { Navigation } from '@components/Navigation'
 import styles from './NavigationAside.module.scss'
 

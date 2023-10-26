@@ -1,1 +1,1 @@
-export { CategorySection } from './CategorySection.tsx'
+export { CategorySection } from './CategorySection'

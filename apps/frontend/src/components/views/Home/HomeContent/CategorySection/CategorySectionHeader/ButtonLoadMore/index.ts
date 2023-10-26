@@ -1,1 +1,1 @@
-export { ButtonLoadMore } from './ButtonLoadMore.tsx'
+export { ButtonLoadMore } from './ButtonLoadMore'

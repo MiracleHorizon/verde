@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals'
 
-import { DigitsHandler } from '@utils/DigitsHandler.ts'
+import { DigitsHandler } from '@utils/DigitsHandler'
 
 describe('DigitsHandler.ts', () => {
   it('should return the last one digit of the number', () => {

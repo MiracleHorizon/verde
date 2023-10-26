@@ -1,1 +1,1 @@
-export { EmptyShowcase } from './EmptyShowcase.tsx'
+export { EmptyShowcase } from './EmptyShowcase'

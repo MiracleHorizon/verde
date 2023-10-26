@@ -1,7 +1,7 @@
 import cn from 'classnames'
 
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
-import type { ClassNameProps } from '@interfaces/ClassNameProps.ts'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './ButtonPay.module.scss'
 
 export function ButtonPay({

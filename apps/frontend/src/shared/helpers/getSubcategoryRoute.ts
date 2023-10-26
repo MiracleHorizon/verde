@@ -1,4 +1,4 @@
-import { getCategoryRoute } from './getCategoryRoute.ts'
+import { getCategoryRoute } from './getCategoryRoute'
 
 export function getSubcategoryRoute(
   categoryId: number | string,

@@ -1,1 +1,1 @@
-export { SubcategoryHeader } from './SubcategoryHeader.tsx'
+export { SubcategoryHeader } from './SubcategoryHeader'

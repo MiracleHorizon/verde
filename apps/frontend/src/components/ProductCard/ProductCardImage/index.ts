@@ -1,1 +1,1 @@
-export { ProductCardImage } from './ProductCardImage.tsx'
+export { ProductCardImage } from './ProductCardImage'

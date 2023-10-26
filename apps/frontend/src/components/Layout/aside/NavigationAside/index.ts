@@ -1,1 +1,1 @@
-export { NavigationAside } from './NavigationAside.tsx'
+export { NavigationAside } from './NavigationAside'

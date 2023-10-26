@@ -3,8 +3,8 @@ import cn from 'classnames'
 import { ProductCardImage } from './ProductCardImage'
 import { ProductCardMain } from './ProductCardMain'
 import { ProductCardFooter } from './ProductCardFooter'
-import { getVariantStyles } from './helpers/getVariantStyles.ts'
-import type { Props } from './ProductCard.types.ts'
+import { getVariantStyles } from './helpers/getVariantStyles'
+import type { Props } from './ProductCard.types'
 import styles from './ProductCard.module.scss'
 
 export function ProductCard({ variant, className, ...product }: Props) {

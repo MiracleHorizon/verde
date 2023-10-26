@@ -1,3 +1,3 @@
-export { ProductCard } from './ProductCard.tsx'
-export { getVariantStyles } from './helpers/getVariantStyles.ts'
-export type { Props, ProductCardVariant } from './ProductCard.types.ts'
+export { ProductCard } from './ProductCard'
+export { getVariantStyles } from './helpers/getVariantStyles'
+export type { Props, ProductCardVariant } from './ProductCard.types'

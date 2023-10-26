@@ -1,2 +1,2 @@
-export { CounterChanger } from './CounterChanger.tsx'
-export type { CounterChangerVariant } from './CounterChanger.types.ts'
+export { CounterChanger } from './CounterChanger'
+export type { CounterChangerVariant } from './CounterChanger.types'

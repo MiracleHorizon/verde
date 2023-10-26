@@ -1,1 +1,1 @@
-export { NotFoundMain } from './NotFoundMain.tsx'
+export { NotFoundMain } from './NotFoundMain'

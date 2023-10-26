@@ -1,1 +1,1 @@
-export { BreadcrumbItem } from './BreadcrumbItem.tsx'
+export { BreadcrumbItem } from './BreadcrumbItem'

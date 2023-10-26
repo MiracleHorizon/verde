@@ -1,1 +1,1 @@
-export { CategoryImage } from './CategoryImage.tsx'
+export { CategoryImage } from './CategoryImage'

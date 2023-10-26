@@ -1,1 +1,1 @@
-export { RootHeader } from './RootHeader.tsx'
+export { RootHeader } from './RootHeader'

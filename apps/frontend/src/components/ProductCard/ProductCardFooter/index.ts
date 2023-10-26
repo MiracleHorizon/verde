@@ -1,1 +1,1 @@
-export { ProductCardFooter } from './ProductCardFooter.tsx'
+export { ProductCardFooter } from './ProductCardFooter'

@@ -1,1 +1,1 @@
-export { DefaultLayout } from './Layout.tsx'
+export { DefaultLayout } from './Layout'

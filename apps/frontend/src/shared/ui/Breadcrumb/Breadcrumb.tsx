@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import cn from 'classnames'
 
 import { BreadcrumbItem } from './BreadcrumbItem'
-import type { Props } from './Breadcrumb.types.ts'
+import type { Props } from './Breadcrumb.types'
 import styles from './Breadcrumb.module.scss'
 
 const DEFAULT_SEPARATOR = '/'

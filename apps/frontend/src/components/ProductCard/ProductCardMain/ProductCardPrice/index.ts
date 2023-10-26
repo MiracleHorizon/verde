@@ -1,1 +1,1 @@
-export { ProductCardPrice } from './ProductCardPrice.tsx'
+export { ProductCardPrice } from './ProductCardPrice'

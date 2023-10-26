@@ -1,1 +1,1 @@
-export { default } from './ProductCardFooterContent.tsx'
+export { default } from './ProductCardFooterContent'

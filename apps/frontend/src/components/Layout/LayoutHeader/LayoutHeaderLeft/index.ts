@@ -1,1 +1,1 @@
-export { LayoutHeaderLeft } from './LayoutHeaderLeft.tsx'
+export { LayoutHeaderLeft } from './LayoutHeaderLeft'

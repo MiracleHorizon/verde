@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-import type { State, Store } from './types.ts'
+import type { State, Store } from './types'
 
 const initialState: State = {
   user: null
