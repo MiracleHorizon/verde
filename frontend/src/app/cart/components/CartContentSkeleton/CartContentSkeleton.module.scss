@@ -1,0 +1,13 @@
+@import '@styles/mixins';
+
+$margin-y: 24px;
+
+.root {
+  @include skeleton($gray-400);
+
+  max-width: 1200px;
+  width: 100%;
+  height: calc(100vh - $root-header-h - $margin-y * 2);
+  margin: $margin-y auto;
+  border-radius: 24px;
+}

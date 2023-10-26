@@ -2,18 +2,18 @@ import cn from 'classnames'
 
 import { DigitsHandler } from '@utils/DigitsHandler'
 import { ruNumberFormatter } from '@utils/NumberFormatter'
-import { getVariantStyles, type Props } from '@components/ProductCard'
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
 import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign'
-import styles from './ProductCardPrice.module.scss'
+import type { CartProduct } from '@interfaces/CartProduct'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
+import styles from './ProductItemPrice.module.scss'
 
-export function ProductCardPrice({
+export function ProductItemPrice({
   fullPrice,
   discountPercentage,
-  variant
-}: Pick<Props, 'fullPrice' | 'discountPercentage' | 'variant'>) {
+  className
+}: Props) {
   const totalCost = calcTotalProductCost(fullPrice, discountPercentage)
-  const priceClassName = getVariantStyles(styles, variant)
 
   const formattedTotalCost = setThinSpaceBeforeCurrencySign(
     ruNumberFormatter.formatCurrency(totalCost, {
@@ -26,20 +26,15 @@ export function ProductCardPrice({
     })
   )
 
-  if (!(discountPercentage > 0)) {
-    return (
-      <span className={cn(styles.price, priceClassName)}>
-        {formattedTotalCost}
-      </span>
-    )
-  }
-
   return (
-    <div className={styles.discountContainer}>
-      <span className={cn(styles.price, styles.discountPrice, priceClassName)}>
-        {formattedTotalCost}
-      </span>
-      <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
+    <div className={cn(styles.root, className)}>
+      {discountPercentage > 0 && (
+        <span className={styles.throughFullPrice}>{formattedFullPrice}</span>
+      )}
+      <span className={styles.price}>{formattedTotalCost}</span>
     </div>
   )
 }
+
+type Props = Pick<CartProduct, 'fullPrice' | 'discountPercentage'> &
+  ClassNameProps

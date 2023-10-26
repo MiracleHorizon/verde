@@ -1,0 +1,1 @@
+export { ProductItemLeft } from './ProductItemLeft'

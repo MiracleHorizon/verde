@@ -1,0 +1,19 @@
+@import '@styles/variables';
+
+.root {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: $root-header-h;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: $root-header-h-sm;
+  }
+}
+
+.content {
+  width: 100%;
+
+  @media screen and (max-width: $laptop) {
+    padding: 0 24px;
+  }
+}

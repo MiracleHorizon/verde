@@ -1,0 +1,70 @@
+@import '@styles/mixins';
+@import '@app/cart/styles/variables';
+
+$padding-y: 40px;
+$right-panel-top-offset: $root-header-h + $padding-y * 2;
+
+.root {
+  @include size-full;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: $padding-y 0;
+
+  @media screen and (max-width: $laptop) {
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .left,
+    .right {
+      min-width: 650px;
+      width: 650px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .left,
+    .right {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+.left {
+  min-width: 600px;
+  width: 600px;
+  margin-right: 70px;
+
+  @media screen and (max-width: $bp-laptop-lg) {
+    min-width: 520px;
+    width: 520px;
+    margin-right: 24px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    margin-right: 0;
+  }
+}
+
+.right {
+  position: sticky;
+  top: $right-panel-top-offset;
+  min-width: 450px;
+  width: 450px;
+  height: calc(100vh - $right-panel-top-offset);
+
+  @media screen and (max-width: $bp-laptop-lg) {
+    min-width: 400px;
+    width: 400px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    position: initial;
+    top: auto;
+    height: auto;
+    margin-top: 24px;
+  }
+}

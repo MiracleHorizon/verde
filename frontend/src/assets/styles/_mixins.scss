@@ -10,6 +10,8 @@
 
 // Sizes
 @mixin square($size) {
+  min-width: $size;
+  min-height: $size;
   width: $size;
   height: $size;
 }

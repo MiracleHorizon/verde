@@ -1,0 +1,66 @@
+@import '@styles/mixins';
+
+.root {
+  $mr: 14px;
+
+  width: calc(60% - $mr);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: $mr;
+
+  @media screen and (max-width: $tablet-sm) {
+    width: auto;
+    flex: 1;
+  }
+}
+
+.informationContainer {
+  z-index: 1;
+}
+
+.title {
+  @include vertical-line-clamp(2);
+
+  font-size: 18px;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    @include vertical-line-clamp(1);
+  }
+}
+
+.price {
+  @include media-hidden-min($tablet-sm);
+
+  @media screen and (max-width: $tablet-sm) {
+    margin-top: 4px;
+  }
+}
+
+.imageContainer {
+  @include square(90px);
+
+  position: relative;
+  margin-right: 14px;
+
+  @media screen and (max-width: $tablet) {
+    @include square(60px);
+
+    margin-right: 10px;
+  }
+
+  @include media-hidden-max($tablet-sm);
+}
+
+.image {
+  border-radius: 20px;
+  object-fit: cover;
+
+  @media screen and (max-width: $tablet) {
+    border-radius: 14px;
+  }
+}

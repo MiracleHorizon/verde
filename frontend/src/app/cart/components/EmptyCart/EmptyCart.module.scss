@@ -1,0 +1,88 @@
+@import '@styles/mixins';
+
+$bp-sm: 450px;
+
+.root {
+  @include flex-center;
+
+  width: 100%;
+  height: calc(100vh - $root-header-h);
+  padding: 0 16px;
+}
+
+.content {
+  @include flex-center;
+
+  max-width: 420px;
+  width: 100%;
+  flex-direction: column;
+
+  .title,
+  .information {
+    text-align: center;
+  }
+
+  @media screen and (max-width: $bp-sm) {
+    max-width: 100%;
+  }
+}
+
+.imageContainer {
+  @include square(140px);
+
+  position: relative;
+  opacity: 90%;
+
+  @media screen and (max-width: $bp-sm) {
+    @include square(110px);
+  }
+}
+
+.titleArticle {
+  max-width: 300px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+
+  @media screen and (max-width: $bp-sm) {
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+
+  @media screen and (max-width: $bp-sm) {
+    font-size: 26px;
+  }
+}
+
+.information {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.link {
+  width: 300px;
+  margin-top: 24px;
+
+  @media screen and (max-width: $bp-sm) {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  button {
+    width: 100%;
+
+    span {
+      font-size: 17px;
+      font-weight: 500;
+
+      @media screen and (max-width: $bp-sm) {
+        font-size: 16px;
+      }
+    }
+  }
+}

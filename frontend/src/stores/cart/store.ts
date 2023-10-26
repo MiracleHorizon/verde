@@ -43,11 +43,21 @@ export const useCartStore = create(
         return acc + totalCost * quantity
       }, 0)
     },
+    totalPositions: () => get().products.length,
 
     /* Actions */
     initialize: ({ id: cartId, products }) => set({ cartId, products }),
     deinitialize: () => set(initialState),
-    clear: () => set({ products: initialState.products }),
+    clear: () => {
+      const id = get().cartId
+
+      if (!id) return
+
+      const localStorageProvider = new BrowserStorageProvider(localStorage)
+      localStorageProvider.set<UserCart>(USER_CART_KEY, { id, products: [] })
+
+      set({ products: initialState.products })
+    },
     updateProducts: products => {
       const id = get().cartId
 

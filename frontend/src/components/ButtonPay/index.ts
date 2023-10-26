@@ -1,0 +1,1 @@
+export { ButtonPay } from './ButtonPay'

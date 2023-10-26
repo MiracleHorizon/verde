@@ -13,5 +13,5 @@ export function useCartSummary(): number {
     return 0
   }
 
-  return productsCost - SERVICE_FEE
+  return productsCost + SERVICE_FEE
 }

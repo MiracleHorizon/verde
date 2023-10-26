@@ -1,0 +1,5 @@
+@import '@app/cart/styles/mixins';
+
+.root {
+  @include section;
+}
