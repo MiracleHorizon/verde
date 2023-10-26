@@ -38,8 +38,8 @@ $logo-size-sm: 44px;
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 400;
   text-transform: uppercase;
 
   @include media-hidden-max($tablet);
