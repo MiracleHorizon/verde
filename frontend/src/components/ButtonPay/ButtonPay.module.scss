@@ -1,0 +1,62 @@
+@use 'sass:color';
+@import '@styles/mixins';
+
+$height: 54px;
+
+.root {
+  width: 100%;
+  height: $height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-radius: 16px;
+  background: $green-primary;
+  transition: background 50ms ease-in-out;
+
+  &:hover {
+    background: color.adjust($green-primary, $lightness: -6%);
+  }
+
+  &:active {
+    background: color.adjust($green-primary, $lightness: -3%);
+  }
+
+  .title,
+  .cost {
+    color: $white-primary;
+  }
+}
+
+.withoutCost {
+  .title {
+    width: 100%;
+    margin: 0;
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+.title {
+  $mr: 8px;
+
+  @include truncate;
+
+  width: calc(55% - $mr);
+  display: inline-block;
+  margin-right: $mr;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: $height / 2;
+  text-align: left;
+}
+
+.cost {
+  @include truncate;
+
+  width: 45%;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: right;
+}

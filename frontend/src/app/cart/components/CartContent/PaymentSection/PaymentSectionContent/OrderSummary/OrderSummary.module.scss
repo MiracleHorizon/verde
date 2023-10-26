@@ -1,0 +1,14 @@
+@import '@styles/mixins';
+@import '@app/cart/styles/variables';
+
+.root {
+  @include flex-start;
+
+  width: 100%;
+  flex-direction: column;
+  row-gap: 18px;
+
+  @media screen and (max-width: $bp-laptop-lg) {
+    row-gap: 16px;
+  }
+}

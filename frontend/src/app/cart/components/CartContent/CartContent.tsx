@@ -1,6 +1,7 @@
 'use client'
 
 import { ProductsSection } from './ProductsSection'
+import { PaymentSection } from './PaymentSection'
 import styles from './CartContent.module.scss'
 
 export function CartContent() {
@@ -9,7 +10,9 @@ export function CartContent() {
       <div className={styles.left}>
         <ProductsSection />
       </div>
-      <div className={styles.right}></div>
+      <div className={styles.right}>
+        <PaymentSection />
+      </div>
     </main>
   )
 }

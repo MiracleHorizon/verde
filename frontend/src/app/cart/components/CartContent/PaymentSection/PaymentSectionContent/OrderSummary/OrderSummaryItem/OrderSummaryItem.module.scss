@@ -1,0 +1,16 @@
+@import '@app/cart/styles/variables';
+
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-size: 18px;
+
+    @media screen and (max-width: $bp-laptop-lg) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @import '@styles/mixins';
+@import '@app/cart/styles/variables';
 
-$bp-laptop-lg: 1230px;
 $padding-y: 40px;
 $right-panel-top-offset: $root-header-h + $padding-y * 2;
 

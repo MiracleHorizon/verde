@@ -15,7 +15,7 @@
 .price {
   font-size: 20px;
 
-  @media screen and (max-width: $laptop) {
+  @media screen and (max-width: $laptop-lg) {
     font-size: 18px;
   }
 

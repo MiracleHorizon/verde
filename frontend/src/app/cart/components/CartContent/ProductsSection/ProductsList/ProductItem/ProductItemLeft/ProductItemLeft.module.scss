@@ -1,8 +1,8 @@
 @import '@styles/mixins';
 
-$mr: 14px;
-
 .root {
+  $mr: 14px;
+
   width: calc(60% - $mr);
   display: flex;
   align-items: center;

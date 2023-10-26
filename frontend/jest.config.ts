@@ -10,6 +10,9 @@ const jestConfig: Config = {
   clearMocks: true,
   restoreMocks: true,
   collectCoverage: true,
+  fakeTimers: {
+    enableGlobally: true
+  },
   coveragePathIgnorePatterns: [
     '<rootDir>/.next/',
     '<rootDir>/node_modules/',
