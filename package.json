@@ -5,11 +5,11 @@
   "description": "Your personal garden store where flowers and greenery meet the convenience of ordering",
   "private": true,
   "scripts": {
-    "start:frontend:prod": "cd frontend && yarn start",
-    "start:frontend:dev": "cd frontend && yarn dev",
-    "start:backend": "cd backend && yarn start",
-    "start:backend:prod": "cd backend && yarn start:prod",
-    "start:backend:dev": "cd backend && yarn dev",
+    "start:frontend:prod": "cd apps/frontend && yarn start",
+    "start:frontend:dev": "cd apps/frontend && yarn dev",
+    "start:backend": "cd apps/backend && yarn start",
+    "start:backend:prod": "cd apps/backend && yarn start:prod",
+    "start:backend:dev": "cd apps/backend && yarn dev",
     "start:dev": "concurrently \"yarn start:frontend:dev\" \"yarn start:backend:dev\""
   },
   "dependencies": {

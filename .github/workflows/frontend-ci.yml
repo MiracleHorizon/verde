@@ -16,7 +16,7 @@ jobs:
         node-version: [ 18.x ]
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: ./apps/frontend
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
