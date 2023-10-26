@@ -7,8 +7,7 @@ describe('SearchEngineOptimizer.ts', () => {
   it('should return generated basic metadata for SEO ', () => {
     const title1 = 'Категория 1'
     const searchEngineOptimizer1 = new SearchEngineOptimizer({
-      title: title1,
-      keywords: []
+      title: title1
     })
     const metadata1 = searchEngineOptimizer1.getBasicMetaData()
 
