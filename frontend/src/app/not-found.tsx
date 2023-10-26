@@ -1,14 +1,10 @@
 import type { Metadata } from 'next'
 
 import { NotFoundView } from '@components/views/NotFound'
-import { SearchEngineOptimizer } from '@utils/SearchEngineOptimizer'
+import { writePageTitle } from '@helpers/writePageTitle'
 
-const searchEngineOptimizer = new SearchEngineOptimizer({
-  title: 'Страница не найдена'
-})
-const basicMedata = searchEngineOptimizer.getBasicMetaData()
 export const metadata: Metadata = {
-  ...basicMedata
+  title: writePageTitle('Страница не найдена')
 }
 
 export default function NotFound() {

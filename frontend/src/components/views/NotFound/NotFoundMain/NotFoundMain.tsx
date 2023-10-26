@@ -8,9 +8,11 @@ import styles from './NotFoundMain.module.scss'
 export function NotFoundMain() {
   return (
     <div className={styles.root}>
-      <h1 className={cn(styles.title, roboto.className)}>
-        404. Страница не найдена
-      </h1>
+      <article className={styles.titleArticle}>
+        <h1 className={cn(styles.title, roboto.className)}>
+          404. Страница не найдена
+        </h1>
+      </article>
       <p className={styles.information}>
         Возможно, она была перемещена, или Вы неверно указали адрес страницы.
       </p>
