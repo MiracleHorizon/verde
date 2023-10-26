@@ -1,8 +1,10 @@
 @use 'sass:color';
 @import '@styles/mixins';
 
-$bg-primary: #fbe000;
+$bg-primary: $green-primary;
+$color-primary: $white-primary;
 $bg-secondary: $gray-500;
+$color-secondary: $black-primary;
 
 @mixin background($bg-color) {
   transition: background 50ms ease-in-out;
@@ -42,10 +44,18 @@ $bg-secondary: $gray-500;
 
 .primary {
   @include background($bg-primary);
+
+  .title {
+    color: $color-primary;
+  }
 }
 
 .secondary {
   @include background($bg-secondary);
+
+  .title {
+    color: $color-secondary;
+  }
 }
 
 .disabled {
