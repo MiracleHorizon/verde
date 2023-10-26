@@ -1,10 +1,8 @@
 import cn from 'classnames'
 
-import { DigitsHandler } from '@utils/DigitsHandler'
-import { ruNumberFormatter } from '@utils/NumberFormatter'
+import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
 import { getVariantStyles, type Props } from '@components/ProductCard'
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
-import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign'
 import styles from './ProductCardPrice.module.scss'
 
 export function ProductCardPrice({
@@ -15,16 +13,8 @@ export function ProductCardPrice({
   const totalCost = calcTotalProductCost(fullPrice, discountPercentage)
   const priceClassName = getVariantStyles(styles, variant)
 
-  const formattedTotalCost = setThinSpaceBeforeCurrencySign(
-    ruNumberFormatter.formatCurrency(totalCost, {
-      maximumSignificantDigits: DigitsHandler.getDigitCount(totalCost) + 2
-    })
-  )
-  const formattedFullPrice = setThinSpaceBeforeCurrencySign(
-    ruNumberFormatter.formatCurrency(fullPrice, {
-      maximumSignificantDigits: DigitsHandler.getDigitCount(fullPrice) + 2
-    })
-  )
+  const formattedTotalCost = formatCurrencyWithThinSpace(totalCost)
+  const formattedFullPrice = formatCurrencyWithThinSpace(fullPrice)
 
   if (!(discountPercentage > 0)) {
     return (

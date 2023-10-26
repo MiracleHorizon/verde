@@ -1,8 +1,6 @@
 import cn from 'classnames'
 
-import { ruNumberFormatter } from '@utils/NumberFormatter'
-import { DigitsHandler } from '@utils/DigitsHandler'
-import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign'
+import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
 import type { ClassNameProps } from '@interfaces/ClassNameProps.ts'
 import styles from './ButtonPay.module.scss'
 
@@ -30,13 +28,7 @@ export function ButtonPay({
     >
       <span className={styles.title}>{title}</span>
       {withCost && (
-        <span className={styles.cost}>
-          {setThinSpaceBeforeCurrencySign(
-            ruNumberFormatter.formatCurrency(cost, {
-              maximumSignificantDigits: DigitsHandler.getDigitCount(cost) + 2
-            })
-          )}
-        </span>
+        <span className={styles.cost}>{formatCurrencyWithThinSpace(cost)}</span>
       )}
     </button>
   )

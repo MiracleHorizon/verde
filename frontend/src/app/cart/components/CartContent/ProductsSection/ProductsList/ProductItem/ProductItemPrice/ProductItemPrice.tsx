@@ -1,9 +1,7 @@
 import cn from 'classnames'
 
-import { DigitsHandler } from '@utils/DigitsHandler'
-import { ruNumberFormatter } from '@utils/NumberFormatter'
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
-import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign'
+import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
 import type { CartProduct } from '@interfaces/CartProduct'
 import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './ProductItemPrice.module.scss'
@@ -15,16 +13,8 @@ export function ProductItemPrice({
 }: Props) {
   const totalCost = calcTotalProductCost(fullPrice, discountPercentage)
 
-  const formattedTotalCost = setThinSpaceBeforeCurrencySign(
-    ruNumberFormatter.formatCurrency(totalCost, {
-      maximumSignificantDigits: DigitsHandler.getDigitCount(totalCost) + 2
-    })
-  )
-  const formattedFullPrice = setThinSpaceBeforeCurrencySign(
-    ruNumberFormatter.formatCurrency(fullPrice, {
-      maximumSignificantDigits: DigitsHandler.getDigitCount(fullPrice) + 2
-    })
-  )
+  const formattedTotalCost = formatCurrencyWithThinSpace(totalCost)
+  const formattedFullPrice = formatCurrencyWithThinSpace(fullPrice)
 
   return (
     <div className={cn(styles.root, className)}>

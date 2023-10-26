@@ -1,8 +1,6 @@
 import { ButtonPay } from '@components/ButtonPay'
 import { useOrderCost } from '@stores/hooks/useOrderCost'
-import { ruNumberFormatter } from '@utils/NumberFormatter'
-import { DigitsHandler } from '@utils/DigitsHandler'
-import { setThinSpaceBeforeCurrencySign } from '@helpers/setThinSpaceBeforeCurrencySign'
+import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
 import styles from './PaymentSectionFooter.module.scss'
 
 export function PaymentSectionFooter() {
@@ -19,11 +17,8 @@ export function PaymentSectionFooter() {
         />
       ) : (
         <ButtonPay
-          title={`Добавьте еще на ${setThinSpaceBeforeCurrencySign(
-            ruNumberFormatter.formatCurrency(minOrderCostShortage, {
-              maximumSignificantDigits:
-                DigitsHandler.getDigitCount(minOrderCostShortage) + 2
-            })
+          title={`Добавьте еще на ${formatCurrencyWithThinSpace(
+            minOrderCostShortage
           )}`}
           isDisabled
           className={styles.buttonPay}
