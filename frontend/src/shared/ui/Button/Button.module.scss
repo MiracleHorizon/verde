@@ -1,5 +1,5 @@
-@use 'sass:color';
 @import '@styles/mixins';
+@import '@styles/build_in_modules';
 
 $bg-primary: $green-primary;
 $color-primary: $white-primary;
@@ -11,11 +11,11 @@ $color-secondary: $black-primary;
   background: $bg-color;
 
   &:hover {
-    background: color.adjust($bg-color, $lightness: -2.5%);
+    @include bg-lightness($green-primary, -4%);
   }
 
   &:active {
-    background: color.adjust($bg-color, $lightness: -1%);
+    @include bg-lightness($green-primary, -7%);
   }
 }
 

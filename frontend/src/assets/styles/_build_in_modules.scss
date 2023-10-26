@@ -1,0 +1,10 @@
+@use 'sass:color';
+
+/* Colors */
+@mixin color-lightness($color, $lightness) {
+  color: color.adjust($color, $lightness: $lightness);
+}
+
+@mixin bg-lightness($color, $lightness) {
+  background: color.adjust($color, $lightness: $lightness);
+}

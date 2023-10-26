@@ -1,5 +1,5 @@
-@use 'sass:color';
 @import '@styles/mixins';
+@import '@styles/build_in_modules';
 
 .root {
   width: 100%;
@@ -34,7 +34,8 @@
   transition: all 50ms ease-in-out;
 
   &:hover {
+    @include color-lightness($black-primary, 25%);
+
     text-decoration: underline;
-    color: color.adjust($black-primary, $lightness: 25%);
   }
 }

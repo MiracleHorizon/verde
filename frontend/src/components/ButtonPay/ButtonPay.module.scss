@@ -1,5 +1,5 @@
-@use 'sass:color';
 @import '@styles/mixins';
+@import '@styles/build_in_modules';
 
 $height: 54px;
 
@@ -15,11 +15,11 @@ $height: 54px;
   transition: background 50ms ease-in-out;
 
   &:hover {
-    background: color.adjust($green-primary, $lightness: -6%);
+    @include bg-lightness($green-primary, -4%);
   }
 
   &:active {
-    background: color.adjust($green-primary, $lightness: -3%);
+    @include bg-lightness($green-primary, -7%);
   }
 
   .title,
