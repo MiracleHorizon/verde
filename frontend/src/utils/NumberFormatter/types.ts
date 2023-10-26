@@ -1,15 +1,15 @@
 /* eslint no-unused-vars: 0 */
-export enum Locale {
+export const enum Locale {
   RU = 'ru-RU',
   EN = 'en-EN'
 }
 
-export enum Currency {
+export const enum Currency {
   RUB = 'RUB',
   USD = 'USD'
 }
 
-export enum CurrencySign {
+export const enum CurrencySign {
   RUB = '₽',
   USD = '$'
 }

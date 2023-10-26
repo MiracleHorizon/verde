@@ -1,5 +1,5 @@
 /* eslint no-unused-vars: 0 */
-export enum HTTPMethod {
+export const enum HTTPMethod {
   GET = 'GET',
   POST = 'POST',
   PUT = 'PUT',

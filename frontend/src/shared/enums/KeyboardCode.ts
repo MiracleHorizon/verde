@@ -1,4 +1,4 @@
 /* eslint no-unused-vars: 0 */
-export enum KeyboardCode {
+export const enum KeyboardCode {
   ESCAPE = 'Escape'
 }
