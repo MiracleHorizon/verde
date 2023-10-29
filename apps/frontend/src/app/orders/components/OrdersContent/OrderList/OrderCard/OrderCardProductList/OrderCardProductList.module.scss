@@ -1,0 +1,38 @@
+@import '@styles/mixins';
+
+$item-size: 34px;
+$item-border-radius: 10px;
+
+@mixin item {
+  width: $item-size;
+  height: $item-size;
+  border-radius: $item-border-radius;
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 6px;
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.item {
+  @include item;
+}
+
+.itemImage {
+  object-fit: cover;
+  border-radius: $item-border-radius;
+}
+
+.productsRestBadge {
+  @include flex-center;
+  @include item;
+
+  font-size: 14px;
+  line-height: 32px;
+  background: $gray-300;
+}

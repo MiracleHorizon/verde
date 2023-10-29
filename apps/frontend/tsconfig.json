@@ -80,6 +80,9 @@
       "@helpers/*": [
         "./src/shared/helpers/*"
       ],
+      "@libs/*": [
+        "./src/shared/libs/*"
+      ],
       "@utils/*": [
         "./src/utils/*"
       ],

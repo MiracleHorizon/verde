@@ -65,15 +65,18 @@
 }
 
 .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.withNavigation {
   $offsets: $layout-aside-margin-x + $layout-px * 2;
   $offsets-laptop-lg: $layout-aside-margin-x + $layout-px-laptop-lg * 2;
   $offsets-laptop: $layout-aside-margin-x-laptop + $layout-px-laptop-lg * 2;
 
   width: calc(100vw - $nav-aside-width - $offsets);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-bottom: 20px;
 
   @media screen and (max-width: $laptop-lg) {
     width: calc(100vw - $nav-aside-width - $offsets-laptop-lg);
@@ -86,4 +89,8 @@
   @media screen and (max-width: $tablet) {
     width: clamp(100%, 100%, 100%);
   }
+}
+
+.withoutNavigation {
+  width: 100%;
 }

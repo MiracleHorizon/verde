@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import cn from 'classnames'
 import type { PropsWithChildren } from 'react'
 
 import { LayoutHeader } from './LayoutHeader'
@@ -10,18 +11,31 @@ const MobileMenu = dynamic(
   { ssr: true }
 )
 
-export function DefaultLayout({ children }: PropsWithChildren) {
+export function DefaultLayout({ children, withoutNavigation }: Props) {
   return (
     <div className={styles.root}>
       <div className={styles.view}>
         <LayoutHeader />
         <div className={styles.wrapper}>
-          <NavigationAside />
-          <div className={styles.content}>{children}</div>
+          {!withoutNavigation && <NavigationAside />}
+          <div
+            className={cn(
+              styles.content,
+              withoutNavigation
+                ? styles.withoutNavigation
+                : styles.withNavigation
+            )}
+          >
+            {children}
+          </div>
         </div>
       </div>
 
       <MobileMenu />
     </div>
   )
+}
+
+interface Props extends PropsWithChildren {
+  withoutNavigation?: boolean
 }

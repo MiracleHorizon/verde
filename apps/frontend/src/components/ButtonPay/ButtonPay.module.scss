@@ -60,3 +60,7 @@ $height: 54px;
   font-weight: 600;
   text-align: right;
 }
+
+.disabled {
+  @include disabled(70%);
+}

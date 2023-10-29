@@ -220,7 +220,7 @@
               "subcategoryId": "clo1164kh000e08l9gntq9dag",
               "title": "Салат с лососем",
               "fullPrice": 387,
-              "imagePath": "/salmon_salad.png",
+              "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/salmon-salad-1024x640.png",
               "discountPercentage": 0
             }
           ]
