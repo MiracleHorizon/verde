@@ -1,0 +1,15 @@
+@import '@styles/mixins';
+@import '@app/orders/[id]/styles/mixins';
+
+.title {
+  @include section-title;
+}
+
+.list {
+  @include flex-start;
+
+  width: 100%;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 16px;
+}

@@ -1,0 +1,18 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-start;
+
+  width: 100%;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-top: 16px;
+
+  @media screen and (max-width: $tablet-sm) {
+    row-gap: 14px;
+  }
+
+  @media screen and (max-width: $mobile-md) {
+    row-gap: 8px;
+  }
+}

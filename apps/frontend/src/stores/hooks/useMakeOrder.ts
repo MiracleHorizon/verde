@@ -8,8 +8,8 @@ import { useOrderCost } from '@stores/hooks/useOrderCost'
 import { useOrderSummary } from '@stores/hooks/useOrderSummary'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
+import { getOrderRoute } from '@helpers/getOrderRoute'
 import { USER_ORDERS_KEY } from '@constants/browserStorages'
-import { Route } from '@enums/Route'
 import type { Order } from '@interfaces/Order'
 import type { OrderProduct } from '@interfaces/OrderProduct'
 import type { CreatOrderDto } from '@interfaces/CreatOrderDto'
@@ -48,7 +48,7 @@ export function useMakeOrder() {
     }
 
     clearCart()
-    router.replace(Route.HOME)
+    router.replace(getOrderRoute(order.id))
   }, [
     router,
     clearCart,
@@ -93,7 +93,7 @@ function createOrderProduct(
   orderId: string,
   { quantity, title, imagePath, fullPrice, discountPercentage }: CartProduct
 ): OrderProduct {
-  const finalCost = calcTotalProductCost(fullPrice, discountPercentage)
+  const totalCost = calcTotalProductCost(fullPrice, discountPercentage)
 
   return {
     id: crypto.randomUUID(),
@@ -101,6 +101,6 @@ function createOrderProduct(
     quantity,
     imagePath,
     orderId,
-    finalCost
+    totalCost
   }
 }
