@@ -31,6 +31,7 @@ $bp-sm: 450px;
   @include square(140px);
 
   position: relative;
+  display: block;
   opacity: 90%;
 
   @media screen and (max-width: $bp-sm) {

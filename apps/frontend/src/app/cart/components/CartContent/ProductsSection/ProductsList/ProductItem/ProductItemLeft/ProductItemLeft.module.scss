@@ -45,6 +45,7 @@
   @include square(90px);
 
   position: relative;
+  display: block;
   margin-right: 14px;
 
   @media screen and (max-width: $tablet) {

@@ -12,9 +12,9 @@ export function EmptyCart() {
   return (
     <div className={styles.root}>
       <main className={styles.content}>
-        <div className={styles.imageContainer}>
+        <span className={styles.imageContainer}>
           <Image priority src={emptyCartBagPng} alt='Пусто' sizes='100%' fill />
-        </div>
+        </span>
         <article className={styles.titleArticle}>
           <h1 className={cn(styles.title, roboto.className)}>
             В вашей корзине пока пусто

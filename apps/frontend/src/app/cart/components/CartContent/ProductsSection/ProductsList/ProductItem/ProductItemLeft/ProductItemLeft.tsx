@@ -16,7 +16,7 @@ export function ProductItemLeft({
 >) {
   return (
     <div className={styles.root}>
-      <div className={styles.imageContainer}>
+      <span className={styles.imageContainer}>
         <Image
           src={imagePath || productFallbackPng.src}
           alt={title}
@@ -25,7 +25,7 @@ export function ProductItemLeft({
           priority
           fill
         />
-      </div>
+      </span>
       <div className={styles.informationContainer}>
         <span className={styles.title}>{title}</span>
         <ProductItemPrice
