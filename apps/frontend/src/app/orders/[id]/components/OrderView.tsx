@@ -1,24 +1,30 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { notFound } from 'next/navigation'
-import { useIsClient } from 'usehooks-ts'
 
-import { OrderHeader } from './OrderHeader'
-import { OrderProducts } from './OrderProducts'
-import { OrderPayment } from './OrderPayment'
+import { FullWidthSpinner } from '@ui/spinners/FullWidthSpinner'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { USER_ORDERS_KEY } from '@constants/browserStorages'
 import type { Order } from '@interfaces/Order'
 import styles from './OrderView.module.scss'
 
-export function OrderView({ id }: Id) {
-  const isClient = useIsClient()
+const LoadingSpinner = () => <FullWidthSpinner className={styles.spinner} />
 
-  if (!isClient) {
-    // TODO: Loader
-    return <div>Loading...</div>
-  }
+const OrderHeader = dynamic(
+  () => import('./OrderHeader').then(mod => mod.OrderHeader),
+  { ssr: false, loading: LoadingSpinner }
+)
+const OrderProducts = dynamic(
+  () => import('./OrderProducts').then(mod => mod.OrderProducts),
+  { ssr: false, loading: LoadingSpinner }
+)
+const OrderPayment = dynamic(
+  () => import('./OrderPayment').then(mod => mod.OrderPayment),
+  { ssr: false, loading: LoadingSpinner }
+)
 
+export default function OrderView({ id }: Id) {
   const order = getOrder({ id })
 
   if (!order) {

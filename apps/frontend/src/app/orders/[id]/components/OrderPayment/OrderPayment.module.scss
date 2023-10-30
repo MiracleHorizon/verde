@@ -12,4 +12,8 @@
   flex-direction: column;
   row-gap: 12px;
   margin-top: 16px;
+
+  @media screen and (max-width: $mobile-md) {
+    margin-top: 10px;
+  }
 }
