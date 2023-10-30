@@ -1,0 +1,62 @@
+@import '@styles/mixins';
+
+@mixin side {
+  display: flex;
+  flex-direction: column;
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    @include vertical-line-clamp(1);
+  }
+}
+
+.left {
+  @include side;
+
+  max-width: 70%;
+  align-items: flex-start;
+}
+
+.deliveryAddress {
+  font-size: 16px;
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 15px;
+  }
+}
+
+.boldText {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 500;
+
+  @media screen and (max-width: $tablet-sm) {
+    font-size: 18px;
+  }
+}
+
+.right {
+  @include side;
+
+  max-width: 30%;
+  align-items: flex-end;
+}
+
+.status {
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.payed {
+  color: $black-primary;
+}
+
+.delivered {
+  color: #5ac31aff;
+}

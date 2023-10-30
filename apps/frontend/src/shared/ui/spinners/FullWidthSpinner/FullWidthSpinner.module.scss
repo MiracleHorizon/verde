@@ -1,0 +1,6 @@
+@import '@styles/mixins';
+
+.root {
+  @include size-full;
+  @include flex-center;
+}

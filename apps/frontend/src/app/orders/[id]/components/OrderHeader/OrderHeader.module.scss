@@ -1,0 +1,51 @@
+@import '@styles/mixins';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+@mixin container {
+  width: 50%;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+
+  span {
+    @include truncate;
+
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 100%;
+    color: $gray-900;
+  }
+}
+
+.idContainer {
+  @include container;
+
+  margin-right: 6px;
+  text-align: left;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 6px;
+    margin-right: 0;
+  }
+}
+
+.dateContainer {
+  @include container;
+
+  text-align: right;
+
+  @media screen and (max-width: $tablet) {
+    text-align: left;
+  }
+}

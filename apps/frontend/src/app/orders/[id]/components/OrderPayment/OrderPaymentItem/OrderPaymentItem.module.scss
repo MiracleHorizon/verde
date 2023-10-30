@@ -1,0 +1,55 @@
+@import '@styles/mixins';
+
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.default {
+  .title,
+  .value {
+    font-size: 17px;
+
+    @media screen and (max-width: $tablet-sm) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: $mobile-md) {
+      font-size: 15px;
+    }
+  }
+}
+
+.totalCost {
+  margin-top: 8px;
+
+  .title,
+  .value {
+    font-size: 22px;
+    font-weight: 500;
+
+    @media screen and (max-width: $tablet-sm) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: $mobile-md) {
+      font-size: 18px;
+    }
+  }
+}
+
+.title {
+  @include vertical-line-clamp(1);
+
+  width: 60%;
+  text-align: left;
+}
+
+.value {
+  @include vertical-line-clamp(1);
+
+  width: 40%;
+  text-align: right;
+}

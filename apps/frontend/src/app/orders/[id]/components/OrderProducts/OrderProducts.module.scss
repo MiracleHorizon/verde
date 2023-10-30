@@ -1,0 +1,24 @@
+@import '@styles/mixins';
+@import '@app/orders/[id]/styles/mixins';
+
+.title {
+  @include section-title;
+}
+
+.divider {
+  @include divider-x($gray-700);
+
+  margin: 32px 0;
+
+  @media screen and (max-width: $tablet) {
+    margin: 28px 0;
+  }
+
+  @media screen and (max-width: $tablet-sm) {
+    margin: 24px 0;
+  }
+
+  @media screen and (max-width: $mobile-md) {
+    margin: 16px 0;
+  }
+}

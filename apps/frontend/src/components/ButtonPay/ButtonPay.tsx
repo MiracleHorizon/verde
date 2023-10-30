@@ -20,7 +20,7 @@ export function ButtonPay({
         styles.root,
         {
           [styles.withoutCost]: !withCost,
-          disabled: isDisabled
+          [styles.disabled]: isDisabled
         },
         className
       )}

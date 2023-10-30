@@ -1,0 +1,10 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-start;
+
+  max-width: 800px;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 16px;
+}
