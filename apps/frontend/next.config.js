@@ -6,11 +6,23 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'eda.yandex',
-      'avatars.mds.yandex.net',
-      'yastatic.net',
-      'verde-serve-static-dyu0.onrender.com'
+    remotePatterns: [
+      {
+        hostname: 'eda.yandex',
+        protocol: 'https'
+      },
+      {
+        hostname: 'avatars.mds.yandex.net',
+        protocol: 'https'
+      },
+      {
+        hostname: 'yastatic.net',
+        protocol: 'https'
+      },
+      {
+        hostname: 'verde-serve-static-dyu0.onrender.com',
+        protocol: 'https'
+      }
     ]
   },
   webpack: config => {

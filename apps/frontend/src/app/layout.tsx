@@ -14,10 +14,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true
   },
-  viewport: {
-    initialScale: 1,
-    width: 'device-width'
-  },
   openGraph: {
     title: APP_TITLE,
     description: APP_DESCRIPTION,
