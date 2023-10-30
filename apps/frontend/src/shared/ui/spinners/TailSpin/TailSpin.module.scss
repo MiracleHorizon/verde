@@ -1,0 +1,12 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.root {
+  @include square(36px);
+  @include rotation;
+
+  display: block;
+  border: 3px solid $gray-800;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+}
