@@ -11,11 +11,11 @@ $color-secondary: $black-primary;
   background: $bg-color;
 
   &:hover {
-    @include bg-lightness($green-primary, -4%);
+    @include bg-lightness($bg-color, -4%);
   }
 
   &:active {
-    @include bg-lightness($green-primary, -7%);
+    @include bg-lightness($bg-color, -7%);
   }
 }
 
