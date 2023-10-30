@@ -6,12 +6,14 @@ import cn from 'classnames'
 
 import { UserMenu } from '../UserMenu'
 import { Modal, type ModalProps } from '@ui/modals/Modal'
-import { roboto } from '@styles/fonts'
 import type { User } from '@interfaces/User'
+import { roboto } from '@styles/fonts'
 import styles from './UserMenuModal.module.scss'
 
 export function UserMenuModal({ user, ...modalProps }: Props) {
   const titleRef = useRef<HTMLHeadingElement | null>(null)
+
+  const onClickUserMenuItem = () => modalProps.onClose(false)
 
   return (
     <Modal initialFocus={titleRef} withBackdrop {...modalProps}>
@@ -29,7 +31,7 @@ export function UserMenuModal({ user, ...modalProps }: Props) {
           </article>
         </header>
 
-        <UserMenu />
+        <UserMenu onClickItem={onClickUserMenuItem} />
       </Dialog.Panel>
     </Modal>
   )
