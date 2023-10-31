@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "test": "jest",
     "lint": "next lint",
@@ -28,6 +29,7 @@
     "zustand": "^4.4.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.1",
     "@types/jest": "^29.5.5",
     "@types/json-server": "^0.14.5",
     "@types/lodash.random": "^3.2.8",
