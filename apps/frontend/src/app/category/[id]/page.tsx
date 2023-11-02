@@ -1,64 +1,45 @@
-import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
 
 import { CategoryView } from './components/category'
 import { SubcategoryView } from './components/subcategory'
-import { HTTPMethod } from '@enums/HTTPMethod'
+import { fetchCategory } from './api/fetchCategory'
+import { fetchSubcategory } from './api/fetchSubcategory'
+import { fetchCategoryMetadata } from './api/fetchCategoryMetadata'
+import { fetchSubcategoryMetadata } from './api/fetchSubcategoryMetadata'
+import { getValueFromSearchParam } from '@helpers/getValueFromSearchParam'
 import type { PageProps } from '@interfaces/next/PageProps'
-import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
+import type { GenerateMetadataParams } from '@interfaces/next/GenerateMetadataParams'
 
-const SERVER_API = 'http://localhost:4200'
-const CATEGORIES_ENDPOINT = 'categories'
-const SUBCATEGORIES_ENDPOINT = 'subcategories'
+export async function generateMetadata({
+  params,
+  searchParams
+}: GenerateMetadataParams): Promise<Metadata> {
+  const subcategoryParam = searchParams.subcategory
+
+  if (subcategoryParam) {
+    const subcategoryId = getValueFromSearchParam(subcategoryParam)
+
+    return fetchSubcategoryMetadata(subcategoryId)
+  }
+
+  return fetchCategoryMetadata(params.id)
+}
 
 export default async function CategoryPage({
   params,
   searchParams
 }: PageProps) {
-  const categoryId = params.id
   const subcategoryParam = searchParams.subcategory
 
-  if (!subcategoryParam) {
-    try {
-      const url = `${SERVER_API}/${CATEGORIES_ENDPOINT}/${categoryId}`
-      const response = await fetch(url, {
-        method: HTTPMethod.GET,
-        cache: 'no-cache'
-      })
+  if (subcategoryParam) {
+    const subcategoryId = getValueFromSearchParam(subcategoryParam)
+    const subcategory = await fetchSubcategory(subcategoryId)
 
-      if (!response.ok) {
-        notFound()
-      }
-
-      const data = await response.json()
-
-      return <CategoryView {...data} />
-    } catch {
-      notFound()
-    }
+    return <SubcategoryView {...subcategory} />
   }
 
-  try {
-    const subcategoryId = Array.isArray(subcategoryParam)
-      ? subcategoryParam[0]
-      : subcategoryParam
-    const url = `${SERVER_API}/${SUBCATEGORIES_ENDPOINT}/${subcategoryId}`
-    const response = await fetch(url, {
-      method: HTTPMethod.GET,
-      cache: 'no-cache'
-    })
+  const categoryId = params.id
+  const category = await fetchCategory(categoryId)
 
-    if (!response.ok) {
-      notFound()
-    }
-
-    const data: ProductSubcategory = await response.json()
-
-    if (data.categoryId.toString() !== categoryId) {
-      notFound()
-    }
-
-    return <SubcategoryView {...data} />
-  } catch {
-    notFound()
-  }
+  return <CategoryView {...category} />
 }

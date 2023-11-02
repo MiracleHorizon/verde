@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals'
 
 import { SearchEngineOptimizer } from '@utils/SearchEngineOptimizer'
-import { APP_DESCRIPTION, APP_KEYWORDS, APP_TITLE } from '@constants/seo'
+import { APP_DESCRIPTION, APP_KEYWORDS } from '@constants/seo'
 
 describe('SearchEngineOptimizer.ts', () => {
   it('should return generated basic metadata for SEO ', () => {
@@ -11,7 +11,7 @@ describe('SearchEngineOptimizer.ts', () => {
     })
     const metadata1 = searchEngineOptimizer1.getBasicMetaData()
 
-    expect(metadata1.title).toBe(`${title1} | ${APP_TITLE}`)
+    expect(metadata1.title).toBe(title1)
     expect(metadata1.description).toBe(APP_DESCRIPTION)
     expect(metadata1.keywords).toStrictEqual(
       APP_KEYWORDS.map(keyword => keyword.toLocaleLowerCase())
@@ -27,7 +27,7 @@ describe('SearchEngineOptimizer.ts', () => {
     })
     const metadata2 = searchEngineOptimizer2.getBasicMetaData()
 
-    expect(metadata2.title).toBe(`${title2} | ${APP_TITLE}`)
+    expect(metadata2.title).toBe(title2)
     expect(metadata2.description).toBe(
       [APP_DESCRIPTION, description2].join('. ')
     )

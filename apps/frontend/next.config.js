@@ -25,6 +25,9 @@ const nextConfig = {
       }
     ]
   },
+  env: {
+    SERVER_API: process.env.SERVER_API
+  },
   webpack: config => {
     config.plugins.push(
       new StylelintPlugin({

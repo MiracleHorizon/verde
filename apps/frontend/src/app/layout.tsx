@@ -7,7 +7,10 @@ import { inter } from '@styles/fonts'
 import './globals.scss'
 
 export const metadata: Metadata = {
-  title: APP_TITLE,
+  title: {
+    default: APP_TITLE,
+    template: `%s | ${APP_TITLE}`
+  },
   description: APP_DESCRIPTION,
   keywords: APP_KEYWORDS,
   robots: {
@@ -37,15 +40,15 @@ export const metadata: Metadata = {
       },
       {
         rel: 'icon',
-        sizes: '512x512',
-        type: 'image/png',
-        url: '/android-chrome-512x512.png'
-      },
-      {
-        rel: 'icon',
         sizes: '192x192',
         type: 'image/png',
         url: '/android-chrome-192x192.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '512x512',
+        type: 'image/png',
+        url: '/android-chrome-512x512.png'
       },
       {
         rel: 'apple-touch-icon',
