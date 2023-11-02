@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 
 import { OrderViewLoader } from './components/OrderViewLoader'
-import { writePageTitle } from '@helpers/writePageTitle'
 import type { PageProps } from '@interfaces/next/PageProps'
 import type { GenerateMetadataParams } from '@interfaces/next/GenerateMetadataParams'
 import './styles/_mixins.scss'
@@ -16,7 +15,7 @@ export async function generateMetadata({
   params
 }: GenerateMetadataParams): Promise<Metadata> {
   return {
-    title: writePageTitle(`Заказ №${params.id}`)
+    title: `Заказ №${params.id}`
   }
 }
 

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 
-import { writePageTitle } from '@helpers/writePageTitle'
 import { APP_DESCRIPTION, APP_KEYWORDS } from '@constants/seo'
 import type { SeoPayload } from '@interfaces/SeoPayload'
 
@@ -19,7 +18,7 @@ export class SearchEngineOptimizer {
 
   public getBasicMetaData(): BasicMetadata {
     const metadata = {
-      title: this.writeTitle(),
+      title: this.title,
       description: this.writeDescription(),
       keywords: this.getUniqueKeywords()
     }
@@ -29,10 +28,6 @@ export class SearchEngineOptimizer {
     }
 
     return metadata
-  }
-
-  private writeTitle(): string {
-    return writePageTitle(this.title)
   }
 
   private writeDescription(): string {
