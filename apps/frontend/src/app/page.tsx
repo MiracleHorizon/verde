@@ -3,11 +3,12 @@ import type { Metadata } from 'next'
 
 import { HomeView } from '@components/views/Home'
 import { DefaultLayout } from '@components/Layout'
+import { APP_TITLE } from '@constants/seo'
 import { HTTPMethod } from '@enums/HTTPMethod'
 import type { ProductCategory } from '@interfaces/ProductCategory'
 
 export const metadata: Metadata = {
-  title: 'Главная'
+  title: `Главная | ${APP_TITLE}`
 }
 
 const SERVER_API = 'http://localhost:4200'
