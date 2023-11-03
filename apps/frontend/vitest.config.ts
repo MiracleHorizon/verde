@@ -37,6 +37,7 @@ const aliases: Alias[] = [
 export default defineConfig({
   test: {
     environment: 'node',
+    testTimeout: 20e3,
     includeSource: ['src/**/*.test.{ts,tsx}'],
     coverage: {
       enabled: true,

@@ -1,4 +1,4 @@
-const ABORT_TIMEOUT = 15e3
+export const ABORT_TIMEOUT = 15e3
 
 export function abortRequestWithTimeout(
   abortController: AbortController,
