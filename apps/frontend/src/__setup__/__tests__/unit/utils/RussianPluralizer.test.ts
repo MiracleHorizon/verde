@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { RussianPluralizer } from '@utils/RussianPluralizer'
 
@@ -8,7 +8,7 @@ const productPluralizer = new RussianPluralizer({
   pluralForm: 'товаров'
 })
 
-describe('RussianPluralizer.ts', () => {
+describe('RussianPluralizer', () => {
   it('should return the correct singular form', () => {
     expect(productPluralizer.pluralizeNoun(1)).toBe('1 товар')
     expect(productPluralizer.pluralizeNoun(21)).toBe('21 товар')

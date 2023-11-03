@@ -394,7 +394,7 @@
           "subcategoryId": "clo0h2w9a000208l9es3s5q93",
           "title": "Брокколи",
           "fullPrice": 158,
-          "imagePath": "http://localhost:4201/images/brocolli-1024x640.png",
+          "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/brocolli-1024x640.png",
           "discountPercentage": 0
         }
       ]

@@ -1,10 +1,10 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { getCategoryRoute } from '@helpers/getCategoryRoute'
 import { Route } from '@enums/Route'
 
-describe('getCategoryRoute.ts', () => {
-  it('should return the generated link to the category with the passed id', () => {
+describe('getCategoryRoute', () => {
+  it('should return correct generated link to the category with the passed id', () => {
     const id1 = 4
     const route1 = getCategoryRoute(id1)
     expect(route1.endsWith(id1.toString())).toBeTruthy()

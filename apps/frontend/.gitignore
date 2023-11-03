@@ -4,7 +4,7 @@
 .pnp.js
 
 # testing
-/coverage
+/src/__setup__/__tests__/unit/coverage
 
 # next.js
 /.next/

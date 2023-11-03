@@ -1,9 +1,9 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { SearchEngineOptimizer } from '@utils/SearchEngineOptimizer'
 import { APP_DESCRIPTION, APP_KEYWORDS } from '@constants/seo'
 
-describe('SearchEngineOptimizer.ts', () => {
+describe('SearchEngineOptimizer', () => {
   it('should return generated basic metadata for SEO ', () => {
     const title1 = 'Категория 1'
     const searchEngineOptimizer1 = new SearchEngineOptimizer({
