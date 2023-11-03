@@ -1,5 +1,9 @@
 export const THIN_SPACE = ' '
 
+/**
+ * @param value - the string value to which a thin space will be added before
+ * the currency sign.
+ */
 export function setThinSpaceBeforeCurrencySign(value: string): string {
   const splitValue = value.split('')
 

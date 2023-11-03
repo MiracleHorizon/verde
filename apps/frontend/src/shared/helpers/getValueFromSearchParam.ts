@@ -1,3 +1,7 @@
+/**
+ * @param searchParam - the search parameter, which can be a string or an
+ * array of strings.
+ */
 export function getValueFromSearchParam(
   searchParam: string | string[]
 ): string {
