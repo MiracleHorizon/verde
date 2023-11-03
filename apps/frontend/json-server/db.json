@@ -34,7 +34,7 @@
               "subcategoryId": "clo0h2w9a000208l9es3s5q93",
               "title": "Брокколи",
               "fullPrice": 158,
-              "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
+              "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/broccoli-1024x640.png",
               "discountPercentage": 0
             }
           ]
@@ -45,7 +45,16 @@
           "categoryTitle": "Овощи и зелень",
           "title": "Зелень",
           "description": "Свежая зелень – незаменимый ингредиент в кулинарии. У нас вы найдете разнообразные виды зелени, включая базилик, петрушку, мяту и другие. Узнайте, как использовать зелень для приготовления вкусных блюд и как вырастить ее дома. Наши советы помогут вам сохранить аромат и свежесть зелени",
-          "products": []
+          "products": [
+            {
+              "id": "clohdgmij000008l5drmp2smu",
+              "subcategoryId":"clo0h303t000308l9coouagqz",
+              "title": "Укроп",
+              "fullPrice": 84,
+              "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/dill-1024x640.png",
+              "discountPercentage": 0
+            }
+          ]
         }
       ]
     },
@@ -385,7 +394,7 @@
           "subcategoryId": "clo0h2w9a000208l9es3s5q93",
           "title": "Брокколи",
           "fullPrice": 158,
-          "imagePath": "https://avatars.mds.yandex.net/get-eda/3377781/6cadc522f50764b609e2d5dd15dcece6/400x400nocrop",
+          "imagePath": "http://localhost:4201/images/brocolli-1024x640.png",
           "discountPercentage": 0
         }
       ]
@@ -396,7 +405,16 @@
       "categoryTitle": "Овощи и зелень",
       "title": "Зелень",
       "description": "Свежая зелень – незаменимый ингредиент в кулинарии. У нас вы найдете разнообразные виды зелени, включая базилик, петрушку, мяту и другие. Узнайте, как использовать зелень для приготовления вкусных блюд и как вырастить ее дома. Наши советы помогут вам сохранить аромат и свежесть зелени",
-      "products": []
+      "products": [
+        {
+          "id": "clohdgmij000008l5drmp2smu",
+          "subcategoryId":"clo0h303t000308l9coouagqz",
+          "title": "Укроп",
+          "fullPrice": 84,
+          "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/dill-1024x640.png",
+          "discountPercentage": 0
+        }
+      ]
     },
     {
       "id": "clo0h3460000408l97cyr4ntq",
