@@ -21,7 +21,7 @@ export function AuthForm<T extends FieldValues, Err extends Error>({
 }: Props<T, Err>) {
   const {
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid, isValidating },
     register
   } = useForm({
     defaultValues,
@@ -52,6 +52,7 @@ export function AuthForm<T extends FieldValues, Err extends Error>({
         variant='primary'
         title='Отправить'
         className={styles.submit}
+        isDisabled={!isValid || isValidating}
       />
     </form>
   )
