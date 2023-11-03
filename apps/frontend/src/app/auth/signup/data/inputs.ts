@@ -53,7 +53,10 @@ export const signupInputs: ReactHookFormInput<SignupPayload>[] = [
     type: 'password',
     placeholder: 'Подтвердите пароль',
     registerOptions: {
-      ...passwordLengthValidation,
+      required: {
+        value: true,
+        message: 'Пожалуйста, подтвердите пароль.'
+      },
       validate: (value: string, formValues: SignupPayload) =>
         value === formValues.password || 'Пароли не совпадают.'
     }
