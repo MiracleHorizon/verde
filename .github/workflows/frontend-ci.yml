@@ -33,7 +33,7 @@ jobs:
         run: yarn build
 
       - name: Test project
-        run: yarn test
+        run: yarn test:coverage
 
       - name: Lint project
         run: yarn lint
