@@ -1,8 +1,8 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { DigitsHandler } from '@utils/DigitsHandler'
 
-describe('DigitsHandler.ts', () => {
+describe('DigitsHandler', () => {
   it('should return the last one digit of the number', () => {
     expect(DigitsHandler.getLastDigit(0)).toBe(0)
     expect(DigitsHandler.getLastDigit(30)).toBe(0)

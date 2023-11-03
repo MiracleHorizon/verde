@@ -1,10 +1,10 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { getSubcategoryRoute } from '@helpers/getSubcategoryRoute'
 import { Route } from '@enums/Route'
 
-describe('getCategoryRoute.ts', () => {
-  it('should return the generated link to the category with the passed id', () => {
+describe('getSubcategoryRoute', () => {
+  it('should return correct generated link to the subcategory with the passed id', () => {
     const categoryId1 = 4321
     const subcategoryId1 = 93
     const route1 = getSubcategoryRoute(categoryId1, subcategoryId1)

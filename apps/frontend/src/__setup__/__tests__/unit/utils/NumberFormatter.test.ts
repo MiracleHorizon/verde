@@ -1,11 +1,11 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { CurrencySign, Locale, NumberFormatter } from '@utils/NumberFormatter'
 
 const ruNumberFormatter = new NumberFormatter(Locale.RU)
 const enNumberFormatter = new NumberFormatter(Locale.EN)
 
-describe('NumberFormatter.ts', () => {
+describe('NumberFormatter', () => {
   it('should return the formatted currency value (ru, RUB)', () => {
     const value1 = 309
     const result = ruNumberFormatter.formatCurrency(value1)

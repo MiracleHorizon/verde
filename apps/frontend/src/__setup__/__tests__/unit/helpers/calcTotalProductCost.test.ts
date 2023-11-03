@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import {
   calcTotalProductCost,
@@ -6,7 +6,7 @@ import {
   MIN_COST
 } from '@helpers/calcTotalProductCost'
 
-describe('calcTotalProductCost.ts', () => {
+describe('calcTotalProductCost', () => {
   it('should calculate the total cost of the product from the full price', () => {
     const fullPrice1 = 100
     const discountPercentage1 = 30
