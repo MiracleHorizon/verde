@@ -7,6 +7,8 @@ import type { Order } from '@interfaces/Order'
 import styles from './OrderCardHeader.module.scss'
 
 export function OrderCardHeader({ totalCost, createdAt, deliveredAt }: Props) {
+  const formattedTotalCost = formatCurrencyWithThinSpace(totalCost)
+
   const { title: statusTitle, isDelivered } = useMemo(
     () => getStatus(deliveredAt),
     [deliveredAt]
@@ -19,9 +21,7 @@ export function OrderCardHeader({ totalCost, createdAt, deliveredAt }: Props) {
         <span className={styles.deliveryAddress}>Ул. Пушкина, д. 31/6</span>
       </div>
       <div className={styles.right}>
-        <span className={styles.boldText}>
-          {formatCurrencyWithThinSpace(totalCost)}
-        </span>
+        <span className={styles.boldText}>{formattedTotalCost}</span>
         <span
           className={cn(
             styles.status,

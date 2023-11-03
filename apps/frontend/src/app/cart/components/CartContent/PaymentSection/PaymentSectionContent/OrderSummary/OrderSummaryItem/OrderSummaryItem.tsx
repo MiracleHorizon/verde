@@ -2,10 +2,12 @@ import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpac
 import styles from './OrderSummaryItem.module.scss'
 
 export function OrderSummaryItem({ title, value }: Props) {
+  const formattedValue = formatCurrencyWithThinSpace(value)
+
   return (
     <li className={styles.root}>
       <span>{title}</span>
-      <span>{formatCurrencyWithThinSpace(value)}</span>
+      <span>{formattedValue}</span>
     </li>
   )
 }
