@@ -10,7 +10,7 @@ import { USER_CART_KEY, USER_KEY } from '@constants/browserStorages'
 import { Route } from '@enums/Route'
 import type { User } from '@interfaces/User'
 import type { UserCart } from '@interfaces/UserCart'
-import type { SignupPayload } from '../interfaces'
+import type { SignupPayload } from '@interfaces/auth/SignupPayload'
 
 export function useSignup() {
   const signin = useUserStore(state => state.signin)

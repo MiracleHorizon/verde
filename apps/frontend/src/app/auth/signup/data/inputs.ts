@@ -4,7 +4,7 @@ import {
   passwordValidate
 } from '@app/auth/validation'
 import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
-import type { SignupPayload } from '../interfaces'
+import type { SignupPayload } from '@interfaces/auth/SignupPayload'
 
 export const signupInputs: ReactHookFormInput<SignupPayload>[] = [
   {

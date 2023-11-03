@@ -1,9 +1,9 @@
 'use client'
 
 import { AuthForm } from '../components'
-import { useSignup } from './hooks'
+import { useSignup } from '@hooks/auth/useSignup'
 import { signupInputs } from './data'
-import type { SignupPayload } from './interfaces'
+import type { SignupPayload } from '@interfaces/auth/SignupPayload'
 
 const defaultValues: SignupPayload = {
   name: '',

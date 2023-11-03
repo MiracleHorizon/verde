@@ -1,9 +1,9 @@
 'use client'
 
 import { AuthForm } from '../components'
-import { useSignin } from './hooks'
+import { useSignin } from '@hooks/auth/useSignin'
 import { signinInputs } from './data'
-import type { SigninPayload } from './interfaces'
+import type { SigninPayload } from '@interfaces/auth/SigninPayload'
 
 const defaultValues: SigninPayload = {
   email: '',

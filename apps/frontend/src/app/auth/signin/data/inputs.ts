@@ -4,7 +4,7 @@ import {
   MIN_PASSWORD_LENGTH
 } from '@app/auth/validation'
 import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
-import type { SigninPayload } from '../interfaces'
+import type { SigninPayload } from '@interfaces/auth/SigninPayload'
 
 export const signinInputs: ReactHookFormInput<SigninPayload>[] = [
   {

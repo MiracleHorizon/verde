@@ -12,7 +12,7 @@ import { USER_CART_KEY, USER_KEY } from '@constants/browserStorages'
 import { Route } from '@enums/Route'
 import type { User } from '@interfaces/User'
 import type { UserCart } from '@interfaces/UserCart'
-import type { SigninPayload } from '../interfaces'
+import type { SigninPayload } from '@interfaces/auth/SigninPayload'
 
 export function useSignin() {
   const [error, setError] = useState<Error | null>(null)
