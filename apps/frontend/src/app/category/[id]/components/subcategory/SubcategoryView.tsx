@@ -1,5 +1,5 @@
 import { SubcategoryHeader } from './SubcategoryHeader'
-import { ProductsGrid } from '@components/ProductsGrid'
+import { ProductGrid } from '@components/ProductGrid'
 import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
 import styles from './SubcategoryView.module.scss'
 
@@ -17,7 +17,7 @@ export function SubcategoryView({
         categoryTitle={categoryTitle}
       />
       <main className={styles.content}>
-        <ProductsGrid products={products} />
+        <ProductGrid products={products} />
       </main>
     </div>
   )

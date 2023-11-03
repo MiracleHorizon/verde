@@ -1,12 +1,12 @@
 import { ProductsSectionHeader } from './ProductsSectionHeader'
-import { ProductsList } from './ProductsList'
+import { ProductList } from './ProductList'
 import styles from './ProductsSection.module.scss'
 
 export function ProductsSection() {
   return (
     <section className={styles.root}>
       <ProductsSectionHeader />
-      <ProductsList />
+      <ProductList />
     </section>
   )
 }

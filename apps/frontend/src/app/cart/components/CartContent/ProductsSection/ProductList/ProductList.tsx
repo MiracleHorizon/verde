@@ -1,8 +1,8 @@
 import { ProductItem } from './ProductItem'
 import { useCartStore } from '@stores/cart'
-import styles from './ProductsList.module.scss'
+import styles from './ProductList.module.scss'
 
-export function ProductsList() {
+export function ProductList() {
   const products = useCartStore(state => state.products)
 
   return (

@@ -1,1 +1,1 @@
-export { TailSpin } from './TailSpin.tsx'
+export { TailSpin } from './TailSpin'

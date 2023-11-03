@@ -1,8 +1,8 @@
 import { ProductCard } from '@components/ProductCard'
 import type { Product } from '@interfaces/Product'
-import styles from './ProductsGrid.module.scss'
+import styles from './ProductGrid.module.scss'
 
-export function ProductsGrid({ products }: Props) {
+export function ProductGrid({ products }: Props) {
   return (
     <div className={styles.root}>
       {products.map(product => (
