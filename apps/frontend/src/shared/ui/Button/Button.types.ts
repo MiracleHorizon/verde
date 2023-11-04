@@ -2,11 +2,12 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
 import type { ClassNameProps } from '@interfaces/ClassNameProps'
 
-export type Props = ButtonHTMLAttributes<HTMLButtonElement> &
+export type Props = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'title'> &
   ClassNameProps &
   Content & {
     variant: 'primary' | 'secondary'
     isDisabled?: boolean
+    titleAttribute?: string
     onClick?: VoidFunction
   }
 

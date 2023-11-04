@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import cn from 'classnames'
 
+import { Button } from '@ui/Button'
 import { IconCart } from '@ui/icons/IconCart'
 import { useCartSummary } from '@stores/hooks/useCartSummary'
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
@@ -22,13 +23,13 @@ export function UserCartSummary({ className }: ClassNameProps) {
   }
 
   return (
-    <button
-      title={`Общая стоимость: ${formattedSummary}`}
+    <Button
+      variant='primary'
+      title={formattedSummary}
+      titleAttribute={`Общая стоимость: ${formattedSummary}`}
+      leadIcon={<IconCart className={styles.icon} />}
       className={cn(styles.root, className)}
       onClick={navigateToCart}
-    >
-      <IconCart className={styles.icon} />
-      <span className={styles.value}>{formattedSummary}</span>
-    </button>
+    />
   )
 }

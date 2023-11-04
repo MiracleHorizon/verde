@@ -18,15 +18,14 @@
   &:active {
     @include bg-lightness($green-primary, -7%);
   }
-}
 
-.value {
-  font-size: 15px;
-  font-weight: 500;
-  color: $white-primary;
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    color: $white-primary;
+  }
 }
 
 .icon {
-  margin-right: 4px;
   fill: $white-primary;
 }

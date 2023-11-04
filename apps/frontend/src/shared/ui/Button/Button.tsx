@@ -7,6 +7,7 @@ import styles from './Button.module.scss'
 function Button({
   variant,
   title,
+  titleAttribute,
   leadIcon,
   isDisabled,
   className,
@@ -16,6 +17,7 @@ function Button({
 
   return (
     <button
+      title={titleAttribute}
       className={cn(
         styles.root,
         withLeadIcon ? styles.withLeadIcon : styles.withoutLeadIcon,
