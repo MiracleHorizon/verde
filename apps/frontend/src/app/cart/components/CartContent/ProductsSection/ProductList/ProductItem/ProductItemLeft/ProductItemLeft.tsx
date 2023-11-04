@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { ProductItemPrice } from '../ProductItemPrice'
 import type { CartProduct } from '@interfaces/CartProduct'
-import productFallbackPng from '@public/product_fallback.png'
+import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './ProductItemLeft.module.scss'
 
 export function ProductItemLeft({

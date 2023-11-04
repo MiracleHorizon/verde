@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
 import type { OrderProduct } from '@interfaces/OrderProduct'
-import productFallbackPng from '@public/product_fallback.png'
+import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './OrderProductItem.module.scss'
 
 export function OrderProductItem({

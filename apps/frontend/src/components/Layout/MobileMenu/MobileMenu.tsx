@@ -1,8 +1,8 @@
 import { MobileMenuItem } from './MobileMenuItem'
 import { Route } from '@enums/Route'
-import homeSvg from '@public/home.svg'
-import listSvg from '@public/list.svg'
-import cartSvg from '@public/cart.svg'
+import homeSvg from '@public/svg/home.svg'
+import listSvg from '@public/svg/list.svg'
+import cartSvg from '@public/svg/cart.svg'
 import styles from './MobileMenu.module.scss'
 
 const items = [

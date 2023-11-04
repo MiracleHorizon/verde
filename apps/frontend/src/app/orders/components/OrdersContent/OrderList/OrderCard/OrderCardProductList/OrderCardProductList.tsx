@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import type { Order } from '@interfaces/Order'
-import productFallbackPng from '@public/product_fallback.png'
+import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './OrderCardProductList.module.scss'
 
 const MAX_DISPLAY_PRODUCTS = 5

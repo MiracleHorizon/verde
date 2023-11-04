@@ -2,7 +2,7 @@ import Image from 'next/image'
 import cn from 'classnames'
 
 import type { ClassNameProps } from '@interfaces/ClassNameProps'
-import userPng from '@public/user.png'
+import userPng from '@public/images/user.png'
 import styles from './Avatar.module.scss'
 
 export function Avatar({ className, onClick }: Props) {

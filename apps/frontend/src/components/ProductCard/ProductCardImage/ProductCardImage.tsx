@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { useImageOnLoad } from 'usehooks-ts'
 
 import type { Props } from '@components/ProductCard'
-import productFallbackPng from '@public/product_fallback.png'
-import imageLoadFailSVG from '@public/image-load-fail.svg'
+import productFallbackPng from '@public/images/product_fallback.png'
+import imageLoadFailSVG from '@public/svg/image-load-fail.svg'
 import styles from './ProductCardImage.module.scss'
 
 export function ProductCardImage({

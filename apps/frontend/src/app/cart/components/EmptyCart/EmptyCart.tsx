@@ -5,7 +5,7 @@ import cn from 'classnames'
 import { Button } from '@ui/Button'
 import { Route } from '@enums/Route'
 import { roboto } from '@styles/fonts'
-import emptyCartBagPng from '@public/empty_cart_bag.png'
+import emptyCartBagPng from '@public/images/empty_cart_bag.png'
 import styles from './EmptyCart.module.scss'
 
 export function EmptyCart() {

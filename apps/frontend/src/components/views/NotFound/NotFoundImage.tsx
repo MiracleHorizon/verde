@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import type { CSSProperties } from 'react'
 
 import { breakpoints } from '@styles/breakpoints'
-import skeletonThinkingPng from '@public/skeleton_thinking.png'
+import skeletonThinkingPng from '@public/images/skeleton_thinking.png'
 
 const style: CSSProperties = {
   objectFit: 'cover'
