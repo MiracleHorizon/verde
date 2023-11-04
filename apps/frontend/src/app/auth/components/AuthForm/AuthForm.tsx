@@ -6,9 +6,11 @@ import {
   type FieldValues,
   useForm
 } from 'react-hook-form'
+import cn from 'classnames'
 
 import { Button } from '@ui/Button'
 import { AuthFormInput } from './AuthFormInput'
+import { ButtonDemoAuth } from '../ButtonDemoAuth'
 import { getSubmitErrorDisplayMessage } from './getSubmitErrorDisplayMessage'
 import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
 import styles from './AuthForm.module.scss'
@@ -35,26 +37,31 @@ export function AuthForm<T extends FieldValues, Err extends Error>({
   }
 
   return (
-    <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
-      {inputs.map(({ fieldName, registerOptions, ...inputAttributes }) => (
-        <AuthFormInput
-          key={fieldName}
-          register={register(fieldName, registerOptions)}
-          error={errors[fieldName] as FieldError}
-          {...inputAttributes}
+    <>
+      <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
+        {inputs.map(({ fieldName, registerOptions, ...inputAttributes }) => (
+          <AuthFormInput
+            key={fieldName}
+            register={register(fieldName, registerOptions)}
+            error={errors[fieldName] as FieldError}
+            {...inputAttributes}
+          />
+        ))}
+        {submitErrorMessage && (
+          <span className={styles.submitError}>{submitErrorMessage}</span>
+        )}
+      </form>
+      <section className={styles.buttonsSection}>
+        <Button
+          variant='primary'
+          title='Отправить'
+          className={cn(styles.button, styles.buttonSubmit)}
+          isDisabled={!isValid || isValidating}
+          onClick={handleSubmit(onSubmit)}
         />
-      ))}
-      {submitErrorMessage && (
-        <span className={styles.submitError}>{submitErrorMessage}</span>
-      )}
-      <Button
-        type='submit'
-        variant='primary'
-        title='Отправить'
-        className={styles.submit}
-        isDisabled={!isValid || isValidating}
-      />
-    </form>
+        <ButtonDemoAuth className={styles.button} />
+      </section>
+    </>
   )
 }
 

@@ -394,7 +394,7 @@
           "subcategoryId": "clo0h2w9a000208l9es3s5q93",
           "title": "Брокколи",
           "fullPrice": 158,
-          "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/brocolli-1024x640.png",
+          "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/broccoli-1024x640.png",
           "discountPercentage": 0
         }
       ]
@@ -549,7 +549,7 @@
           "subcategoryId": "clo1164kh000e08l9gntq9dag",
           "title": "Салат с лососем",
           "fullPrice": 387,
-          "imagePath": "/salmon_salad.png",
+          "imagePath": "https://verde-serve-static-dyu0.onrender.com/images/salmon-salad-1024x640.png",
           "discountPercentage": 0
         }
       ]
