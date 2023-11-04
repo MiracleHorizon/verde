@@ -5,6 +5,12 @@
   @include square(44px);
 
   border-radius: 16px;
+  opacity: 45%;
+  transition: opacity 40ms ease-in;
+
+  &:hover {
+    opacity: 100%;
+  }
 }
 
 .button {
