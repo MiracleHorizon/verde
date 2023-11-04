@@ -9,7 +9,11 @@ export function ProductItemRight({
   fullPrice,
   discountPercentage
 }: Pick<CartProduct, 'id' | 'fullPrice' | 'discountPercentage'>) {
-  const { quantity, ...counterChangerProps } = useCartProduct(id)
+  const { quantity, ...counterChangerProps } = useCartProduct({
+    id,
+    fullPrice,
+    discountPercentage
+  })
 
   return (
     <div className={styles.root}>

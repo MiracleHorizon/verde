@@ -1,25 +1,31 @@
 'use client'
 
 import { useCartStore } from '@stores/cart'
+import { useCanAddToCart } from '@stores/hooks/useCanAddToCart'
 import { MAX_PRODUCT_QUANTITY } from '@constants/mock'
+import type { Product } from '@interfaces/Product'
 
-export function useCartProduct(productId: string) {
-  const quantity = useCartStore(state => state.productQuantity(productId))
+export function useCartProduct({
+  id,
+  fullPrice,
+  discountPercentage
+}: Pick<Product, 'id' | 'fullPrice' | 'discountPercentage'>) {
+  const quantity = useCartStore(state => state.productQuantity(id))
 
-  const isIncrementDisabled = quantity >= MAX_PRODUCT_QUANTITY
-  const isDecrementDisabled = quantity <= 0
+  const { canAddToCart } = useCanAddToCart()
+  const isCanAddToCart = canAddToCart({ fullPrice, discountPercentage })
 
   const increment = useCartStore(state => state.incrementProductQuantity)
   const decrement = useCartStore(state => state.decrementProductQuantity)
 
-  const handleIncrement = () => increment(productId)
-  const handleDecrement = () => decrement(productId)
+  const handleIncrement = () => increment(id)
+  const handleDecrement = () => decrement(id)
 
   return {
     quantity,
     increment: handleIncrement,
     decrement: handleDecrement,
-    isIncrementDisabled,
-    isDecrementDisabled
+    isIncrementDisabled: quantity >= MAX_PRODUCT_QUANTITY || !isCanAddToCart,
+    isDecrementDisabled: quantity <= 0
   }
 }

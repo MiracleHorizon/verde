@@ -26,7 +26,11 @@ export default function ProductCardFooterContent({
   const isAuth = useUserStore(state => state.isAuth())
   const inCart = useCartStore(state => state.isProductInCart(product.id))
 
-  const { quantity, ...counterChangerProps } = useCartProduct(product.id)
+  const { quantity, ...counterChangerProps } = useCartProduct({
+    id: product.id,
+    fullPrice: product.fullPrice,
+    discountPercentage: product.discountPercentage
+  })
   const addProduct = useCartStore(state => state.addProduct)
 
   const handleAddProduct = useCallback(() => {
