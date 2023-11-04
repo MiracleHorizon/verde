@@ -11,6 +11,7 @@ import cn from 'classnames'
 import { Button } from '@ui/Button'
 import { AuthFormInput } from './AuthFormInput'
 import { ButtonDemoAuth } from '../ButtonDemoAuth'
+import { HiddenSubmitInput } from '@components/HiddenSubmitInput'
 import { getSubmitErrorDisplayMessage } from './getSubmitErrorDisplayMessage'
 import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
 import styles from './AuthForm.module.scss'
@@ -50,6 +51,7 @@ export function AuthForm<T extends FieldValues, Err extends Error>({
         {submitErrorMessage && (
           <span className={styles.submitError}>{submitErrorMessage}</span>
         )}
+        <HiddenSubmitInput />
       </form>
       <section className={styles.buttonsSection}>
         <Button
