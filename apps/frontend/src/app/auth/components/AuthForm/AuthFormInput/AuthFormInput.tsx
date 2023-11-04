@@ -1,7 +1,7 @@
-import { useId, useRef } from 'react'
+import { useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { useEventListener } from 'usehooks-ts'
 import cn from 'classnames'
-
 import type { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 
 import { IconExclamationTriangle } from '@ui/icons/IconExclamationTriangle'
@@ -9,12 +9,21 @@ import { KeyboardCode } from '@enums/KeyboardCode'
 import type { InputProps } from '@interfaces/InputProps'
 import styles from './AuthFormInput.module.scss'
 
+const TogglePasswordVisibility = dynamic(
+  () =>
+    import('@components/TogglePasswordVisibility').then(
+      mod => mod.TogglePasswordVisibility
+    ),
+  { ssr: false }
+)
+
 export function AuthFormInput<T extends string>({
   register: { ref, ...register },
   error,
+  type,
   ...inputAttributes
 }: Props<T>) {
-  const id = useId()
+  const [inputType, setInputType] = useState(type)
   const inputRef = useRef<HTMLInputElement | null>(null)
 
   const handleMount = (node: HTMLInputElement | null) => {
@@ -28,16 +37,17 @@ export function AuthFormInput<T extends string>({
   })
 
   return (
-    <label htmlFor={id} className={styles.root}>
+    <div className={styles.root}>
       <input
-        id={id}
         ref={handleMount}
         className={cn(
           styles.field,
           error && error.message !== ''
             ? styles.errorStatus
-            : styles.defaultStatus
+            : styles.defaultStatus,
+          type === 'password' ? styles.passwordType : styles.notPasswordType
         )}
+        type={inputType}
         {...register}
         {...inputAttributes}
       />
@@ -47,7 +57,14 @@ export function AuthFormInput<T extends string>({
           {error.message}
         </span>
       )}
-    </label>
+      {type === 'password' && (
+        <TogglePasswordVisibility
+          inputType={inputType}
+          setInputType={setInputType}
+          className={styles.togglePasswordVisibility}
+        />
+      )}
+    </div>
   )
 }
 

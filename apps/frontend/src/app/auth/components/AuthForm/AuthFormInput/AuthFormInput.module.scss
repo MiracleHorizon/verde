@@ -14,6 +14,7 @@ $input-h-sm: 44px;
 .root {
   @include flex-start;
 
+  position: relative;
   width: 100%;
   flex-direction: column;
 
@@ -43,6 +44,25 @@ $input-h-sm: 44px;
   @media screen and (max-width: $mobile-md) {
     height: $input-h-sm;
     min-height: $input-h-sm;
+  }
+}
+
+.passwordType {
+  padding-right: $toggle-visibility-size + 20px;
+}
+
+.notPasswordType {
+  padding-right: 10px;
+}
+
+.togglePasswordVisibility {
+  position: absolute;
+  right: 10px;
+  top: $input-h / 2;
+  translate: 0 -50%;
+
+  @media screen and (max-width: $mobile-md) {
+    top: $input-h-sm / 2;
   }
 }
 

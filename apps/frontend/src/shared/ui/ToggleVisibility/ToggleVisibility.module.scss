@@ -1,0 +1,9 @@
+@import '@styles/mixins';
+
+.root {
+  @include square($toggle-visibility-size);
+  @include flex-center;
+
+  cursor: pointer;
+  opacity: 60%;
+}
