@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import { ProductItemLeft } from './ProductItemLeft'
 import { ProductItemRight } from './ProductItemRight'
-import type { CartProduct } from '@interfaces/CartProduct'
+import type { CartProduct } from '@interfaces/business/CartProduct'
 import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './ProductItem.module.scss'
 

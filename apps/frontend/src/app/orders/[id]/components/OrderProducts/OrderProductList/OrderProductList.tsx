@@ -1,8 +1,8 @@
 import { OrderProductItem } from './OrderProductItem'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderProductList.module.scss'
 
-export function OrderProductList({ products }: Pick<Order, 'products'>) {
+export function OrderProductList({ products }: Pick<UserOrder, 'products'>) {
   return (
     <ul className={styles.root}>
       {products.map(product => (

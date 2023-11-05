@@ -1,11 +1,11 @@
 import { DateFns } from '@libs/DateFns'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderHeader.module.scss'
 
 export function OrderHeader({
   id,
   createdAt
-}: Pick<Order, 'id' | 'createdAt'>) {
+}: Pick<UserOrder, 'id' | 'createdAt'>) {
   const dateFormat = 'd MMMM yyyy, k:mm'
   const formattedDate = DateFns.format(createdAt, dateFormat)
 

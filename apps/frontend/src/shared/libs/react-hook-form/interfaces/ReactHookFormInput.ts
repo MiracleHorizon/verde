@@ -1,6 +1,6 @@
 import type { FieldValues, Path, RegisterOptions } from 'react-hook-form'
 
-import type { InputProps } from './InputProps'
+import type { InputProps } from '@interfaces/InputProps'
 
 type FieldName<T> = Path<T>
 

@@ -7,8 +7,8 @@ import { useCartStore } from '@stores/cart'
 import { useUserStore } from '@stores/user'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { USER_CART_KEY, USER_KEY } from '@constants/browserStorages'
-import type { User } from '@interfaces/User'
-import type { UserCart } from '@interfaces/UserCart'
+import type { User } from '@interfaces/user/User'
+import type { UserCart } from '@interfaces/user/UserCart'
 
 export function useInitUser() {
   const isClient = useIsClient()

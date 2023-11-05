@@ -7,7 +7,7 @@ import cn from 'classnames'
 
 import { CategoryImage } from '@components/CategoryImage'
 import { getCategoryRoute } from '@helpers/getCategoryRoute'
-import type { NavigationCategory } from '@interfaces/NavigationCategory'
+import type { NavigationCategory } from '@interfaces/business/NavigationCategory'
 import styles from './NavigationItem.module.scss'
 
 function NavigationItem({ id, title, imagePath }: NavigationCategory) {

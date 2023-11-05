@@ -7,14 +7,14 @@ import { useUserStore } from '@stores/user'
 import { useCartStore } from '@stores/cart'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { createUser } from '@helpers/createUser'
-import { createOrder } from '@helpers/createOrder'
+import { createUserOrder } from '@helpers/createUserOrder'
 import { USER_ORDERS_KEY } from '@constants/browserStorages'
 import { SERVICE_FEE } from '@constants/payment'
 import { Route } from '@enums/Route'
-import type { Order } from '@interfaces/Order'
-import type { CreatOrderDto } from '@interfaces/CreatOrderDto'
+import type { UserOrder } from '@interfaces/user/UserOrder'
+import type { CreatUserOrderDto } from '@interfaces/user/CreatUserOrderDto'
 
-const mockOrdersDto: Omit<CreatOrderDto, 'userId' | 'serviceFee'>[] = [
+const mockOrdersDto: Omit<CreatUserOrderDto, 'userId' | 'serviceFee'>[] = [
   {
     totalCost: 1143,
     deliveryCost: 399,
@@ -204,9 +204,9 @@ export function useDemoSignup() {
       password: 'SomeSTRONG40_password1'
     })
 
-    const orders: Order[] = mockOrdersDto
+    const orders: UserOrder[] = mockOrdersDto
       .map(payload =>
-        createOrder({
+        createUserOrder({
           userId: user.id,
           serviceFee: SERVICE_FEE,
           ...payload

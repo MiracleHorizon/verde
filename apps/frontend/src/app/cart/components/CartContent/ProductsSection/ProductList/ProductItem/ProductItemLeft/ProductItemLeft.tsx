@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { ProductItemPrice } from '../ProductItemPrice'
 import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
-import type { CartProduct } from '@interfaces/CartProduct'
+import type { CartProduct } from '@interfaces/business/CartProduct'
 import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './ProductItemLeft.module.scss'
 

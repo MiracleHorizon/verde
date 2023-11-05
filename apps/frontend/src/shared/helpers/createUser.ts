@@ -4,8 +4,8 @@ import {
   USER_KEY,
   USER_ORDERS_KEY
 } from '@constants/browserStorages'
-import type { UserCart } from '@interfaces/UserCart'
-import type { User } from '@interfaces/User'
+import type { User } from '@interfaces/user/User'
+import type { UserCart } from '@interfaces/user/UserCart'
 import type { SignupPayload } from '@interfaces/auth/SignupPayload'
 
 export function createUser({

@@ -4,7 +4,7 @@ import { Header } from '@app/category/[id]/components/Header'
 import { getCategoryRoute } from '@helpers/getCategoryRoute'
 import { Route } from '@enums/Route'
 import type { BreadcrumbItem } from '@ui/Breadcrumb'
-import type { ProductSubcategory } from '@interfaces/ProductSubcategory'
+import type { ProductSubcategory } from '@interfaces/business/ProductSubcategory'
 
 export function SubcategoryHeader({
   title,

@@ -8,7 +8,7 @@ import { useCartStore } from '@stores/cart'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { USER_KEY } from '@constants/browserStorages'
 import { Route } from '@enums/Route'
-import type { User } from '@interfaces/User'
+import type { User } from '@interfaces/user/User'
 
 export function useSignout() {
   const signout = useUserStore(state => state.signout)

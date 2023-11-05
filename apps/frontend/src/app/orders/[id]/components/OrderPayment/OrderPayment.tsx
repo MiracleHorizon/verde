@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 
 import { OrderPaymentItem } from './OrderPaymentItem'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderPayment.module.scss'
 
 export function OrderPayment({
@@ -9,7 +9,10 @@ export function OrderPayment({
   productsCost,
   deliveryCost,
   serviceFee
-}: Pick<Order, 'totalCost' | 'productsCost' | 'deliveryCost' | 'serviceFee'>) {
+}: Pick<
+  UserOrder,
+  'totalCost' | 'productsCost' | 'deliveryCost' | 'serviceFee'
+>) {
   const items = useMemo(
     () => [
       { title: 'Стоимость товаров', value: productsCost },

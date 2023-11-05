@@ -1,8 +1,8 @@
 import { OrderProductList } from './OrderProductList'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderProducts.module.scss'
 
-export function OrderProducts({ products }: Pick<Order, 'products'>) {
+export function OrderProducts({ products }: Pick<UserOrder, 'products'>) {
   return (
     <>
       <div className={styles.divider} />

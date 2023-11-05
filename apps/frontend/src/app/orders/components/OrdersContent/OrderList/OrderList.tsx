@@ -1,5 +1,5 @@
 import { OrderCard } from './OrderCard'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderList.module.scss'
 
 export function OrderList({ orders }: Props) {
@@ -13,5 +13,5 @@ export function OrderList({ orders }: Props) {
 }
 
 interface Props {
-  orders: Order[]
+  orders: UserOrder[]
 }

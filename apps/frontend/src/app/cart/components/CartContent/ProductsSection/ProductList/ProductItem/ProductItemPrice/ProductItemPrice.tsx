@@ -2,7 +2,7 @@ import cn from 'classnames'
 
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
-import type { CartProduct } from '@interfaces/CartProduct'
+import type { CartProduct } from '@interfaces/business/CartProduct'
 import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './ProductItemPrice.module.scss'
 

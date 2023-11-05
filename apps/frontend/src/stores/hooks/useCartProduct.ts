@@ -3,7 +3,7 @@
 import { useCartStore } from '@stores/cart'
 import { useCanAddToCart } from '@stores/hooks/useCanAddToCart'
 import { MAX_PRODUCT_QUANTITY } from '@constants/mock'
-import type { Product } from '@interfaces/Product'
+import type { Product } from '@interfaces/business/Product'
 
 export function useCartProduct({
   id,

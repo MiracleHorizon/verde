@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import { useToggle } from 'usehooks-ts'
 
 import { Avatar } from '@ui/Avatar'
-import type { User } from '@interfaces/User'
+import type { User } from '@interfaces/user/User'
 
 const UserMenuModal = dynamic(
   () => import('./UserMenuModal').then(mod => mod.UserMenuModal),

@@ -6,7 +6,7 @@ import { useIsClient } from 'usehooks-ts'
 import cn from 'classnames'
 
 import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
-import type { ProductCategory } from '@interfaces/ProductCategory'
+import type { ProductCategory } from '@interfaces/business/ProductCategory'
 import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './CategoryImage.module.scss'
 

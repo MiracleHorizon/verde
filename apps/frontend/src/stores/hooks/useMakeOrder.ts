@@ -6,10 +6,10 @@ import { useCartStore } from '@stores/cart'
 import { useOrderCost } from '@stores/hooks/useOrderCost'
 import { useOrderSummary } from '@stores/hooks/useOrderSummary'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
-import { createOrder } from '@helpers/createOrder'
+import { createUserOrder } from '@helpers/createUserOrder'
 import { getOrderRoute } from '@helpers/getOrderRoute'
 import { USER_ORDERS_KEY } from '@constants/browserStorages'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 
 export function useMakeOrder() {
   const router = useRouter()
@@ -24,7 +24,7 @@ export function useMakeOrder() {
   const handleMakeOrder = useCallback(() => {
     if (!user) return
 
-    const order = createOrder({
+    const order = createUserOrder({
       userId: user.id,
       totalCost: orderCost,
       deliveryCost,
@@ -35,7 +35,7 @@ export function useMakeOrder() {
 
     const localStorageProvider = new BrowserStorageProvider(localStorage)
 
-    const userOrders = localStorageProvider.get<Order[]>(USER_ORDERS_KEY)
+    const userOrders = localStorageProvider.get<UserOrder[]>(USER_ORDERS_KEY)
 
     if (userOrders) {
       localStorageProvider.set(USER_ORDERS_KEY, [...userOrders, order])

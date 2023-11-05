@@ -5,7 +5,7 @@ import { useIsClient } from 'usehooks-ts'
 
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { USER_ORDERS_KEY } from '@constants/browserStorages'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 
 const OrdersContent = dynamic(
   () => import('./OrdersContent').then(mod => mod.OrdersContent),
@@ -20,7 +20,7 @@ export function OrdersView() {
   }
 
   const localStorageProvider = new BrowserStorageProvider(localStorage)
-  const orders = localStorageProvider.get<Order[]>(USER_ORDERS_KEY)
+  const orders = localStorageProvider.get<UserOrder[]>(USER_ORDERS_KEY)
 
   if (!orders || orders.length === 0) {
     return (

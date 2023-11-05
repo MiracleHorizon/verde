@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { APP_DESCRIPTION, APP_KEYWORDS } from '@constants/seo'
-import type { SeoPayload } from '@interfaces/SeoPayload'
+import type { SeoPayload } from '@interfaces/next/SeoPayload'
 
 type BasicMetadata = Pick<Metadata, 'title' | 'keywords' | 'description'>
 

@@ -3,7 +3,7 @@ import { useCallback } from 'react'
 import { useOrderCost } from './useOrderCost'
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
 import { MAX_CART_TOTAL } from '@constants/mock'
-import type { Product } from '@interfaces/Product'
+import type { Product } from '@interfaces/business/Product'
 
 export function useCanAddToCart() {
   const { orderCost } = useOrderCost()

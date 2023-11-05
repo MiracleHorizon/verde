@@ -1,6 +1,6 @@
 import type { NextRequest } from 'next/server'
 
-import { RouteAccessHandler } from '@utils/RouteAccessHandler.ts'
+import { RouteAccessHandler } from '@utils/RouteAccessHandler'
 
 export function middleware(req: NextRequest) {
   const routesAccessHandler = new RouteAccessHandler(req)

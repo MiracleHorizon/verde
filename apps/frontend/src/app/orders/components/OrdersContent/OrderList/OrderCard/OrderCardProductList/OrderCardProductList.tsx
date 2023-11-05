@@ -1,13 +1,15 @@
 import Image from 'next/image'
 
 import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './OrderCardProductList.module.scss'
 
 const MAX_DISPLAY_PRODUCTS = 5
 
-export function OrderCardProductList({ products }: Pick<Order, 'products'>) {
+export function OrderCardProductList({
+  products
+}: Pick<UserOrder, 'products'>) {
   const { style, handleImageOnLoad } = useFullSizeImageLoad()
 
   return (

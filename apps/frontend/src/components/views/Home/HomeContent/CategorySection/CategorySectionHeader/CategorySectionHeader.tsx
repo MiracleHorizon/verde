@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { CategoryImage } from '@components/CategoryImage'
 import { ButtonLoadMore } from './ButtonLoadMore'
 import { getCategoryRoute } from '@helpers/getCategoryRoute'
-import type { ProductCategory } from '@interfaces/ProductCategory'
+import type { ProductCategory } from '@interfaces/business/ProductCategory'
 import styles from './CategorySectionHeader.module.scss'
 
 export function CategorySectionHeader({

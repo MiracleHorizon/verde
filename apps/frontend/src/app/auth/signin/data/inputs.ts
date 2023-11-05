@@ -3,7 +3,7 @@ import {
   MAX_PASSWORD_LENGTH,
   MIN_PASSWORD_LENGTH
 } from '@app/auth/validation'
-import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
+import type { ReactHookFormInput } from '@libs/react-hook-form/interfaces/ReactHookFormInput'
 import type { SigninPayload } from '@interfaces/auth/SigninPayload'
 
 export const signinInputs: ReactHookFormInput<SigninPayload>[] = [

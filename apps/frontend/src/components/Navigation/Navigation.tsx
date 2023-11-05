@@ -1,5 +1,5 @@
 import { NavigationItem } from './NavigationItem'
-import type { NavigationCategory } from '@interfaces/NavigationCategory'
+import type { NavigationCategory } from '@interfaces/business/NavigationCategory'
 import styles from './Navigation.module.scss'
 
 export function Navigation() {

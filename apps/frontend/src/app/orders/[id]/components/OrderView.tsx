@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 import { FullWidthSpinner } from '@ui/spinners/FullWidthSpinner'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { USER_ORDERS_KEY } from '@constants/browserStorages'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderView.module.scss'
 
 const LoadingSpinner = () => <FullWidthSpinner className={styles.spinner} />
@@ -54,11 +54,11 @@ export default function OrderView({ id }: Id) {
   )
 }
 
-type Id = Pick<Order, 'id'>
+type Id = Pick<UserOrder, 'id'>
 
-function getOrder({ id }: Id): Order | null {
+function getOrder({ id }: Id): UserOrder | null {
   const localStorageProvider = new BrowserStorageProvider(localStorage)
-  const orders = localStorageProvider.get<Order[]>(USER_ORDERS_KEY)
+  const orders = localStorageProvider.get<UserOrder[]>(USER_ORDERS_KEY)
 
   if (!orders) {
     return null

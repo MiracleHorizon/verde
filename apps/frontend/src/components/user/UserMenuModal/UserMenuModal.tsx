@@ -6,7 +6,7 @@ import cn from 'classnames'
 
 import { UserMenu } from '../UserMenu'
 import { Modal, type ModalProps } from '@ui/modals/Modal'
-import type { User } from '@interfaces/User'
+import type { User } from '@interfaces/user/User'
 import { roboto } from '@styles/fonts'
 import styles from './UserMenuModal.module.scss'
 

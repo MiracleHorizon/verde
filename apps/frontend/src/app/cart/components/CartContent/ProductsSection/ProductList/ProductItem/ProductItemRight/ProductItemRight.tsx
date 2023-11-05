@@ -1,7 +1,7 @@
 import { ProductItemPrice } from '../ProductItemPrice'
 import { CounterChanger } from '@ui/CounterChanger'
 import { useCartProduct } from '@stores/hooks/useCartProduct'
-import type { CartProduct } from '@interfaces/CartProduct'
+import type { CartProduct } from '@interfaces/business/CartProduct'
 import styles from './ProductItemRight.module.scss'
 
 export function ProductItemRight({

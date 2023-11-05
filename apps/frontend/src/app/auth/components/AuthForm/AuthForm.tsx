@@ -13,7 +13,7 @@ import { AuthFormInput } from './AuthFormInput'
 import { ButtonDemoAuth } from '../ButtonDemoAuth'
 import { HiddenSubmitInput } from '@components/HiddenSubmitInput'
 import { getSubmitErrorDisplayMessage } from './getSubmitErrorDisplayMessage'
-import type { ReactHookFormInput } from '@interfaces/ReactHookFormInput'
+import type { ReactHookFormInput } from '@libs/react-hook-form/interfaces/ReactHookFormInput'
 import styles from './AuthForm.module.scss'
 
 export function AuthForm<T extends FieldValues, Err extends Error>({

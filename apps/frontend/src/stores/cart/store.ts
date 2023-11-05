@@ -4,7 +4,7 @@ import { devtools } from 'zustand/middleware'
 import { BrowserStorageProvider } from '@utils/BrowserStorageProvider'
 import { calcTotalProductCost } from '@helpers/calcTotalProductCost'
 import { USER_CART_KEY } from '@constants/browserStorages'
-import type { UserCart } from '@interfaces/UserCart'
+import type { UserCart } from '@interfaces/user/UserCart'
 import type { State, Store } from './types'
 
 type Id = string

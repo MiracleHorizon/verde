@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import { DateFns } from '@libs/DateFns'
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
-import type { Order } from '@interfaces/Order'
+import type { UserOrder } from '@interfaces/user/UserOrder'
 import styles from './OrderCardHeader.module.scss'
 
 export function OrderCardHeader({ totalCost, createdAt, deliveredAt }: Props) {
@@ -35,7 +35,7 @@ export function OrderCardHeader({ totalCost, createdAt, deliveredAt }: Props) {
   )
 }
 
-type Props = Pick<Order, 'totalCost' | 'createdAt' | 'deliveredAt'>
+type Props = Pick<UserOrder, 'totalCost' | 'createdAt' | 'deliveredAt'>
 
 function formatDate(createdAt: string): string {
   const createdAtDate = new Date(createdAt)

@@ -1,6 +1,6 @@
 import { CategoryHeader } from './CategoryHeader'
 import { CategoryShowcase } from './CategoryShowcase'
-import type { ProductCategory } from '@interfaces/ProductCategory'
+import type { ProductCategory } from '@interfaces/business/ProductCategory'
 import styles from './CategoryView.module.scss'
 
 export function CategoryView({ title, subcategories }: ProductCategory) {

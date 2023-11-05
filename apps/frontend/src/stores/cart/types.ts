@@ -1,6 +1,6 @@
-import type { UserCart } from '@interfaces/UserCart'
-import type { Product } from '@interfaces/Product'
-import type { CartProduct } from '@interfaces/CartProduct'
+import type { UserCart } from '@interfaces/user/UserCart'
+import type { Product } from '@interfaces/business/Product'
+import type { CartProduct } from '@interfaces/business/CartProduct'
 
 export type Store<T> = State<T> & Computed<T> & Actions<T>
 

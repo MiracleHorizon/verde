@@ -1,4 +1,4 @@
-import type { User } from '@interfaces/User'
+import type { User } from '@interfaces/user/User'
 
 export type Store = State & Computed & Actions
 

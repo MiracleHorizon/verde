@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
-import type { OrderProduct } from '@interfaces/OrderProduct'
+import type { UserOrderProduct } from '@interfaces/user/UserOrderProduct'
 import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './OrderProductItem.module.scss'
 
@@ -11,7 +11,7 @@ export function OrderProductItem({
   imagePath,
   quantity,
   totalCost
-}: OrderProduct) {
+}: UserOrderProduct) {
   const { style, handleImageOnLoad } = useFullSizeImageLoad()
   const formattedTotalCost = formatCurrencyWithThinSpace(totalCost)
   const quantityTitle = `${quantity} шт`

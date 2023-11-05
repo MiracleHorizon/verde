@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 
 import { abortRequestWithTimeout } from '@helpers/abortRequestWithTimeout'
 import { HTTPMethod } from '@enums/HTTPMethod'
-import type { ProductCategory } from '@interfaces/ProductCategory'
+import type { ProductCategory } from '@interfaces/business/ProductCategory'
 
 const baseAPI = process.env.SERVER_API + '/categories'
 

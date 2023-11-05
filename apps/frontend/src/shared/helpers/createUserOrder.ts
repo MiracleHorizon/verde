@@ -1,9 +1,12 @@
 import { getDeliveredAtDate } from './getDeliveredAtDate'
 import { createOrderProduct } from './createOrderProduct'
-import type { Order } from '@interfaces/Order'
-import type { CreatOrderDto } from '@interfaces/CreatOrderDto'
+import type { UserOrder } from '@interfaces/user/UserOrder'
+import type { CreatUserOrderDto } from '@interfaces/user/CreatUserOrderDto'
 
-export function createOrder({ products, ...dto }: CreatOrderDto): Order {
+export function createUserOrder({
+  products,
+  ...dto
+}: CreatUserOrderDto): UserOrder {
   const order = {
     id: crypto.randomUUID(),
     ...dto
