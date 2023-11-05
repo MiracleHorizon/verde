@@ -10,13 +10,15 @@
     "start:backend": "cd apps/backend && yarn start",
     "start:backend:prod": "cd apps/backend && yarn start:prod",
     "start:backend:dev": "cd apps/backend && yarn dev",
-    "start:dev": "concurrently \"yarn start:frontend:dev\" \"yarn start:backend:dev\""
+    "start:dev": "concurrently \"yarn start:frontend:dev\" \"yarn start:backend:dev\"",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "concurrently": "^8.2.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.5",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "husky": "^8.0.0"
   }
 }

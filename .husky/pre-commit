@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+#frontend
+cd apps/frontend && npm run build && npm run lint && npm run lint:styles && npm run test:coverage
