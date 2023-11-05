@@ -4,13 +4,17 @@ import { useCallback, useState } from 'react'
 import {
   AnimatePresence,
   type AnimationProps,
-  motion,
+  LazyMotion,
+  m,
   useMotionValueEvent,
   useScroll
 } from 'framer-motion'
 
 import { IconChevronDoubleUp } from '@ui/icons/IconChevronDoubleUp'
 import styles from './ButtonBackTop.module.scss'
+
+const features = () =>
+  import('@libs/framer-motion/features/domAnimation').then(mod => mod.default)
 
 export const animation: AnimationProps = {
   initial: {
@@ -52,16 +56,18 @@ export default function ButtonBackTop() {
   )
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          {...animation}
-          className={styles.root}
-          onClick={handleBackTop}
-        >
-          <IconChevronDoubleUp className={styles.icon} />
-        </motion.button>
-      )}
-    </AnimatePresence>
+    <LazyMotion features={features}>
+      <AnimatePresence>
+        {isVisible && (
+          <m.button
+            {...animation}
+            className={styles.root}
+            onClick={handleBackTop}
+          >
+            <IconChevronDoubleUp className={styles.icon} />
+          </m.button>
+        )}
+      </AnimatePresence>
+    </LazyMotion>
   )
 }
