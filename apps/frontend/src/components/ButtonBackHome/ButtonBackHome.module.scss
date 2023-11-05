@@ -4,7 +4,7 @@
   @include flex-center;
 
   opacity: 70%;
-  transition: opacity 0.1s ease-out;
+  transition: opacity 100ms ease-out;
 
   &:hover {
     opacity: 100%;

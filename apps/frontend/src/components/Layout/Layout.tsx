@@ -10,6 +10,9 @@ const MobileMenu = dynamic(
   () => import('./MobileMenu').then(mod => mod.MobileMenu),
   { ssr: true }
 )
+const ButtonBackTop = dynamic(() => import('@components/ButtonBackTop'), {
+  ssr: false
+})
 
 export function DefaultLayout({ children, withoutNavigation }: Props) {
   return (
@@ -32,6 +35,7 @@ export function DefaultLayout({ children, withoutNavigation }: Props) {
       </div>
 
       <MobileMenu />
+      <ButtonBackTop />
     </div>
   )
 }
