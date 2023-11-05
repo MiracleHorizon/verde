@@ -2,8 +2,8 @@
 
 import { useMemo, useRef } from 'react'
 import Image from 'next/image'
-import { useImageOnLoad } from 'usehooks-ts'
 
+import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
 import type { Props } from '@components/ProductCard'
 import productFallbackPng from '@public/images/product_fallback.png'
 import imageLoadFailSvg from '@public/svg/image-load-fail.svg'
@@ -15,9 +15,8 @@ export function ProductCardImage({
   variant
 }: Pick<Props, 'title' | 'imagePath' | 'variant'>) {
   const imageRef = useRef<HTMLImageElement | null>(null)
-  const { handleImageOnLoad, css } = useImageOnLoad()
+  const { style, handleImageOnLoad } = useFullSizeImageLoad()
 
-  const style = useMemo(() => ({ ...css.fullSize }), [css.fullSize])
   const imageSizes = useMemo(() => {
     if (!variant || variant === 'default') {
       return {

@@ -1,32 +1,19 @@
 @import '@styles/variables';
 @import '@styles/mixins';
 
-.image {
+.root {
   @include square($category-image-size);
 
-  min-width: $category-image-size;
-  background-size: $category-image-size $category-image-size;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
 
   @media screen and (max-width: $mobile-lg) {
-    @include square($category-image-size);
-
-    min-width: $category-image-size;
-    background-size: $category-image-size-sm $category-image-size-sm;
+    @include square($category-image-size-mobile-lg);
   }
 }
 
 .imageFallback {
-  @include square($category-image-size);
+  @include size-full;
 
-  min-width: $category-image-size;
   border-radius: 12px;
   background: $gray-500;
-
-  @media screen and (max-width: $mobile-lg) {
-    @include square($category-image-size-sm);
-
-    min-width: $category-image-size-sm;
-  }
 }

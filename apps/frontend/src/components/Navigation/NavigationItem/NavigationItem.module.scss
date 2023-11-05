@@ -32,7 +32,7 @@ $title-ml: 12px;
   justify-content: flex-start;
   padding: 2px 4px;
 
-  @media screen and (max-width: $laptop) and (max-width: $tablet) {
+  @media screen and (max-width: $laptop) and (min-width: $tablet + 1) {
     justify-content: center;
   }
 }
@@ -50,7 +50,7 @@ $title-ml: 12px;
   }
 
   @media screen and (max-width: $mobile-lg) {
-    width: calc(100% - $category-image-size-sm - $title-ml);
+    width: calc(100% - $category-image-size-mobile-lg - $title-ml);
   }
 }
 
