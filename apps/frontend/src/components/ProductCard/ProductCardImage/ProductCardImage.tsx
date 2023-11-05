@@ -6,7 +6,7 @@ import { useImageOnLoad } from 'usehooks-ts'
 
 import type { Props } from '@components/ProductCard'
 import productFallbackPng from '@public/images/product_fallback.png'
-import imageLoadFailSVG from '@public/svg/image-load-fail.svg'
+import imageLoadFailSvg from '@public/svg/image-load-fail.svg'
 import styles from './ProductCardImage.module.scss'
 
 export function ProductCardImage({
@@ -37,10 +37,10 @@ export function ProductCardImage({
 
     if (!image) return
 
-    const failSVGSrc = imageLoadFailSVG.src
+    const failSvgSrc = imageLoadFailSvg.src
 
-    image.src = failSVGSrc
-    image.srcset = failSVGSrc
+    image.src = failSvgSrc
+    image.srcset = failSvgSrc
   }
 
   return (

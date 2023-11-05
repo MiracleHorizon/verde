@@ -1,0 +1,10 @@
+@import '@styles/mixins';
+
+.root {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  @include media-hidden-max($tablet);
+}

@@ -1,9 +1,35 @@
 @import '@styles/mixins';
 
-.root {
+@mixin user-dashboard-skeleton {
   @include skeleton($gray-600);
+}
 
-  width: 100px;
+.root {
+  @include flex-center;
+
+  height: $user-dashboard-height;
+  column-gap: 10px;
+}
+
+.userCartSummary {
+  @include user-dashboard-skeleton;
+
+  width: 110px;
   height: 100%;
-  border-radius: 10px;
+  border-radius: $button-border-radius;
+}
+
+.buttonOrders {
+  @include user-dashboard-skeleton;
+
+  width: 110px;
+  height: 100%;
+  border-radius: $button-border-radius;
+}
+
+.avatar {
+  @include user-dashboard-skeleton;
+  @include square($avatar-size);
+
+  border-radius: 50%;
 }

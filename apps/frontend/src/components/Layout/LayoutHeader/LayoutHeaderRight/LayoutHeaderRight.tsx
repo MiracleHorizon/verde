@@ -6,11 +6,6 @@ import { UserDashboardSkeleton } from '@components/user/UserDashboardSkeleton'
 import { breakpoints } from '@styles/breakpoints'
 import styles from './LayoutHeaderRight.module.scss'
 
-const UserCartSummary = dynamic(
-  () =>
-    import('@components/user/UserCartSummary').then(mod => mod.UserCartSummary),
-  { ssr: false }
-)
 const UserDashboard = dynamic(
   () => import('@components/user/UserDashboard').then(mod => mod.UserDashboard),
   { ssr: false, loading: UserDashboardSkeleton }
@@ -34,10 +29,7 @@ const hamburgerMenuProps = {
 export function LayoutHeaderRight() {
   return (
     <div className={styles.root}>
-      <div className={styles.content}>
-        <UserCartSummary className={styles.userCartSummary} />
-        <UserDashboard />
-      </div>
+      <UserDashboard />
       <HamburgerMenu {...hamburgerMenuProps}>
         <Drawer />
       </HamburgerMenu>

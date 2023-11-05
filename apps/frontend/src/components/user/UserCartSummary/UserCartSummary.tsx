@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import cn from 'classnames'
 
 import { Button } from '@ui/Button'
@@ -15,10 +15,12 @@ export function UserCartSummary({ className }: ClassNameProps) {
   const summary = useCartSummary()
   const formattedSummary = formatCurrencyWithThinSpace(summary)
 
+  const pathname = usePathname()
   const router = useRouter()
+
   const navigateToCart = () => router.push(Route.CART)
 
-  if (summary === 0 || isNaN(summary)) {
+  if (summary === 0 || isNaN(summary) || pathname === Route.CART) {
     return null
   }
 
