@@ -23,14 +23,14 @@ $color-secondary: $black-primary;
   @include flex-center;
 
   height: 48px;
-  border-radius: 16px;
+  border-radius: $button-border-radius;
 }
 
-.withoutLeadIcon {
+.withoutIcon {
   padding: 0 16px;
 }
 
-.withLeadIcon {
+.withIcon {
   padding: 0 10px;
 }
 
@@ -40,6 +40,10 @@ $color-secondary: $black-primary;
 
 .titleWithLeadIcon {
   margin-left: 6px;
+}
+
+.titleWithTrailIcon {
+  margin-right: 6px;
 }
 
 .primary {

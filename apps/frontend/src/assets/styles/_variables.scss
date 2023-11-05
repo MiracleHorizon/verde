@@ -29,7 +29,6 @@ $gray-900: #9e9b98;
 $mobile-menu-h: 70px;
 $root-header-h: 80px;
 $root-header-h-sm: 60px;
-$divider-x-h: 1px;
 $layout-aside-margin-x: 32px;
 $layout-aside-margin-x-laptop: 22px;
 $layout-px: 55px;
@@ -48,9 +47,12 @@ $nav-item-h: 50px;
 $nav-item-h-mobile-lg: 46px;
 $nav-item-border-radius: 12px;
 $nav-item-hover-bg-color: $gray-500;
-$toggle-visibility-size: 24px;
+$user-dashboard-height: 48px;
 
 // UI - components
 $avatar-size: 44px;
+$divider-x-h: 1px;
 $counter-changer-border-radius: 10px;
 $modals-border-radius: 24px;
+$button-border-radius: 16px;
+$toggle-visibility-size: 24px;

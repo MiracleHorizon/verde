@@ -9,18 +9,20 @@ function Button({
   title,
   titleAttribute,
   leadIcon,
+  trailIcon,
   isDisabled,
   className,
   ...buttonAttributes
 }: Props) {
   const withLeadIcon = Boolean(leadIcon)
+  const withTrailIcon = Boolean(trailIcon)
 
   return (
     <button
       title={titleAttribute}
       className={cn(
         styles.root,
-        withLeadIcon ? styles.withLeadIcon : styles.withoutLeadIcon,
+        withLeadIcon || withTrailIcon ? styles.withIcon : styles.withoutIcon,
         {
           [styles.primary]: variant === 'primary',
           [styles.secondary]: variant === 'secondary',
@@ -34,12 +36,14 @@ function Button({
       {title && (
         <span
           className={cn(styles.title, {
-            [styles.titleWithLeadIcon]: withLeadIcon
+            [styles.titleWithLeadIcon]: withLeadIcon,
+            [styles.titleWithTrailIcon]: withTrailIcon
           })}
         >
           {title}
         </span>
       )}
+      {trailIcon}
     </button>
   )
 }
