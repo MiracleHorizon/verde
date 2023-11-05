@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { ProductItemPrice } from '../ProductItemPrice'
+import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
 import type { CartProduct } from '@interfaces/CartProduct'
 import productFallbackPng from '@public/images/product_fallback.png'
 import styles from './ProductItemLeft.module.scss'
@@ -14,6 +15,8 @@ export function ProductItemLeft({
   CartProduct,
   'title' | 'imagePath' | 'fullPrice' | 'discountPercentage'
 >) {
+  const { style, handleImageOnLoad } = useFullSizeImageLoad()
+
   return (
     <div className={styles.root}>
       <span className={styles.imageContainer}>
@@ -24,6 +27,8 @@ export function ProductItemLeft({
           sizes='100%'
           priority
           fill
+          style={style}
+          onLoad={handleImageOnLoad}
         />
       </span>
       <div className={styles.informationContainer}>

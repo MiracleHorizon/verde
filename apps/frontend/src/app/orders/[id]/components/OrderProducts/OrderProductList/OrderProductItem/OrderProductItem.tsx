@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { useFullSizeImageLoad } from '@hooks/useFullSizeImageLoad'
 import { formatCurrencyWithThinSpace } from '@helpers/formatCurrencyWithThinSpace'
 import type { OrderProduct } from '@interfaces/OrderProduct'
 import productFallbackPng from '@public/images/product_fallback.png'
@@ -11,6 +12,7 @@ export function OrderProductItem({
   quantity,
   totalCost
 }: OrderProduct) {
+  const { style, handleImageOnLoad } = useFullSizeImageLoad()
   const formattedTotalCost = formatCurrencyWithThinSpace(totalCost)
   const quantityTitle = `${quantity} шт`
 
@@ -25,6 +27,8 @@ export function OrderProductItem({
             sizes='100%'
             fill
             className={styles.image}
+            style={style}
+            onLoad={handleImageOnLoad}
           />
         </span>
         <article className={styles.mainInformation}>
