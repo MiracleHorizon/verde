@@ -19,8 +19,9 @@ export function SignupForm() {
     <AuthForm
       inputs={signupInputs}
       defaultValues={defaultValues}
-      onSubmit={handleSignup}
+      submitTitle='Зарегистрироваться'
       submitError={null}
+      onSubmit={handleSignup}
     />
   )
 }

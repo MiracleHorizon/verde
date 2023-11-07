@@ -19,8 +19,9 @@ import styles from './AuthForm.module.scss'
 export function AuthForm<T extends FieldValues, Err extends Error>({
   inputs,
   defaultValues,
-  onSubmit,
-  submitError
+  submitTitle,
+  submitError,
+  onSubmit
 }: Props<T, Err>) {
   const {
     handleSubmit,
@@ -56,7 +57,7 @@ export function AuthForm<T extends FieldValues, Err extends Error>({
       <section className={styles.buttonsSection}>
         <Button
           variant='primary'
-          title='Отправить'
+          title={submitTitle}
           className={cn(styles.button, styles.buttonSubmit)}
           isDisabled={!isValid || isValidating}
           onClick={handleSubmit(onSubmit)}
@@ -71,6 +72,7 @@ export function AuthForm<T extends FieldValues, Err extends Error>({
 interface Props<T extends FieldValues, Err extends Error> {
   inputs: ReactHookFormInput<T>[]
   defaultValues: DefaultValues<T>
-  onSubmit: (payload: T) => void
+  submitTitle: string
   submitError: Err | null
+  onSubmit: (payload: T) => void
 }

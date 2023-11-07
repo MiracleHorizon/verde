@@ -17,8 +17,9 @@ export function SigninForm() {
     <AuthForm
       inputs={signinInputs}
       defaultValues={defaultValues}
-      onSubmit={handleSignin}
+      submitTitle='Войти'
       submitError={error}
+      onSubmit={handleSignin}
     />
   )
 }
