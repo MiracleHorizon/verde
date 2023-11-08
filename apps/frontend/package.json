@@ -8,7 +8,8 @@
     "dev": "next dev",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
-    "start": "next start",
+    "start:prod": "concurrently \"next start\" \"yarn server:start\"",
+    "start:dev": "concurrently \"yarn dev\" \"yarn server:start\"",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "next lint",
@@ -18,6 +19,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "classnames": "^2.3.2",
+    "concurrently": "^8.2.2",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
     "js-cookie": "^3.0.5",
