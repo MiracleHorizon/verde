@@ -11,15 +11,15 @@ export const metadata: Metadata = {
   title: `Главная | ${APP_TITLE}`
 }
 
-const SERVER_API = 'http://localhost:4200'
-const CATEGORIES_ENDPOINT = 'categories'
-
 export default async function HomePage() {
   try {
-    const url = `${SERVER_API}/${CATEGORIES_ENDPOINT}`
+    const url = process.env.SERVER_API + '/categories'
     const response = await fetch(url, {
       method: HTTPMethod.GET,
-      cache: 'no-cache'
+      cache: 'force-cache',
+      next: {
+        tags: ['categories/root']
+      }
     })
 
     if (!response.ok) {
