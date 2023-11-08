@@ -1,0 +1,20 @@
+@import '@styles/mixins';
+
+.root {
+  @include flex-center;
+
+  width: max-content;
+  margin-bottom: 18px;
+}
+
+.logo {
+  @include square(70px);
+
+  @media screen and (max-width: $tablet-sm) {
+    @include square(60px);
+  }
+
+  @media screen and (max-width: $mobile-sm) {
+    @include square(50px);
+  }
+}

@@ -2,6 +2,10 @@
 
 .root {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   margin-bottom: 28px;
 
   @media screen and (max-width: $mobile-lg) {
@@ -11,6 +15,10 @@
   @media screen and (max-width: $mobile-md) {
     margin-bottom: 18px;
   }
+}
+
+.titleArticle {
+  width: 100%;
 }
 
 .title {

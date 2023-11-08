@@ -2,8 +2,9 @@
 
 import { usePathname } from 'next/navigation'
 
+import { AuthBackHome } from './AuthBackHome'
 import { getAuthHeroTitle } from './getAuthHeroTitle'
-import { Route } from '@enums/Route'
+import type { Route } from '@enums/Route'
 import styles from './AuthHero.module.scss'
 
 export function AuthHero() {
@@ -11,7 +12,8 @@ export function AuthHero() {
 
   return (
     <section className={styles.root}>
-      <article>
+      <AuthBackHome />
+      <article className={styles.titleArticle}>
         <h1 className={styles.title}>{getAuthHeroTitle(pathname as Route)}</h1>
       </article>
     </section>
