@@ -1,7 +1,7 @@
 @import '@styles/variables';
 @import '@styles/mixins';
 
-$logo-size-sm: 44px;
+$logo-size-tablet: 44px;
 
 .root {
   min-width: 125px;
@@ -11,7 +11,7 @@ $logo-size-sm: 44px;
   @media screen and (max-width: $tablet) {
     @include flex-center;
 
-    min-width: $logo-size-sm;
+    min-width: $logo-size-tablet;
     flex-direction: column;
   }
 }
@@ -22,7 +22,7 @@ $logo-size-sm: 44px;
   border-radius: 50%;
 
   @media screen and (max-width: $tablet) {
-    @include square($logo-size-sm);
+    @include square($logo-size-tablet);
   }
 }
 

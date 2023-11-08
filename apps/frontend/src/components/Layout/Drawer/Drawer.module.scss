@@ -13,8 +13,8 @@
   z-index: 30;
 
   @media screen and (max-width: $tablet) {
-    top: $root-header-h-sm;
-    height: calc(100vh - $root-header-h-sm);
+    top: $root-header-h-tablet;
+    height: calc(100vh - $root-header-h-tablet);
   }
 }
 

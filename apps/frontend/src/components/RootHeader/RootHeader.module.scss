@@ -14,7 +14,7 @@ $medium-bp: 500px;
   background: $gray-200;
 
   @media screen and (max-width: $tablet) {
-    height: $root-header-h-sm;
+    height: $root-header-h-tablet;
   }
 
   @media screen and (max-width: $medium-bp) {

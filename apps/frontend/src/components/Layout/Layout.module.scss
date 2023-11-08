@@ -26,7 +26,7 @@
   padding-top: $root-header-h;
 
   @media screen and (max-width: $tablet) {
-    padding-top: $root-header-h-sm;
+    padding-top: $root-header-h-tablet;
   }
 }
 
@@ -68,7 +68,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .withNavigation {

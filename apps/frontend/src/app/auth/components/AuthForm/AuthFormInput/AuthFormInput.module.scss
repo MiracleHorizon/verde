@@ -1,7 +1,7 @@
 @import '@styles/mixins';
 
 $input-h: 48px;
-$input-h-sm: 44px;
+$input-h-mobile-md: 44px;
 
 @mixin status-border($color, $secondary-color: $color) {
   border: 1.5px solid $color;
@@ -42,8 +42,8 @@ $input-h-sm: 44px;
   }
 
   @media screen and (max-width: $mobile-md) {
-    height: $input-h-sm;
-    min-height: $input-h-sm;
+    height: $input-h-mobile-md;
+    min-height: $input-h-mobile-md;
   }
 }
 
@@ -62,7 +62,7 @@ $input-h-sm: 44px;
   translate: 0 -50%;
 
   @media screen and (max-width: $mobile-md) {
-    top: $input-h-sm / 2;
+    top: $input-h-mobile-md / 2;
   }
 }
 
