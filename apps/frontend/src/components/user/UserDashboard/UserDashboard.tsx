@@ -1,9 +1,11 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import cn from 'classnames'
 
 import { ButtonSignin } from '../ButtonSignin'
 import { useUserStore } from '@stores/user'
+import type { ClassNameProps } from '@interfaces/ClassNameProps'
 import styles from './UserDashboard.module.scss'
 
 const ButtonOrders = dynamic(
@@ -20,15 +22,15 @@ const UserMenuModalContainer = dynamic(
   { ssr: false }
 )
 
-export function UserDashboard() {
+export function UserDashboard({ className }: ClassNameProps) {
   const user = useUserStore(state => state.user)
 
   if (!user) {
-    return <ButtonSignin />
+    return <ButtonSignin className={className} />
   }
 
   return (
-    <div className={styles.root}>
+    <div className={cn(styles.root, className)}>
       <ButtonOrders />
       <UserCartSummary className={styles.userCartSummary} />
       <UserMenuModalContainer user={user} />

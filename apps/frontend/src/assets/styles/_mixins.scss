@@ -63,13 +63,13 @@
 /* Media */
 @mixin media-hidden-max($breakpoint) {
   @media screen and (max-width: $breakpoint) {
-    display: none;
+    display: none !important;
   }
 }
 
 @mixin media-hidden-min($breakpoint) {
   @media screen and (min-width: $breakpoint + 1px) {
-    display: none;
+    display: none !important;
   }
 }
 

@@ -29,7 +29,7 @@ const hamburgerMenuProps = {
 export function LayoutHeaderRight() {
   return (
     <div className={styles.root}>
-      <UserDashboard />
+      <UserDashboard className={styles.userDashboard} />
       <HamburgerMenu {...hamburgerMenuProps}>
         <Drawer />
       </HamburgerMenu>

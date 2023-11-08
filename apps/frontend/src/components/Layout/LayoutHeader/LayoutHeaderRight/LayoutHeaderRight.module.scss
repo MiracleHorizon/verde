@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.userDashboard {
+  @include media-hidden-max($tablet);
+}
+
 .hamburgerMenu {
   display: none;
 
