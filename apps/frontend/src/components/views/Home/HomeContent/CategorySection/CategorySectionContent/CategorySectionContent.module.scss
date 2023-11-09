@@ -2,9 +2,10 @@
 
 .root {
   @include flex-start;
+  @include scrollbar-hidden;
 
   width: 100%;
   gap: 10px;
   padding: 4px 0;
-  overflow: scroll hidden;
+  overflow: auto hidden;
 }

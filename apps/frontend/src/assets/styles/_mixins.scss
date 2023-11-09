@@ -1,11 +1,52 @@
+@use 'sass:color';
+
 @import 'variables';
 @import 'animations';
+@import 'build_in_modules';
 
 /* Global */
 @mixin disabled($opacity: 40%) {
   pointer-events: none;
   user-select: none;
   opacity: $opacity;
+}
+
+@mixin scrollbar($bg-color: $gray-800) {
+  $track-color: color.adjust($bg-color, $lightness: 10%);
+  $thumb-color: $bg-color;
+  $thumb-color-hover: color.adjust($bg-color, $lightness: -6%);
+
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color $track-color;
+
+  // WebKit
+  &::-webkit-scrollbar {
+    @include square(8px);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    transition: background 80ms ease-in;
+
+    &:hover {
+      background: $thumb-color-hover;
+    }
+  }
+}
+
+@mixin scrollbar-hidden {
+  // Firefox
+  scrollbar-width: none;
+
+  // WebKit
+  &::-webkit-scrollbar {
+    @include square(0);
+  }
 }
 
 // Sizes
