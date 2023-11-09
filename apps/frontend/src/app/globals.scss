@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import '@styles/mixins';
 
 * {
   margin: 0;
@@ -6,12 +6,34 @@
   box-sizing: border-box;
   outline: none;
   color: $black-primary;
+
+  @include scrollbar;
 }
 
 body {
-  width: 100vw;
   min-height: 100vh;
   background: $gray-200;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+
+    @media screen and (max-width: $tablet) {
+      background: linear-gradient(
+        to bottom,
+        transparent calc(100% - $mobile-menu-h),
+        $white-primary $mobile-menu-h
+      );
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: $root-header-h;
+
+    @media screen and (max-width: $tablet) {
+      margin-top: $root-header-h-tablet;
+      margin-bottom: $mobile-menu-h;
+    }
+  }
 }
 
 a {
